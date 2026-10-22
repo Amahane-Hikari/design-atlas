@@ -70,6 +70,20 @@ node scripts/check-case-pack.mjs .\my-cases.json
 
 `dist/engine.js` 保留原来的 30 个模块与 v1 项目接口，合并新增模块注册表；重复 ID 会报错。新增整页模板在 TEMPLATES 中注册，新增内置设计配方在 `dist/case-model.js` 的 RECIPES 中注册。
 
+## v3 模块样式与动效协议
+
+每个图层可带可选的 `style` 对象与 `label`（≤60 字符）；项目可带 `effects`。三者都由 `dist/fx-runtime.js` 的 `normalizeBlockStyle` / `normalizeEffects` 校验：只接受登记过的选项、六位十六进制颜色与限定范围的数值，其余回落到默认值，并且只保存与默认不同的键。
+
+```json
+{"type":"hero-gradient","props":{},"label":"首屏","style":{"tone":"dark","pattern":"stars","patternOpacity":70,"enter":"blur","trigger":"load","stagger":true,"hover":"lift","text":"gradient","css":"& h1 { letter-spacing: -3px; }"}}
+```
+
+- 新增选项：在 `FX_OPTIONS` 登记 ID 与中文名，在 `FX_CSS` 写对应规则（入场动效需同名 `@keyframes fx-<id>`，使用 `translate`/`scale`/`rotate` 等独立变换属性，避免覆盖模块自身的 `transform`）。检查器与特效实验室会自动出现新选项。
+- 区块渲染时 `sectionFx` 把样式转换为 `data-*` 属性、内联 CSS 变量和装饰层；模块 CSS 统一作用于 `#s-<uid>`，并移除 `</style`。
+- v3 原创模块在 `dist/fx-blocks.js` 注册：`FX_BLOCKS` 定义（可选 `fields` 给列表编辑器提供字段名），`R` 中的渲染函数，`FX_BLOCK_CSS` 与 `FX_BLOCK_JS`。需要按模块初始化的脚本推入 `window.__atlasHooks`，签名为 `(section,{edit})`；滚动驱动的效果给钩子加 `scroll` 方法。所有交互用事件委托或钩子，以便画布局部刷新后继续工作。
+- 画布编辑桥 `EDITOR_JS` 只在拼装台预览中注入：它通过带一次性 token 的 postMessage 提出「选择、改字、移动、插入、操作」请求，工作台校验图层、字段与模块类型后才写入项目。导出与详情预览不包含编辑桥。
+- 画布双击改字按「元素自身文本 = 某个文本字段 / 列表单元」匹配，所以渲染时请直接输出转义后的字段值；拼接了其他文字的元素只能在检查器中修改。
+
 ## 案例数据与来源
 
 内置网站案例位于 `dist/data/site-cases.json`。每条包含来源、核对日期、实际阅读范围、借鉴建议与配方关联。新增内置案例必须读过原站内容，使用 `content-reviewed`；只有完成真实浏览器观察的范围才记录为 `browser-sampled`，并写明页面与动作。
@@ -78,7 +92,7 @@ node scripts/check-case-pack.mjs .\my-cases.json
 
 ## 模块和离线构建
 
-依赖顺序为 `pattern-engine → engine → case-model → case-ui → workspace-model → studio-model → studio-ui → app`。`case-model` 和 `workspace-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
+依赖顺序为 `fx-runtime → fx-blocks → pattern-engine → engine → case-model → case-ui → workspace-model → studio-model → studio-ui → builder-ui → app`。`case-model` 和 `workspace-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
 
 `studio-model.js` 提供全局检索、同类布局替换及独占锁下的项目库写入。`studio-ui.js` 负责项目库、命令搜索与持久化，调用 app 桥接接口打开资源或提交项目事务；不要直接持有和修改 app 的草稿对象。新增可搜索资源时补充 `getItems()` 和对应打开行为。
 
