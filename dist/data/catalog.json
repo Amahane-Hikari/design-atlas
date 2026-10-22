@@ -1,0 +1,1724 @@
+{
+  "generatedAt": "2026-10-22",
+  "scope": {
+    "skills": "扫描 CODEX_HOME/skills、HOME/.agents/skills、CODEX_HOME/plugins/cache 的 SKILL.md；仅纳入前端设计、图像、动效、网站、UI 工程、浏览器验收、性能与交付的公开能力摘要；localPath 相对各扫描根目录；排除备份与普通后端；新技能按公开元数据保守归类。",
+    "references": "完整扫描上述根目录中的 DESIGN.md；颜色取自文件，文档许可与品牌素材限制分列；不附参考全文；来源仅离线核对。",
+    "openSource": "截至 2026-10-22 核对的 37 个官方仓库精选资源，其中 35 个开源项目、2 个特殊授权参考；未声称覆盖互联网全部项目。仅链接官方文档与源码，不打包第三方组件。"
+  },
+  "skills": [
+    {
+      "id": "skill-agents-reverse-engineer-anything",
+      "name": "reverse-engineer-anything",
+      "description": "依据已交付的 Electron、JavaScript 或浏览器应用，研究可验证的界面行为。",
+      "category": "UI 工程",
+      "tags": [
+        "Electron",
+        "浏览器",
+        "行为验证",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "local",
+      "localPath": "reverse-engineer-anything/SKILL.md",
+      "capabilities": [
+        "已交付应用检查",
+        "浏览器行为证据",
+        "界面实现对照"
+      ],
+      "prompt": "使用 reverse-engineer-anything，围绕当前项目的目标与现有视觉语言完成已交付应用检查、浏览器行为证据、界面实现对照。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-batch-edit-photos",
+      "name": "adobe-batch-edit-photos",
+      "description": "批量统一照片的曝光、色调和视觉风格，用于网站图片素材。",
+      "category": "图像与字体",
+      "tags": [
+        "图像",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-batch-edit-photos/SKILL.md",
+      "capabilities": [
+        "批量照片调整",
+        "色调一致性",
+        "网站图片素材"
+      ],
+      "prompt": "使用 adobe-batch-edit-photos，围绕当前项目的目标与现有视觉语言完成批量照片调整、色调一致性、网站图片素材。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-create-mockups",
+      "name": "adobe-create-mockups",
+      "description": "将已有标志或设计放入产品、设备和场景样机，预览展示效果。",
+      "category": "图像与字体",
+      "tags": [
+        "样机",
+        "品牌展示",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-create-mockups/SKILL.md",
+      "capabilities": [
+        "样机展示",
+        "设计场景化",
+        "视觉效果预览"
+      ],
+      "prompt": "使用 adobe-create-mockups，围绕当前项目的目标与现有视觉语言完成样机展示、设计场景化、视觉效果预览。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-create-social-variations",
+      "name": "adobe-create-social-variations",
+      "description": "为图片和视频制作不同画幅与尺寸的传播版本。",
+      "category": "图像与字体",
+      "tags": [
+        "素材适配",
+        "Adobe",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-create-social-variations/SKILL.md",
+      "capabilities": [
+        "裁切与缩放",
+        "多画幅适配",
+        "图像与视频导出"
+      ],
+      "prompt": "使用 adobe-create-social-variations，围绕当前项目的目标与现有视觉语言完成裁切与缩放、多画幅适配、图像与视频导出。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-design-from-template",
+      "name": "adobe-design-from-template",
+      "description": "使用 Adobe Express 模板制作海报、缩略图和网站传播视觉素材。",
+      "category": "图像与字体",
+      "tags": [
+        "模板",
+        "视觉素材",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-design-from-template/SKILL.md",
+      "capabilities": [
+        "模板选型",
+        "宣传视觉素材",
+        "版式适配"
+      ],
+      "prompt": "使用 adobe-design-from-template，围绕当前项目的目标与现有视觉语言完成模板选型、宣传视觉素材、版式适配。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-edit-quick-cut",
+      "name": "adobe-edit-quick-cut",
+      "description": "从原始视频制作重点片段，准备网站宣传和演示素材。",
+      "category": "动画与媒体",
+      "tags": [
+        "视频",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-edit-quick-cut/SKILL.md",
+      "capabilities": [
+        "重点片段剪辑",
+        "视频视觉素材",
+        "宣传短片"
+      ],
+      "prompt": "使用 adobe-edit-quick-cut，围绕当前项目的目标与现有视觉语言完成重点片段剪辑、视频视觉素材、宣传短片。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-fonts",
+      "name": "adobe-fonts",
+      "description": "查找和预览 Adobe Fonts 字体，比较语言覆盖、字重与字体搭配。",
+      "category": "图像与字体",
+      "tags": [
+        "字体",
+        "排版",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-fonts/SKILL.md",
+      "capabilities": [
+        "字体检索与预览",
+        "语言与字重检查",
+        "字体搭配"
+      ],
+      "prompt": "使用 adobe-fonts，围绕当前项目的目标与现有视觉语言完成字体检索与预览、语言与字重检查、字体搭配。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-app-69312da8e4dc81919370cb86fd172b6c-adobe-retouch-portraits",
+      "name": "adobe-retouch-portraits",
+      "description": "批量修饰人像照片，准备可供视觉方案审阅的人像素材。",
+      "category": "图像与字体",
+      "tags": [
+        "人像",
+        "图像",
+        "Adobe",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/app-69312da8e4dc81919370cb86fd172b6c/10.0.0/skills/adobe-retouch-portraits/SKILL.md",
+      "capabilities": [
+        "人像修饰",
+        "批量素材处理",
+        "视觉审阅"
+      ],
+      "prompt": "使用 adobe-retouch-portraits，围绕当前项目的目标与现有视觉语言完成人像修饰、批量素材处理、视觉审阅。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-codex-design-md-library",
+      "name": "design-md-library",
+      "description": "检索本地 DESIGN.md 设计参考，选择视觉方向并提炼可迁移的设计系统。",
+      "category": "设计参考",
+      "tags": [
+        "DESIGN.md",
+        "设计系统",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "design-md-library/SKILL.md",
+      "capabilities": [
+        "参考选型",
+        "色彩与排版系统",
+        "网站设计研究"
+      ],
+      "prompt": "使用 design-md-library，围绕当前项目的目标与现有视觉语言完成参考选型、色彩与排版系统、网站设计研究。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-ffmpeg-skill",
+      "name": "ffmpeg-skill",
+      "description": "使用本地 FFmpeg 转码、裁切、拼接和优化网页所需的音视频素材。",
+      "category": "动画与媒体",
+      "tags": [
+        "FFmpeg",
+        "视频",
+        "素材",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "ffmpeg-skill/SKILL.md",
+      "capabilities": [
+        "音视频转码",
+        "字幕与叠加",
+        "尺寸与体积处理"
+      ],
+      "prompt": "使用 ffmpeg-skill，围绕当前项目的目标与现有视觉语言完成音视频转码、字幕与叠加、尺寸与体积处理。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-hatch-pet",
+      "name": "hatch-pet",
+      "description": "制作和修复带多方向状态的动画精灵图，进行逐帧视觉检查。",
+      "category": "动画与媒体",
+      "tags": [
+        "精灵图",
+        "角色动画",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "hatch-pet/SKILL.md",
+      "capabilities": [
+        "动画精灵图",
+        "透明素材",
+        "帧序列视觉检查"
+      ],
+      "prompt": "使用 hatch-pet，围绕当前项目的目标与现有视觉语言完成动画精灵图、透明素材、帧序列视觉检查。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-imagegen",
+      "name": "imagegen",
+      "description": "根据需求生成或编辑图片、插画、纹理和透明背景素材。",
+      "category": "图像与字体",
+      "tags": [
+        "图像",
+        "素材",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": ".system/imagegen/SKILL.md",
+      "capabilities": [
+        "图像生成与编辑",
+        "透明背景素材",
+        "视觉方案探索"
+      ],
+      "prompt": "使用 imagegen，围绕当前项目的目标与现有视觉语言完成图像生成与编辑、透明背景素材、视觉方案探索。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-jianying-editor",
+      "name": "jianying-editor",
+      "description": "制作可编辑剪映工程，支持素材、字幕、录屏与 Web 动效合成。",
+      "category": "动画与媒体",
+      "tags": [
+        "剪映",
+        "视频",
+        "动效",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "jianying-editor/SKILL.md",
+      "capabilities": [
+        "可编辑视频工程",
+        "字幕与素材编排",
+        "Web 动效合成"
+      ],
+      "prompt": "使用 jianying-editor，围绕当前项目的目标与现有视觉语言完成可编辑视频工程、字幕与素材编排、Web 动效合成。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-live2d-end-to-end",
+      "name": "live2d-end-to-end",
+      "description": "从角色分层与绑定到动态模型和网页展示验收，形成可追溯的角色动画流程。",
+      "category": "动画与媒体",
+      "tags": [
+        "Live2D",
+        "角色动画",
+        "Web",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "live2d-end-to-end/SKILL.md",
+      "capabilities": [
+        "角色分层与绑定",
+        "动态模型",
+        "网页展示验收"
+      ],
+      "prompt": "使用 live2d-end-to-end，围绕当前项目的目标与现有视觉语言完成角色分层与绑定、动态模型、网页展示验收。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-playwright",
+      "name": "playwright",
+      "description": "使用真实浏览器验证页面导航、交互、截图和界面状态。",
+      "category": "浏览器验收",
+      "tags": [
+        "Playwright",
+        "浏览器",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "local",
+      "localPath": "playwright/SKILL.md",
+      "capabilities": [
+        "浏览器交互验收",
+        "页面截图",
+        "界面状态检查"
+      ],
+      "prompt": "使用 playwright，围绕当前项目的目标与现有视觉语言完成浏览器交互验收、页面截图、界面状态检查。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-screenshot",
+      "name": "screenshot",
+      "description": "截取桌面、窗口或指定区域，保留界面视觉验收证据。",
+      "category": "浏览器验收",
+      "tags": [
+        "截图",
+        "视觉验收",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "local",
+      "localPath": "screenshot/SKILL.md",
+      "capabilities": [
+        "界面截图",
+        "窗口与区域采集",
+        "视觉证据"
+      ],
+      "prompt": "使用 screenshot，围绕当前项目的目标与现有视觉语言完成界面截图、窗口与区域采集、视觉证据。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-vercel-deploy",
+      "name": "vercel-deploy",
+      "description": "为前端项目创建 Vercel 预览或生产部署。",
+      "category": "部署与交付",
+      "tags": [
+        "Vercel",
+        "部署",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "vercel-deploy/SKILL.md",
+      "capabilities": [
+        "前端预览部署",
+        "生产部署",
+        "部署结果交付"
+      ],
+      "prompt": "使用 vercel-deploy，围绕当前项目的目标与现有视觉语言完成前端预览部署、生产部署、部署结果交付。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-codex-web-perf",
+      "name": "web-perf",
+      "description": "测量页面加载性能、Core Web Vitals 与 Lighthouse 指标。",
+      "category": "性能优化",
+      "tags": [
+        "性能",
+        "Lighthouse",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "local",
+      "localPath": "web-perf/SKILL.md",
+      "capabilities": [
+        "页面加载性能",
+        "Core Web Vitals",
+        "Lighthouse 诊断"
+      ],
+      "prompt": "使用 web-perf，围绕当前项目的目标与现有视觉语言完成页面加载性能、Core Web Vitals、Lighthouse 诊断。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。"
+    },
+    {
+      "id": "skill-computer-use-computer-use",
+      "name": "computer-use",
+      "description": "通过受支持的计算机界面执行操作，检查可见界面行为。",
+      "category": "浏览器验收",
+      "tags": [
+        "界面操作",
+        "视觉验收",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://github.com/openai/openai/tree/master/project/cua/sky_js/plugin",
+      "localPath": "openai-bundled/computer-use/26.1013.40934/skills/computer-use/SKILL.md",
+      "capabilities": [
+        "可见界面检查",
+        "交互操作",
+        "界面证据"
+      ],
+      "prompt": "使用 computer-use，围绕当前项目的目标与现有视觉语言完成可见界面检查、交互操作、界面证据。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-data-analytics-build-dashboard",
+      "name": "build-dashboard",
+      "description": "根据可核查的数据构建可编辑、可探索的交互仪表盘。",
+      "category": "可视化",
+      "tags": [
+        "仪表盘",
+        "交互",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "openai-curated-remote/data-analytics/1.0.11/skills/build-dashboard/SKILL.md",
+      "capabilities": [
+        "交互仪表盘",
+        "数据来源追溯",
+        "筛选与探索"
+      ],
+      "prompt": "使用 build-dashboard，围绕当前项目的目标与现有视觉语言完成交互仪表盘、数据来源追溯、筛选与探索。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-data-analytics-build-report",
+      "name": "build-report",
+      "description": "编排具有可核查证据的报告页面，组织图表、结论与阅读层次。",
+      "category": "可视化",
+      "tags": [
+        "报告",
+        "信息设计",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/data-analytics/1.0.11/skills/build-report/SKILL.md",
+      "capabilities": [
+        "报告信息层次",
+        "图表与叙事",
+        "证据关联"
+      ],
+      "prompt": "使用 build-report，围绕当前项目的目标与现有视觉语言完成报告信息层次、图表与叙事、证据关联。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-data-analytics-publish-artifact-to-sites",
+      "name": "publish-artifact-to-sites",
+      "description": "将已有分析报告或仪表盘发布到 Sites 并核对交付链接。",
+      "category": "部署与交付",
+      "tags": [
+        "Sites",
+        "仪表盘",
+        "发布",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "openai-curated-remote/data-analytics/1.0.11/skills/publish-artifact-to-sites/SKILL.md",
+      "capabilities": [
+        "报告页面发布",
+        "仪表盘交付",
+        "发布结果核对"
+      ],
+      "prompt": "使用 publish-artifact-to-sites，围绕当前项目的目标与现有视觉语言完成报告页面发布、仪表盘交付、发布结果核对。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-data-analytics-visualize-data",
+      "name": "visualize-data",
+      "description": "为报告、仪表盘等可交付成果设计并验证数据图表。",
+      "category": "可视化",
+      "tags": [
+        "图表",
+        "仪表盘",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-curated-remote/data-analytics/1.0.11/skills/visualize-data/SKILL.md",
+      "capabilities": [
+        "图表设计",
+        "可视化编码",
+        "图表可读性验证"
+      ],
+      "prompt": "使用 visualize-data，围绕当前项目的目标与现有视觉语言完成图表设计、可视化编码、图表可读性验证。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-hyperframes-gsap",
+      "name": "gsap",
+      "description": "在 HyperFrames 中使用 GSAP 的缓动、错峰、时间线和变换动画。",
+      "category": "动画与媒体",
+      "tags": [
+        "GSAP",
+        "动画",
+        "HyperFrames",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "localPath": "openai-curated-remote/hyperframes/0.1.2/skills/gsap/SKILL.md",
+      "capabilities": [
+        "GSAP 时间线",
+        "缓动与错峰",
+        "动画性能处理"
+      ],
+      "prompt": "使用 gsap，围绕当前项目的目标与现有视觉语言完成GSAP 时间线、缓动与错峰、动画性能处理。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-hyperframes-hyperframes",
+      "name": "hyperframes",
+      "description": "以 HTML 构建动画、视频合成、字幕与场景转场。",
+      "category": "动画与媒体",
+      "tags": [
+        "HTML",
+        "动画",
+        "HyperFrames",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "localPath": "openai-curated-remote/hyperframes/0.1.2/skills/hyperframes/SKILL.md",
+      "capabilities": [
+        "HTML 视频合成",
+        "字幕与转场",
+        "动画时间编排"
+      ],
+      "prompt": "使用 hyperframes，围绕当前项目的目标与现有视觉语言完成HTML 视频合成、字幕与转场、动画时间编排。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-hyperframes-hyperframes-cli",
+      "name": "hyperframes-cli",
+      "description": "使用 HyperFrames CLI 预览、检查和渲染 HTML 动画作品。",
+      "category": "动画与媒体",
+      "tags": [
+        "CLI",
+        "动画",
+        "HyperFrames",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "localPath": "openai-curated-remote/hyperframes/0.1.2/skills/hyperframes-cli/SKILL.md",
+      "capabilities": [
+        "动画预览",
+        "布局检查",
+        "渲染与诊断"
+      ],
+      "prompt": "使用 hyperframes-cli，围绕当前项目的目标与现有视觉语言完成动画预览、布局检查、渲染与诊断。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-hyperframes-hyperframes-registry",
+      "name": "hyperframes-registry",
+      "description": "安装和接入 HyperFrames 动画组件与可复用区块。",
+      "category": "动画与媒体",
+      "tags": [
+        "组件",
+        "动画",
+        "HyperFrames",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "localPath": "openai-curated-remote/hyperframes/0.1.2/skills/hyperframes-registry/SKILL.md",
+      "capabilities": [
+        "动画组件复用",
+        "注册表区块",
+        "合成配置"
+      ],
+      "prompt": "使用 hyperframes-registry，围绕当前项目的目标与现有视觉语言完成动画组件复用、注册表区块、合成配置。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-hyperframes-website-to-hyperframes",
+      "name": "website-to-hyperframes",
+      "description": "从网站展示内容制作 HTML 视频和产品演示动画。",
+      "category": "动画与媒体",
+      "tags": [
+        "网站演示",
+        "动画",
+        "HyperFrames",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://github.com/heygen-com/hyperframes",
+      "localPath": "openai-curated-remote/hyperframes/0.1.2/skills/website-to-hyperframes/SKILL.md",
+      "capabilities": [
+        "网站画面采集",
+        "产品演示动画",
+        "HTML 视频"
+      ],
+      "prompt": "使用 website-to-hyperframes，围绕当前项目的目标与现有视觉语言完成网站画面采集、产品演示动画、HTML 视频。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-sites-sites",
+      "name": "sites",
+      "description": "构建和修改落地页、作品集、仪表盘及交互网站。",
+      "category": "网站构建",
+      "tags": [
+        "网站",
+        "前端",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "openai-curated-remote/sites/1.1.1/skills/sites/SKILL.md",
+      "capabilities": [
+        "网站与页面构建",
+        "交互功能实现",
+        "网站预览与发布"
+      ],
+      "prompt": "使用 sites，围绕当前项目的目标与现有视觉语言完成网站与页面构建、交互功能实现、网站预览与发布。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-sites-sites-remix",
+      "name": "sites-remix",
+      "description": "从已发布的 Sites 网站创建独立副本，再按需求调整设计和功能。",
+      "category": "网站构建",
+      "tags": [
+        "Sites",
+        "网站",
+        "复用",
+        "build"
+      ],
+      "role": "build",
+      "source": "local",
+      "localPath": "openai-curated-remote/sites/1.1.1/skills/sites-remix/SKILL.md",
+      "capabilities": [
+        "网站副本",
+        "视觉与内容适配",
+        "独立交付"
+      ],
+      "prompt": "使用 sites-remix，围绕当前项目的目标与现有视觉语言完成网站副本、视觉与内容适配、独立交付。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-access-protected-vercel-deployment",
+      "name": "access-protected-vercel-deployment",
+      "description": "在已有授权下访问受 Vercel 保护的预览并完成浏览器验收。",
+      "category": "浏览器验收",
+      "tags": [
+        "Vercel",
+        "预览验收",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://vercel.com/docs/cli/curl",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/access-protected-vercel-deployment/SKILL.md",
+      "capabilities": [
+        "受保护预览访问",
+        "浏览器验收",
+        "授权状态检查"
+      ],
+      "prompt": "使用 access-protected-vercel-deployment，围绕当前项目的目标与现有视觉语言完成受保护预览访问、浏览器验收、授权状态检查。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-ai-sdk",
+      "name": "ai-sdk",
+      "description": "为 AI 聊天等前端界面接入流式状态、消息和结构化结果。",
+      "category": "UI 工程",
+      "tags": [
+        "AI SDK",
+        "聊天 UI",
+        "流式",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://sdk.vercel.ai/docs",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/ai-sdk/SKILL.md",
+      "capabilities": [
+        "聊天界面接入",
+        "流式交互状态",
+        "结构化结果呈现"
+      ],
+      "prompt": "使用 ai-sdk，围绕当前项目的目标与现有视觉语言完成聊天界面接入、流式交互状态、结构化结果呈现。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-cdn-caching",
+      "name": "cdn-caching",
+      "description": "分析网站缓存命中、陈旧内容和页面重新验证行为。",
+      "category": "性能优化",
+      "tags": [
+        "CDN",
+        "缓存",
+        "性能",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://vercel.com/docs/caching",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/cdn-caching/SKILL.md",
+      "capabilities": [
+        "CDN 缓存诊断",
+        "页面新鲜度",
+        "重新验证行为"
+      ],
+      "prompt": "使用 cdn-caching，围绕当前项目的目标与现有视觉语言完成CDN 缓存诊断、页面新鲜度、重新验证行为。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-deployments-cicd",
+      "name": "deployments-cicd",
+      "description": "组织 Vercel 的前端构建、预览、发布与回退流程。",
+      "category": "部署与交付",
+      "tags": [
+        "Vercel",
+        "CI/CD",
+        "部署",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://vercel.com/docs/deployments",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/deployments-cicd/SKILL.md",
+      "capabilities": [
+        "构建与预览",
+        "发布流程",
+        "版本回退"
+      ],
+      "prompt": "使用 deployments-cicd，围绕当前项目的目标与现有视觉语言完成构建与预览、发布流程、版本回退。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-flags-sdk",
+      "name": "flags-sdk",
+      "description": "通过功能开关与实验控制前端功能的展示和逐步开放。",
+      "category": "UI 工程",
+      "tags": [
+        "功能开关",
+        "实验",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://vercel.com/docs/flags",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/flags-sdk/SKILL.md",
+      "capabilities": [
+        "功能开关",
+        "界面实验",
+        "逐步开放"
+      ],
+      "prompt": "使用 flags-sdk，围绕当前项目的目标与现有视觉语言完成功能开关、界面实验、逐步开放。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-is-agentic",
+      "name": "is-agentic",
+      "description": "检查网站对 AI 代理的可用性，读取评分报告并定位改进项。",
+      "category": "浏览器验收",
+      "tags": [
+        "网站可用性",
+        "代理",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://is-agentic.com/docs",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/is-agentic/SKILL.md",
+      "capabilities": [
+        "网站代理可用性",
+        "报告解读",
+        "页面问题定位"
+      ],
+      "prompt": "使用 is-agentic，围绕当前项目的目标与现有视觉语言完成网站代理可用性、报告解读、页面问题定位。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-microfrontends",
+      "name": "microfrontends",
+      "description": "组织可独立部署的前端应用，处理跨应用路由与渐进迁移。",
+      "category": "UI 工程",
+      "tags": [
+        "微前端",
+        "路由",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://vercel.com/docs/microfrontends",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/microfrontends/SKILL.md",
+      "capabilities": [
+        "微前端集成",
+        "跨应用路由",
+        "前端独立部署"
+      ],
+      "prompt": "使用 microfrontends，围绕当前项目的目标与现有视觉语言完成微前端集成、跨应用路由、前端独立部署。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-react-best-practices",
+      "name": "react-best-practices",
+      "description": "检查 React 与 TypeScript 组件的结构、状态、可访问性和性能。",
+      "category": "UI 工程",
+      "tags": [
+        "React",
+        "TypeScript",
+        "组件",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://react.dev/reference/react",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/react-best-practices/SKILL.md",
+      "capabilities": [
+        "React 组件检查",
+        "Hooks 与状态",
+        "可访问性与性能"
+      ],
+      "prompt": "使用 react-best-practices，围绕当前项目的目标与现有视觉语言完成React 组件检查、Hooks 与状态、可访问性与性能。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-routing-middleware",
+      "name": "routing-middleware",
+      "description": "配置网站请求路由、重写与重定向，支持前端页面导航。",
+      "category": "UI 工程",
+      "tags": [
+        "路由",
+        "Vercel",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://nextjs.org/docs/app/api-reference/file-conventions/proxy",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/routing-middleware/SKILL.md",
+      "capabilities": [
+        "页面重写",
+        "导航重定向",
+        "网站请求路由"
+      ],
+      "prompt": "使用 routing-middleware，围绕当前项目的目标与现有视觉语言完成页面重写、导航重定向、网站请求路由。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-vercel-cli",
+      "name": "vercel-cli",
+      "description": "通过 Vercel CLI 管理网站部署、预览与运行日志。",
+      "category": "部署与交付",
+      "tags": [
+        "Vercel",
+        "CLI",
+        "部署",
+        "build"
+      ],
+      "role": "build",
+      "source": "https://vercel.com/docs/cli",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/vercel-cli/SKILL.md",
+      "capabilities": [
+        "网站部署",
+        "预览管理",
+        "运行日志检查"
+      ],
+      "prompt": "使用 vercel-cli，围绕当前项目的目标与现有视觉语言完成网站部署、预览管理、运行日志检查。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-vercel-verification",
+      "name": "verification",
+      "description": "验证网站从浏览器到接口和数据的完整用户流程。",
+      "category": "浏览器验收",
+      "tags": [
+        "端到端",
+        "Vercel",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "https://vercel.com/docs/projects/project-configuration",
+      "localPath": "openai-curated-remote/vercel/0.54.1/skills/verification/SKILL.md",
+      "capabilities": [
+        "端到端流程",
+        "接口与页面联动",
+        "运行结果验证"
+      ],
+      "prompt": "使用 verification，围绕当前项目的目标与现有视觉语言完成端到端流程、接口与页面联动、运行结果验证。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-visualize-visualize",
+      "name": "visualize",
+      "description": "在对话中预览交互示意、图表、模拟和界面草图。",
+      "category": "可视化",
+      "tags": [
+        "原型",
+        "可视化",
+        "design"
+      ],
+      "role": "design",
+      "source": "local",
+      "localPath": "openai-bundled/visualize/1.0.50/skills/visualize/SKILL.md",
+      "capabilities": [
+        "交互原型示意",
+        "图表与模拟",
+        "界面方案探索"
+      ],
+      "prompt": "使用 visualize，围绕当前项目的目标与现有视觉语言完成交互原型示意、图表与模拟、界面方案探索。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-watch-video-watch",
+      "name": "watch",
+      "description": "分析参考视频的时间轴、关键帧和屏幕文字，支持界面动效研究。",
+      "category": "设计参考",
+      "tags": [
+        "视频参考",
+        "OCR",
+        "动效研究",
+        "verify"
+      ],
+      "role": "verify",
+      "source": "local",
+      "localPath": "watch-video/SKILL.md",
+      "capabilities": [
+        "关键帧提取",
+        "时间轴转录",
+        "屏幕文字分析"
+      ],
+      "prompt": "使用 watch，围绕当前项目的目标与现有视觉语言完成关键帧提取、时间轴转录、屏幕文字分析。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-work-pets-create-pet",
+      "name": "create-pet",
+      "description": "创建和验证用于 ChatGPT Work 的动画角色与精灵图。",
+      "category": "动画与媒体",
+      "tags": [
+        "精灵图",
+        "角色动画",
+        "ChatGPT Work",
+        "design"
+      ],
+      "role": "design",
+      "source": "https://github.com/openai/openai/tree/master/chatgpt/oai-maintained-plugins/plugins/pets",
+      "localPath": "openai-curated-remote/work-pets/0.1.6/skills/create-pet/SKILL.md",
+      "capabilities": [
+        "角色视觉设计",
+        "动画精灵图",
+        "动画预览验证"
+      ],
+      "prompt": "使用 create-pet，围绕当前项目的目标与现有视觉语言完成角色视觉设计、动画精灵图、动画预览验证。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    },
+    {
+      "id": "skill-work-pets-update-pet",
+      "name": "update-pet",
+      "description": "检查、修复和更新已有动画角色的精灵图、外观与预览。",
+      "category": "动画与媒体",
+      "tags": [
+        "精灵图",
+        "角色动画",
+        "ChatGPT Work",
+        "design"
+      ],
+      "role": "design",
+      "source": "https://github.com/openai/openai/tree/master/chatgpt/oai-maintained-plugins/plugins/pets",
+      "localPath": "openai-curated-remote/work-pets/0.1.6/skills/update-pet/SKILL.md",
+      "capabilities": [
+        "精灵图修复",
+        "动画状态检查",
+        "角色外观更新"
+      ],
+      "prompt": "使用 update-pet，围绕当前项目的目标与现有视觉语言完成精灵图修复、动画状态检查、角色外观更新。先读取对应技能的适用范围，再交付可审阅结果并说明验证证据。如需连接器或外部服务，先确认当前会话已连接所需能力。"
+    }
+  ],
+  "resources": [
+    {
+      "id": "shadcn-ui-ui",
+      "name": "shadcn/ui",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "可复制进项目的组件源码，适合建立自己的设计系统。",
+      "mood": "neutral",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/shadcn-ui/ui",
+      "docs": "https://ui.shadcn.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/shadcn-ui/ui/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "radix-ui-primitives",
+      "name": "Radix Primitives",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "无样式的交互与无障碍基础组件，适合深度定制。",
+      "mood": "minimal",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/radix-ui/primitives",
+      "docs": "https://radix-ui.com/primitives",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/radix-ui/primitives/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "mui-material-ui",
+      "name": "Material UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "完整的 Material Design 组件与主题体系。",
+      "mood": "blue",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/mui/material-ui",
+      "docs": "https://mui.com/material-ui/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/mui/material-ui/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "ant-design-ant-design",
+      "name": "Ant Design",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "面向中后台的企业级组件与设计语言。",
+      "mood": "blue",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/ant-design/ant-design",
+      "docs": "https://ant.design",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ant-design/ant-design/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "chakra-ui-chakra-ui",
+      "name": "Chakra UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "以组合与样式属性驱动的应用组件。",
+      "mood": "mint",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/chakra-ui/chakra-ui",
+      "docs": "https://chakra-ui.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/chakra-ui/chakra-ui/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "mantinedev-mantine",
+      "name": "Mantine",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "包含 Hooks、表单与主题配置的应用组件库。",
+      "mood": "blue",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/mantinedev/mantine",
+      "docs": "https://mantine.dev",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/mantinedev/mantine/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "heroui-inc-heroui",
+      "name": "HeroUI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React",
+      "description": "现代应用界面组件，支持主题与交互状态。",
+      "mood": "violet",
+      "tags": [
+        "React",
+        "组件系统"
+      ],
+      "source": "https://github.com/heroui-inc/heroui",
+      "docs": "https://heroui.com",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/heroui-inc/heroui/blob/v3/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "saadeghi-daisyui",
+      "name": "daisyUI",
+      "kind": "opensource",
+      "category": "样式工具",
+      "stack": "HTML / Tailwind",
+      "description": "语义化 CSS 类与多主题，适合快速搭建。",
+      "mood": "mint",
+      "tags": [
+        "HTML",
+        "Tailwind",
+        "样式工具"
+      ],
+      "source": "https://github.com/saadeghi/daisyui",
+      "docs": "https://daisyui.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/saadeghi/daisyui/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "themesberg-flowbite",
+      "name": "Flowbite",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "HTML / Tailwind",
+      "description": "基于 Tailwind 的常见界面组件与交互。",
+      "mood": "blue",
+      "tags": [
+        "HTML",
+        "Tailwind",
+        "组件系统"
+      ],
+      "source": "https://github.com/themesberg/flowbite",
+      "docs": "https://flowbite.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/themesberg/flowbite/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "tailwindlabs-headlessui",
+      "name": "Headless UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "React / Vue",
+      "description": "可自行设计外观的无样式交互组件。",
+      "mood": "neutral",
+      "tags": [
+        "React",
+        "Vue",
+        "组件系统"
+      ],
+      "source": "https://github.com/tailwindlabs/headlessui",
+      "docs": "https://headlessui.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tailwindlabs/headlessui/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "unovue-reka-ui",
+      "name": "Reka UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Vue",
+      "description": "面向 Vue 的无样式可访问组件基础。",
+      "mood": "mint",
+      "tags": [
+        "Vue",
+        "组件系统"
+      ],
+      "source": "https://github.com/unovue/reka-ui",
+      "docs": "https://reka-ui.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/unovue/reka-ui/blob/v2/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "unovue-shadcn-vue",
+      "name": "shadcn-vue",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Vue",
+      "description": "可复制和改造的 Vue 组件源码。",
+      "mood": "neutral",
+      "tags": [
+        "Vue",
+        "组件系统"
+      ],
+      "source": "https://github.com/unovue/shadcn-vue",
+      "docs": "https://shadcn-vue.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/unovue/shadcn-vue/blob/dev/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "vuecomponent-ant-design-vue",
+      "name": "Ant Design Vue",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Vue",
+      "description": "Ant Design 设计语言的 Vue 实现。",
+      "mood": "blue",
+      "tags": [
+        "Vue",
+        "组件系统"
+      ],
+      "source": "https://github.com/vueComponent/ant-design-vue",
+      "docs": "https://antdv.com/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/vueComponent/ant-design-vue/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "element-plus-element-plus",
+      "name": "Element Plus",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Vue",
+      "description": "适合业务系统和管理界面的 Vue 组件库。",
+      "mood": "blue",
+      "tags": [
+        "Vue",
+        "组件系统"
+      ],
+      "source": "https://github.com/element-plus/element-plus",
+      "docs": "https://element-plus.org",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/element-plus/element-plus/blob/dev/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "nuxt-ui",
+      "name": "Nuxt UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Vue / Nuxt",
+      "description": "适用于 Nuxt 与 Vue 的主题化界面组件。",
+      "mood": "mint",
+      "tags": [
+        "Vue",
+        "Nuxt",
+        "组件系统"
+      ],
+      "source": "https://github.com/nuxt/ui",
+      "docs": "https://ui.nuxt.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/nuxt/ui/blob/v4/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "huntabyte-shadcn-svelte",
+      "name": "shadcn-svelte",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Svelte",
+      "description": "Svelte 生态的可复制组件源码。",
+      "mood": "neutral",
+      "tags": [
+        "Svelte",
+        "组件系统"
+      ],
+      "source": "https://github.com/huntabyte/shadcn-svelte",
+      "docs": "https://shadcn-svelte.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/huntabyte/shadcn-svelte/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "huntabyte-bits-ui",
+      "name": "Bits UI",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Svelte",
+      "description": "Svelte 的无样式、可组合交互基础组件。",
+      "mood": "orange",
+      "tags": [
+        "Svelte",
+        "组件系统"
+      ],
+      "source": "https://github.com/huntabyte/bits-ui",
+      "docs": "https://bits-ui.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/huntabyte/bits-ui/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "skeletonlabs-skeleton",
+      "name": "Skeleton",
+      "kind": "opensource",
+      "category": "组件系统",
+      "stack": "Svelte / Tailwind",
+      "description": "主题优先的 UI 工具包与应用组件。",
+      "mood": "mint",
+      "tags": [
+        "Svelte",
+        "Tailwind",
+        "组件系统"
+      ],
+      "source": "https://github.com/skeletonlabs/skeleton",
+      "docs": "https://skeleton.dev",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/skeletonlabs/skeleton/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "carbon-design-system-carbon",
+      "name": "Carbon",
+      "kind": "opensource",
+      "category": "设计系统",
+      "stack": "多框架",
+      "description": "IBM 的企业设计系统，适合复杂数据与业务界面。",
+      "mood": "blue",
+      "tags": [
+        "多框架",
+        "设计系统"
+      ],
+      "source": "https://github.com/carbon-design-system/carbon",
+      "docs": "https://www.carbondesignsystem.com",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/carbon-design-system/carbon/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "microsoft-fluentui",
+      "name": "Fluent UI",
+      "kind": "opensource",
+      "category": "设计系统",
+      "stack": "React / Web Components",
+      "description": "微软的跨平台组件与设计系统。",
+      "mood": "blue",
+      "tags": [
+        "React",
+        "Web Components",
+        "设计系统"
+      ],
+      "source": "https://github.com/microsoft/fluentui",
+      "docs": "https://react.fluentui.dev",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/microsoft/fluentui/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "primer-react",
+      "name": "Primer React",
+      "kind": "opensource",
+      "category": "设计系统",
+      "stack": "React",
+      "description": "GitHub 的 React 界面组件与设计实践。",
+      "mood": "neutral",
+      "tags": [
+        "React",
+        "设计系统"
+      ],
+      "source": "https://github.com/primer/react",
+      "docs": "https://primer.style/product/getting-started/react/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/primer/react/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "magicuidesign-magicui",
+      "name": "Magic UI",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "React / Motion",
+      "description": "面向产品落地页的可复制动画与视觉效果。",
+      "mood": "violet",
+      "tags": [
+        "React",
+        "Motion",
+        "动效"
+      ],
+      "source": "https://github.com/magicuidesign/magicui",
+      "docs": "https://magicui.design",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/magicuidesign/magicui/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "davidhdev-react-bits",
+      "name": "React Bits",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "React",
+      "description": "动画、文字效果和视觉背景；按仓库许可证使用。",
+      "mood": "orange",
+      "tags": [
+        "React",
+        "动效"
+      ],
+      "source": "https://github.com/DavidHDev/react-bits",
+      "docs": "https://reactbits.dev",
+      "license": "MIT + Commons Clause",
+      "licenseUrl": "https://github.com/DavidHDev/react-bits/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "2026-10-22 读取 LICENSE.md：允许作为应用的一部分使用；禁止把组件、工具或导出物本身作为独立资源重新分发或销售。此项目为源码可见资源，不标为宽松开源，本工作台仅提供链接，不打包其实现。",
+      "projectType": "source-available"
+    },
+    {
+      "id": "motiondivision-motion",
+      "name": "Motion",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "JavaScript / React",
+      "description": "从微交互到页面转场的动画引擎。",
+      "mood": "orange",
+      "tags": [
+        "JavaScript",
+        "React",
+        "动效"
+      ],
+      "source": "https://github.com/motiondivision/motion",
+      "docs": "https://motion.dev",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/motiondivision/motion/blob/main/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "juliangarnier-anime",
+      "name": "Anime.js",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "JavaScript",
+      "description": "时间线、SVG、滚动与布局相关动画。",
+      "mood": "orange",
+      "tags": [
+        "JavaScript",
+        "动效"
+      ],
+      "source": "https://github.com/juliangarnier/anime",
+      "docs": "https://animejs.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/juliangarnier/anime/blob/master/LICENSE.md",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "pmndrs-react-spring",
+      "name": "React Spring",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "React",
+      "description": "基于弹簧物理的交互动画。",
+      "mood": "violet",
+      "tags": [
+        "React",
+        "动效"
+      ],
+      "source": "https://github.com/pmndrs/react-spring",
+      "docs": "http://www.react-spring.dev/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/pmndrs/react-spring/blob/next/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "formkit-auto-animate",
+      "name": "AutoAnimate",
+      "kind": "opensource",
+      "category": "动效",
+      "stack": "多框架",
+      "description": "为列表和布局变化补上自动过渡动画。",
+      "mood": "mint",
+      "tags": [
+        "多框架",
+        "动效"
+      ],
+      "source": "https://github.com/formkit/auto-animate",
+      "docs": "https://auto-animate.formkit.com",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/formkit/auto-animate/blob/master/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "lucide-icons-lucide",
+      "name": "Lucide",
+      "kind": "opensource",
+      "category": "图标",
+      "stack": "多框架",
+      "description": "统一笔画风格的可定制 SVG 图标。",
+      "mood": "neutral",
+      "tags": [
+        "多框架",
+        "图标"
+      ],
+      "source": "https://github.com/lucide-icons/lucide",
+      "docs": "https://lucide.dev",
+      "license": "ISC + MIT",
+      "licenseUrl": "https://github.com/lucide-icons/lucide/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "主体 ISC；部分源自 Feather 的图标为 MIT。使用时保留相应声明。工作台未打包其图标源码。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "phosphor-icons-core",
+      "name": "Phosphor Icons",
+      "kind": "opensource",
+      "category": "图标",
+      "stack": "SVG",
+      "description": "多字重图标系统，适合产品界面。",
+      "mood": "mint",
+      "tags": [
+        "SVG",
+        "图标"
+      ],
+      "source": "https://github.com/phosphor-icons/core",
+      "docs": "https://github.com/phosphor-icons/core",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/phosphor-icons/core/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "tabler-tabler-icons",
+      "name": "Tabler Icons",
+      "kind": "opensource",
+      "category": "图标",
+      "stack": "多框架",
+      "description": "可调整大小与笔画的开源 SVG 图标集合。",
+      "mood": "blue",
+      "tags": [
+        "多框架",
+        "图标"
+      ],
+      "source": "https://github.com/tabler/tabler-icons",
+      "docs": "https://tabler.io/icons",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tabler/tabler-icons/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "tabler-tabler",
+      "name": "Tabler",
+      "kind": "opensource",
+      "category": "模板",
+      "stack": "HTML / Bootstrap",
+      "description": "可复用的管理后台组件与页面模板。",
+      "mood": "blue",
+      "tags": [
+        "HTML",
+        "Bootstrap",
+        "模板"
+      ],
+      "source": "https://github.com/tabler/tabler",
+      "docs": "https://tabler.io",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tabler/tabler/blob/dev/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "cruip-tailwind-landing-page-template",
+      "name": "Open Landing",
+      "kind": "opensource",
+      "category": "模板",
+      "stack": "React / Tailwind",
+      "description": "产品落地页模板，用于学习页面结构与节奏。",
+      "mood": "violet",
+      "tags": [
+        "React",
+        "Tailwind",
+        "模板"
+      ],
+      "source": "https://github.com/cruip/tailwind-landing-page-template",
+      "docs": "https://cruip.com",
+      "license": "GPL 声明 + 附加限制（待核实）",
+      "licenseUrl": "https://github.com/cruip/tailwind-landing-page-template#terms-and-license",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "README 声明 GPL，同时提出不再分发模板的附加要求；授权存在需澄清之处。本目录仅给官方入口，不打包模板代码。",
+      "projectType": "source-available"
+    },
+    {
+      "id": "themesberg-flowbite-admin-dashboard",
+      "name": "Flowbite Admin",
+      "kind": "opensource",
+      "category": "模板",
+      "stack": "HTML / Tailwind",
+      "description": "包含常用管理界面的后台模板。",
+      "mood": "blue",
+      "tags": [
+        "HTML",
+        "Tailwind",
+        "模板"
+      ],
+      "source": "https://github.com/themesberg/flowbite-admin-dashboard",
+      "docs": "https://flowbite-admin-dashboard.vercel.app",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/themesberg/flowbite-admin-dashboard/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "tailwindlabs-tailwindcss",
+      "name": "Tailwind CSS",
+      "kind": "opensource",
+      "category": "样式工具",
+      "stack": "CSS",
+      "description": "实用类样式框架，用 token 构建统一界面。",
+      "mood": "mint",
+      "tags": [
+        "CSS",
+        "样式工具"
+      ],
+      "source": "https://github.com/tailwindlabs/tailwindcss",
+      "docs": "https://tailwindcss.com/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tailwindlabs/tailwindcss/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "unocss-unocss",
+      "name": "UnoCSS",
+      "kind": "opensource",
+      "category": "样式工具",
+      "stack": "CSS",
+      "description": "可配置的即时原子 CSS 引擎。",
+      "mood": "neutral",
+      "tags": [
+        "CSS",
+        "样式工具"
+      ],
+      "source": "https://github.com/unocss/unocss",
+      "docs": "https://unocss.dev",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/unocss/unocss/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "uiverse-io-galaxy",
+      "name": "Uiverse Galaxy",
+      "kind": "opensource",
+      "category": "组件集合",
+      "stack": "HTML / CSS",
+      "description": "社区交互组件集合，需逐项确认作者与授权。",
+      "mood": "violet",
+      "tags": [
+        "HTML",
+        "CSS",
+        "组件集合"
+      ],
+      "source": "https://github.com/uiverse-io/galaxy",
+      "docs": "https://Uiverse.io",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/uiverse-io/galaxy/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    },
+    {
+      "id": "voltagent-awesome-design-md",
+      "name": "Awesome Design MD",
+      "kind": "opensource",
+      "category": "设计参考",
+      "stack": "Markdown",
+      "description": "将网站视觉语言整理为可检索的 DESIGN.md 文档。",
+      "mood": "neutral",
+      "tags": [
+        "Markdown",
+        "设计参考"
+      ],
+      "source": "https://github.com/VoltAgent/awesome-design-md",
+      "docs": "https://getdesign.md/",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/VoltAgent/awesome-design-md/blob/main/LICENSE",
+      "verifiedAt": "2026-10-22",
+      "archived": false,
+      "notes": "目录收录开源或源码可见项目；免费核心与商业扩展授权请分别确认。工作台演示为独立编写，不代表已安装此库。",
+      "projectType": "open-source"
+    }
+  ]
+}

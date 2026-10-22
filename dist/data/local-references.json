@@ -1,0 +1,4687 @@
+[
+  {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "category": "电商与零售",
+    "tags": [
+      "电商与零售",
+      "DESIGN.md",
+      "浅色"
+    ],
+    "description": "A warm, generous consumer marketplace anchored on a clean white canvas and Airbnb Rausch (#ff385c), the single brand voltage that carries every primary CTA, search-button orb, and rating dot",
+    "colors": [
+      "#FF385C",
+      "#E00B41",
+      "#FFD1DA",
+      "#C13515",
+      "#B32505",
+      "#460479",
+      "#92174D",
+      "#222222",
+      "#3F3F3F",
+      "#6A6A6A",
+      "#929292",
+      "#DDDDDD",
+      "#EBEBEB",
+      "#C1C1C1",
+      "#FFFFFF",
+      "#F7F7F7",
+      "#F2F2F2",
+      "#428BFF",
+      "#000000"
+    ],
+    "designTokens": {
+      "accent": "#FF385C",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#222222",
+      "muted": "#6A6A6A",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/airbnb/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/airbnb/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以洁净白底呈现温暖宽松的消费市场界面，统一用珊瑚红突出主要按钮、搜索入口与评分标记。"
+  },
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "A sober, editorial workflow-software interface anchored on white canvas and dark-ink type, where brand voltage comes from full-bleed signature cards in coral, dark green, peach, and dark navy that punctuate long-scroll explainer pages",
+    "colors": [
+      "#181D26",
+      "#0D1218",
+      "#333840",
+      "#41454D",
+      "#DDDDDD",
+      "#9297A0",
+      "#FFFFFF",
+      "#F8FAFC",
+      "#E0E2E6",
+      "#1D1F25",
+      "#AA2D00",
+      "#0A2E0E",
+      "#F5E9D4",
+      "#FCAB79",
+      "#A8D8C4",
+      "#F4D35E",
+      "#D9A441",
+      "#1B61C9",
+      "#1A3866",
+      "#254FAD",
+      "#458FFF",
+      "#006400",
+      "#39BF45"
+    ],
+    "designTokens": {
+      "accent": "#181D26",
+      "bg": "#FFFFFF",
+      "surface": "#F8FAFC",
+      "ink": "#181D26",
+      "muted": "#41454D",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/airtable/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/airtable/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白底和深色文字建立克制的编辑式界面，穿插珊瑚、深绿、桃色及藏蓝整幅卡片，组织长页说明。"
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "深色",
+      "渐变与光效",
+      "影像主导"
+    ],
+    "description": "A photography-first interface that turns marketing into a museum gallery",
+    "colors": [
+      "#0066CC",
+      "#0071E3",
+      "#2997FF",
+      "#1D1D1F",
+      "#FFFFFF",
+      "#CCCCCC",
+      "#333333",
+      "#7A7A7A",
+      "#F0F0F0",
+      "#E0E0E0",
+      "#F5F5F7",
+      "#FAFAFC",
+      "#272729",
+      "#2A2A2C",
+      "#252527",
+      "#000000",
+      "#D2D2D7"
+    ],
+    "designTokens": {
+      "accent": "#0066CC",
+      "bg": "#FFFFFF",
+      "ink": "#1D1D1F",
+      "muted": "#1D1D1F",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/apple/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/apple/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以摄影作为界面叙事的核心，让产品展示带有博物馆画廊般的观赏感，整体视觉围绕影像展开。"
+  },
+  {
+    "id": "binance",
+    "name": "Binance",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "A confident financial-platform interface anchored on a deep near-black canvas, where Binance's iconic yellow (#FCD535) carries every primary CTA, brand accent, and value-claim moment",
+    "colors": [
+      "#FCD535",
+      "#F0B90B",
+      "#3A3A1F",
+      "#181A20",
+      "#EAECEF",
+      "#707A8A",
+      "#929AA5",
+      "#2B3139",
+      "#CDD1D6",
+      "#FFFFFF",
+      "#0B0E11",
+      "#1E2329",
+      "#FAFAFA",
+      "#F5F5F5",
+      "#0ECB81",
+      "#F6465D",
+      "#2DBDB6",
+      "#3B82F6"
+    ],
+    "designTokens": {
+      "accent": "#FCD535",
+      "ink": "#181A20",
+      "muted": "#707A8A",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/binance/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/binance/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以接近纯黑的深色画布营造鲜明的金融平台气质，集中用高亮黄色强调主要操作与核心价值信息。"
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "BMW's corporate site — distinct from BMW M's motorsport-bombastic variant, this is a measured and settled corporate-automotive interface",
+    "colors": [
+      "#1C69D4",
+      "#0653B6",
+      "#D6D6D6",
+      "#262626",
+      "#3C3C3C",
+      "#1A1A1A",
+      "#6B6B6B",
+      "#9A9A9A",
+      "#E6E6E6",
+      "#CCCCCC",
+      "#FFFFFF",
+      "#F7F7F7",
+      "#FAFAFA",
+      "#EBEBEB",
+      "#1A2129",
+      "#262E38",
+      "#BBBBBB",
+      "#0066B1",
+      "#E22718",
+      "#22C55E",
+      "#F59E0B",
+      "#DC2626"
+    ],
+    "designTokens": {
+      "accent": "#1C69D4",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "ink": "#262626",
+      "muted": "#6B6B6B",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/bmw/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/bmw/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以沉稳、节制的企业汽车界面建立成熟感，整体视觉语气端正安定，呈现平和稳健的品牌展示气质。"
+  },
+  {
+    "id": "bmw-m",
+    "name": "BMW M",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "A motorsport-engineering interface anchored on a near-black canvas with white BMW Type Next Latin display headlines in confident UPPERCASE",
+    "colors": [
+      "#FFFFFF",
+      "#BBBBBB",
+      "#E6E6E6",
+      "#7E7E7E",
+      "#3C3C3C",
+      "#262626",
+      "#000000",
+      "#1A1A1A",
+      "#0D0D0D",
+      "#0066B1",
+      "#1C69D4",
+      "#E22718",
+      "#0653B6",
+      "#2B2B2B",
+      "#F4B400",
+      "#0FA336"
+    ],
+    "designTokens": {
+      "accent": "#FFFFFF",
+      "bg": "#000000",
+      "surface": "#1A1A1A",
+      "ink": "#FFFFFF",
+      "muted": "#7E7E7E",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/bmw-m/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/bmw-m/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近黑画布承托白色大写展示标题，结合清晰有力的字形表达，形成偏重赛车工程的界面气质。"
+  },
+  {
+    "id": "bugatti",
+    "name": "Bugatti",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "An austere luxury-automotive interface that uses near-pure black canvas, white uppercase letterspaced display, and full-bleed automotive photography as the only voltage",
+    "colors": [
+      "#FFFFFF",
+      "#CCCCCC",
+      "#E6E6E6",
+      "#999999",
+      "#666666",
+      "#262626",
+      "#3A3A3A",
+      "#000000",
+      "#0D0D0D",
+      "#141414",
+      "#1F1F1F",
+      "#C3D9F3",
+      "#D4A017",
+      "#5FA657"
+    ],
+    "designTokens": {
+      "accent": "#FFFFFF",
+      "bg": "#000000",
+      "surface": "#141414",
+      "ink": "#FFFFFF",
+      "muted": "#999999",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/bugatti/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/bugatti/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近乎纯黑的背景、加宽字距的白色大写标题和满幅汽车摄影构成画面，呈现克制的豪华感。"
+  },
+  {
+    "id": "cal",
+    "name": "Cal.com",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "A clean, calendar-software-first interface anchored on white canvas with black primary CTAs and custom Cal Sans display typography",
+    "colors": [
+      "#111111",
+      "#242424",
+      "#E5E7EB",
+      "#374151",
+      "#6B7280",
+      "#898989",
+      "#F3F4F6",
+      "#FFFFFF",
+      "#F8F9FA",
+      "#F5F5F5",
+      "#101010",
+      "#1A1A1A",
+      "#A1A1AA",
+      "#3B82F6",
+      "#10B981",
+      "#F59E0B",
+      "#EF4444",
+      "#FB923C",
+      "#EC4899",
+      "#8B5CF6",
+      "#34D399"
+    ],
+    "designTokens": {
+      "accent": "#111111",
+      "bg": "#FFFFFF",
+      "surface": "#F5F5F5",
+      "ink": "#111111",
+      "muted": "#6B7280",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/cal/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/cal/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白色画布和黑色主要按钮构成洁净的日历产品界面，搭配定制展示字体，突出实用清晰的产品表达。"
+  },
+  {
+    "id": "cho-kaguyahime",
+    "name": "超かぐや姫！",
+    "category": "动画与音乐企划",
+    "tags": [
+      "动画与音乐企划",
+      "DESIGN.md",
+      "渐变与光效",
+      "动画官网",
+      "角色专题",
+      "和风",
+      "霓虹",
+      "舞台构图"
+    ],
+    "description": "官方动画电影网站的本地设计研究：贯穿页面的圆形舞台、和风霓虹母题、深浅章节、内容专属组件，以及手机端重新构图",
+    "colors": [
+      "#FF635D",
+      "#00C0C3",
+      "#FFE48F",
+      "#282828",
+      "#CBC4F8",
+      "#F5BABF"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "local",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "NOASSERTION",
+        "status": "not-established",
+        "source": "local",
+        "evidence": "design-md-library/references/observed-sites/cho-kaguyahime/DESIGN.md",
+        "fullTextRedistributable": false,
+        "note": "本地研究未发现明确的再分发许可；仅提供原创能力摘要与颜色事实，不附全文。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/observed-sites/cho-kaguyahime/DESIGN.md",
+      "本地直接研究，独立于 awesome-design-md；source=local 不代表研究对象网站没有公开来源。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。",
+      "研究对象：https://www.cho-kaguyahime.com/；研究记录日期 2026-09-09；本文不是该站官方设计规范。"
+    ],
+    "descriptionZh": "本地站点研究提炼贯穿页面的圆形舞台、和风霓虹与深浅章节，结合内容专属组件和手机端重新构图。"
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "A warm-canvas editorial interface for Anthropic's Claude product",
+    "colors": [
+      "#CC785C",
+      "#A9583E",
+      "#E6DFD8",
+      "#141413",
+      "#3D3D3A",
+      "#252523",
+      "#6C6A64",
+      "#8E8B82",
+      "#EBE6DF",
+      "#FAF9F5",
+      "#F5F0E8",
+      "#EFE9DE",
+      "#E8E0D2",
+      "#181715",
+      "#252320",
+      "#1F1E1B",
+      "#FFFFFF",
+      "#A09D96",
+      "#5DB8A6",
+      "#E8A55A",
+      "#5DB872",
+      "#D4A017",
+      "#C64545"
+    ],
+    "designTokens": {
+      "accent": "#CC785C",
+      "bg": "#FAF9F5",
+      "surface": "#EFE9DE",
+      "ink": "#141413",
+      "muted": "#6C6A64",
+      "font": "serif"
+    },
+    "source": "https://getdesign.md/claude/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/claude/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以温暖的画布和编辑式编排塑造亲和的人工智能产品界面，整体视觉着重传达温和的阅读气质。"
+  },
+  {
+    "id": "clay",
+    "name": "Clay",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "A vibrant claymation-meets-data interface for Clay.com (GTM data-orchestration platform)",
+    "colors": [
+      "#0A0A0A",
+      "#1F1F1F",
+      "#E5E5E5",
+      "#3A3A3A",
+      "#1A1A1A",
+      "#6A6A6A",
+      "#9A9A9A",
+      "#F0F0F0",
+      "#FFFAF0",
+      "#FAF5E8",
+      "#F5F0E0",
+      "#EBE6D6",
+      "#0A1A1A",
+      "#1A2A2A",
+      "#FFFFFF",
+      "#A0A0A0",
+      "#FF4D8B",
+      "#1A3A3A",
+      "#B8A4ED",
+      "#FFB084",
+      "#E8B94A",
+      "#A4D4C5",
+      "#FF6B5A",
+      "#22C55E",
+      "#F59E0B",
+      "#EF4444"
+    ],
+    "designTokens": {
+      "accent": "#0A0A0A",
+      "bg": "#FFFAF0",
+      "surface": "#F5F0E0",
+      "ink": "#0A0A0A",
+      "muted": "#6A6A6A",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/clay/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/clay/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将黏土动画般的鲜活视觉与数据产品表达结合，呈现富有生气的界面，突出创意造型与数据内容的融合。"
+  },
+  {
+    "id": "clickhouse",
+    "name": "ClickHouse",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "A high-performance database interface anchored on near-pure black canvas with electric yellow as the brand voltage",
+    "colors": [
+      "#FAFF69",
+      "#E6EB52",
+      "#3A3A1F",
+      "#FFFFFF",
+      "#CCCCCC",
+      "#E6E6E6",
+      "#888888",
+      "#5A5A5A",
+      "#2A2A2A",
+      "#3A3A3A",
+      "#0A0A0A",
+      "#121212",
+      "#1A1A1A",
+      "#242424",
+      "#22C55E",
+      "#EF4444",
+      "#3B82F6",
+      "#F59E0B"
+    ],
+    "designTokens": {
+      "accent": "#FAFF69",
+      "bg": "#0A0A0A",
+      "surface": "#1A1A1A",
+      "ink": "#FFFFFF",
+      "muted": "#888888",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/clickhouse/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/clickhouse/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以接近纯黑的画布和高亮电黄色形成鲜明对比，将技术产品的力量感集中在简洁有力的色彩关系中。"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "Cohere's 2026 web system is a controlled enterprise AI interface built from stark white editorial space, deep green-black product bands, soft mineral surfaces, rounded media cards, and a distinctive type split between monospaced-feeling display headlines and precise Unica77 UI text",
+    "colors": [
+      "#17171C",
+      "#000000",
+      "#212121",
+      "#003C33",
+      "#071829",
+      "#FFFFFF",
+      "#EEECE7",
+      "#EDFCE9",
+      "#F1F5FF",
+      "#D9D9DD",
+      "#E5E7EB",
+      "#F2F2F2",
+      "#93939F",
+      "#75758A",
+      "#616161",
+      "#1863DC",
+      "#4C6EE6",
+      "#FF7759",
+      "#FFAD9B",
+      "#9B60AA",
+      "#B30000"
+    ],
+    "designTokens": {
+      "accent": "#17171C",
+      "bg": "#FFFFFF",
+      "ink": "#212121",
+      "muted": "#93939F",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/cohere/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/cohere/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以留白充足的白底、深绿黑色产品区和柔和矿物色面构成层次，搭配圆角媒体卡片与差异化字体。"
+  },
+  {
+    "id": "coinbase",
+    "name": "Coinbase",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "浅色",
+      "克制"
+    ],
+    "description": "An institutional-grade crypto exchange whose marketing surfaces read like a quietly-confident financial-services brand",
+    "colors": [
+      "#0052FF",
+      "#003ECC",
+      "#A8B8CC",
+      "#0A0B0D",
+      "#5B616E",
+      "#7C828A",
+      "#A8ACB3",
+      "#DEE1E6",
+      "#EEF0F3",
+      "#FFFFFF",
+      "#F7F7F7",
+      "#16181C",
+      "#05B169",
+      "#CF202F",
+      "#F4B000"
+    ],
+    "designTokens": {
+      "accent": "#0052FF",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#0A0B0D",
+      "muted": "#7C828A",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/coinbase/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/coinbase/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以低调而自信的金融服务视觉呈现加密交易平台，整体气质稳健克制，强调机构级产品的可信感。"
+  },
+  {
+    "id": "composio",
+    "name": "Composio",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "A developer-tools brand for AI-agent tool integration whose marketing surfaces lean into a dark, technical aesthetic with a single deep-electric-blue voltage (#0007cd)",
+    "colors": [
+      "#0007CD",
+      "#0005A3",
+      "#1A26FF",
+      "#FFFFFF",
+      "#A8A8A8",
+      "#888888",
+      "#666666",
+      "#222222",
+      "#1A1A1A",
+      "#333333",
+      "#0F0F0F",
+      "#000000",
+      "#181818",
+      "#2A2A2A",
+      "#00D4FF",
+      "#7B3AED",
+      "#FF4D4D",
+      "#33D17A"
+    ],
+    "designTokens": {
+      "accent": "#0007CD",
+      "bg": "#0F0F0F",
+      "surface": "#181818",
+      "ink": "#FFFFFF",
+      "muted": "#888888",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/composio/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/composio/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深色技术风格呈现开发者工具，用单一深电蓝作为视觉强调，突出人工智能工具集成平台的气质。"
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "克制",
+      "编辑式排版"
+    ],
+    "description": "An AI-first code editor whose marketing site reads like a quietly-confident developer-tools brand with a warm-cream editorial canvas (#f7f7f4) instead of the typical dark IDE atmosphere",
+    "colors": [
+      "#F54E00",
+      "#D04200",
+      "#26251E",
+      "#5A5852",
+      "#807D72",
+      "#A09C92",
+      "#E6E5E0",
+      "#EFEEE8",
+      "#CFCDC4",
+      "#F7F7F4",
+      "#FAFAF7",
+      "#FFFFFF",
+      "#DFA88F",
+      "#9FC9A2",
+      "#9FBBE0",
+      "#C0A8DD",
+      "#C08532",
+      "#CF2D56",
+      "#1F8A65"
+    ],
+    "designTokens": {
+      "accent": "#F54E00",
+      "bg": "#F7F7F4",
+      "surface": "#FFFFFF",
+      "ink": "#26251E",
+      "muted": "#807D72",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/cursor/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/cursor/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以温暖米白的编辑式画布呈现代码工具，整体语气安静自信，让开发者产品带有柔和的阅读氛围。"
+  },
+  {
+    "id": "dell-1996",
+    "name": "Dell (1996)",
+    "category": "复古网页",
+    "tags": [
+      "复古网页",
+      "DESIGN.md",
+      "影像主导",
+      "复古"
+    ],
+    "description": "An inspired interpretation of Dell.com's 1996 design language — a catalog-era enterprise web design built around a literal black page frame, vivid flat color-block \"ribbon cards\" tinted in sage, salmon, periwinkle, sky, peach and lime, chunky Helvetica-Black display titles, Times Roman body copy, and an entire visual vocabulary of pre-Photoshop hand-cut GIF ",
+    "colors": [
+      "#E91D2A",
+      "#FFFFFF",
+      "#000000",
+      "#FCC20F",
+      "#6A26A4",
+      "#0000EE",
+      "#8E8A25",
+      "#B3BD95",
+      "#D77A7A",
+      "#E6915D",
+      "#C0D4A7",
+      "#9AB6C8",
+      "#A5B8C0",
+      "#8C9AE0"
+    ],
+    "designTokens": {
+      "accent": "#E91D2A",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#000000",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/dell-1996/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/dell-1996/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以黑色页面边框、鲜亮平涂色块卡片、厚重标题与罗马体正文组合，呈现早期企业目录网页的复古感。"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "克制",
+      "编辑式排版",
+      "渐变与光效",
+      "影像主导"
+    ],
+    "description": "A voice-AI brand whose marketing surfaces read like a quietly editorial print magazine",
+    "colors": [
+      "#292524",
+      "#0C0A09",
+      "#4E4E4E",
+      "#777169",
+      "#A8A29E",
+      "#E7E5E4",
+      "#F0EFED",
+      "#D6D3D1",
+      "#F5F5F5",
+      "#FAFAFA",
+      "#FFFFFF",
+      "#1C1917",
+      "#A7E5D3",
+      "#F4C5A8",
+      "#C8B8E0",
+      "#A8C8E8",
+      "#E8B8C4",
+      "#DC2626",
+      "#16A34A"
+    ],
+    "designTokens": {
+      "accent": "#292524",
+      "bg": "#F5F5F5",
+      "surface": "#FFFFFF",
+      "ink": "#0C0A09",
+      "muted": "#777169",
+      "font": "serif"
+    },
+    "source": "https://getdesign.md/elevenlabs/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/elevenlabs/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以安静的纸质杂志感呈现语音人工智能产品，将编辑式视觉气质融入营销页面，强调平和的内容表达。"
+  },
+  {
+    "id": "expo",
+    "name": "Expo",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "克制",
+      "编辑式排版",
+      "渐变与光效"
+    ],
+    "description": "A React Native developer-platform whose marketing site reads like a quietly-confident infrastructure brand",
+    "colors": [
+      "#000000",
+      "#1A1A1A",
+      "#0D74CE",
+      "#476CFF",
+      "#171717",
+      "#60646C",
+      "#999999",
+      "#CCCCCC",
+      "#F0F0F3",
+      "#F5F5F7",
+      "#DCDEE0",
+      "#FFFFFF",
+      "#FAFAFA",
+      "#B0B4BA",
+      "#CFE7FF",
+      "#A8C8E8",
+      "#AB6400",
+      "#8145B5",
+      "#47C2FF",
+      "#EB8E90",
+      "#16A34A"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#171717",
+      "muted": "#999999",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/expo/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/expo/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以安静而自信的基础设施品牌气质呈现开发平台，视觉表达保持稳健，让营销页面传达清晰的技术定位。"
+  },
+  {
+    "id": "ferrari",
+    "name": "Ferrari",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "A luxury-automotive brand whose marketing surfaces read as cinematic editorial",
+    "colors": [
+      "#DA291C",
+      "#B01E0A",
+      "#9D2211",
+      "#FFFFFF",
+      "#969696",
+      "#181818",
+      "#666666",
+      "#8F8F8F",
+      "#303030",
+      "#D2D2D2",
+      "#EBEBEB",
+      "#F7F7F7",
+      "#FFF200",
+      "#F6E500",
+      "#4C98B9",
+      "#03904A",
+      "#F13A2C"
+    ],
+    "designTokens": {
+      "accent": "#DA291C",
+      "bg": "#181818",
+      "surface": "#303030",
+      "ink": "#FFFFFF",
+      "muted": "#666666",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/ferrari/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/ferrari/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将豪华汽车的营销展示处理成电影感编辑画面，以具有叙事意味的视觉气质，建立高端产品的观赏感。"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "A confident black-and-white editorial frame interrupted by oversized, hand-cut pastel color blocks",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#E6E6E6",
+      "#F1F1F1",
+      "#F7F7F5",
+      "#DCEEB1",
+      "#C5B0F4",
+      "#F4ECD6",
+      "#EFD4D4",
+      "#C8E6CD",
+      "#F3C9B6",
+      "#1F1D3D",
+      "#FF3D8B",
+      "#1EA64A"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#F7F7F5",
+      "ink": "#000000",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/figma/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/figma/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以鲜明的黑白编辑式框架组织页面，再穿插放大的手工剪纸感粉彩色块，营造自信而活泼的视觉节奏。"
+  },
+  {
+    "id": "framer",
+    "name": "Framer",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "A confident dark-canvas builder marketing site that treats the page like a working artboard — pure black surfaces, white display type set in GT Walsheim Medium with aggressive negative tracking, and a single confident blue (#0099ff) reserved for hyperlinks and selection states",
+    "colors": [
+      "#FFFFFF",
+      "#000000",
+      "#0099FF",
+      "#999999",
+      "#090909",
+      "#141414",
+      "#1C1C1C",
+      "#262626",
+      "#1A1A1A",
+      "#D44DF0",
+      "#6A4CF5",
+      "#FF7A3D",
+      "#FF5577",
+      "#22C55E"
+    ],
+    "designTokens": {
+      "accent": "#FFFFFF",
+      "bg": "#090909",
+      "surface": "#141414",
+      "ink": "#FFFFFF",
+      "muted": "#999999",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/framer/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/framer/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以纯黑画布和紧凑的白色展示字塑造工作画板感，集中用明亮蓝色标示链接与选中状态，层次鲜明。"
+  },
+  {
+    "id": "hashicorp",
+    "name": "HashiCorp",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "An enterprise-infrastructure marketing canvas built around a near-black ground (#000000) and a system of per-product accent colors — Terraform purple, Vault yellow, Consul pink, Waypoint cyan, Vagrant blue — that act as identity tokens rather than decorative palette",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#2B89FF",
+      "#B2B6BD",
+      "#656A76",
+      "#15181E",
+      "#1F232B",
+      "#3B3D45",
+      "#252830",
+      "#7B42BC",
+      "#911CED",
+      "#FFCF25",
+      "#E62B1E",
+      "#14C6CB",
+      "#12B6BB",
+      "#1868F2",
+      "#00CA8E",
+      "#F24C53",
+      "#FBEABF",
+      "#BB5A00",
+      "#101A59",
+      "#A737FF"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#000000",
+      "surface": "#15181E",
+      "ink": "#FFFFFF",
+      "muted": "#B2B6BD",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/hashicorp/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/hashicorp/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近黑背景构建企业技术产品界面，为不同产品分配紫、黄、粉、青、蓝等强调色，作为身份识别标记。"
+  },
+  {
+    "id": "hp",
+    "name": "HP",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "An inspired interpretation of HP's design language — a white-paper enterprise-consumer system anchored by HP Electric Blue (#024ad8) as the lone signal CTA, near-black ink (#1a1a1a) for headlines, geometric Forma-DJR sans throughout, and angular blue-chevron decorations that nod to the HP wordmark's slashes",
+    "colors": [
+      "#024AD8",
+      "#296EF9",
+      "#0E3191",
+      "#C9E0FC",
+      "#FFFFFF",
+      "#1A1A1A",
+      "#000000",
+      "#292929",
+      "#F7F7F7",
+      "#E8E8E8",
+      "#C2C2C2",
+      "#636363",
+      "#3D3D3D",
+      "#FF5050",
+      "#F9D4D2",
+      "#B3262B",
+      "#5A1313",
+      "#8EBDCE",
+      "#7FADBE",
+      "#356373"
+    ],
+    "designTokens": {
+      "accent": "#024AD8",
+      "bg": "#FFFFFF",
+      "ink": "#1A1A1A",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/hp/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/hp/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白纸般的画布、近黑标题和几何无衬线字构成界面，用电蓝行动按钮及锐角装饰建立清晰视觉信号。"
+  },
+  {
+    "id": "ibm",
+    "name": "IBM",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色"
+    ],
+    "description": "An enterprise-marketing canvas faithful to Carbon Design System: white surfaces, charcoal type, IBM Blue (#0f62fe) as the single confident accent, and a deliberately flat-square aesthetic where corners stay at 0–4px",
+    "colors": [
+      "#0F62FE",
+      "#FFFFFF",
+      "#161616",
+      "#525252",
+      "#8C8C8C",
+      "#F4F4F4",
+      "#E0E0E0",
+      "#262626",
+      "#C6C6C6",
+      "#0043CE",
+      "#002D9C",
+      "#0050E6",
+      "#24A148",
+      "#F1C21B",
+      "#DA1E28"
+    ],
+    "designTokens": {
+      "accent": "#0F62FE",
+      "bg": "#FFFFFF",
+      "surface": "#F4F4F4",
+      "ink": "#161616",
+      "muted": "#525252",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/ibm/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/ibm/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白色表面、炭黑文字与单一蓝色强调构建企业界面，采用平直方正的造型，体现严谨的系统化设计。"
+  },
+  {
+    "id": "intercom",
+    "name": "Intercom",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "浅色",
+      "克制",
+      "编辑式排版"
+    ],
+    "description": "An editorial customer-service marketing canvas built around a soft cream-white ground, charcoal type set in Saans (Intercom's proprietary geometric sans), and a single confident Fin Orange (#ff5600) reserved for the Fin AI brand",
+    "colors": [
+      "#111111",
+      "#FFFFFF",
+      "#626260",
+      "#7B7B78",
+      "#9C9FA5",
+      "#F5F1EC",
+      "#EBE7E1",
+      "#000000",
+      "#313130",
+      "#D3CEC6",
+      "#FF5600",
+      "#FE4C02",
+      "#65B5FF",
+      "#0BDF50",
+      "#FF2067",
+      "#B3E01C",
+      "#03B2CB",
+      "#0007CB",
+      "#C41C1C"
+    ],
+    "designTokens": {
+      "accent": "#111111",
+      "bg": "#F5F1EC",
+      "surface": "#FFFFFF",
+      "ink": "#111111",
+      "muted": "#626260",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/intercom/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/intercom/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以柔和奶白背景与炭黑几何无衬线字建立编辑式界面，将鲜亮橙色集中用于人工智能产品的品牌强调。"
+  },
+  {
+    "id": "kraken",
+    "name": "Kraken",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "浅色"
+    ],
+    "description": "Kraken's website is a clean, trustworthy crypto exchange that uses purple as its commanding brand color",
+    "colors": [
+      "#7132F5",
+      "#5741D8",
+      "#5B1ECF",
+      "#101114",
+      "#149E61",
+      "#686B82",
+      "#9497A9",
+      "#FFFFFF",
+      "#DEDEE5",
+      "#026B3F",
+      "#484B5E"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/kraken/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/kraken/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以紫色作为主导视觉颜色，构建洁净而可信的加密交易平台界面，强调金融产品清楚稳健的整体观感。"
+  },
+  {
+    "id": "lamborghini",
+    "name": "Lamborghini",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "Lamborghini's website is a cathedral of darkness — a digital stage where jet-black surfaces stretch infinitely and every element emerges from the void like a machine under a spotlight",
+    "colors": [
+      "#000000",
+      "#FFC000",
+      "#FFFFFF",
+      "#917300",
+      "#FFCE3E",
+      "#29ABE2",
+      "#3860BE",
+      "#202020",
+      "#181818",
+      "#F8F8F8",
+      "#E6E6E6",
+      "#F5F5F5",
+      "#494949",
+      "#7D7D7D",
+      "#969696",
+      "#666666",
+      "#555555",
+      "#313131",
+      "#1EAEDB",
+      "#DDDDDD"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/lamborghini/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/lamborghini/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以大面积漆黑表面营造深邃的数字舞台，让界面元素如聚光灯下的机械般从暗处浮现，形成戏剧张力。"
+  },
+  {
+    "id": "linear.app",
+    "name": "Linear",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "深色",
+      "克制"
+    ],
+    "description": "A near-black product-focused marketing canvas built around #010102 (the deepest dark surface of any tool in this collection), light gray text (#f7f8f8), and the signature Linear lavender-blue (#5e6ad2) used as the single chromatic accent",
+    "colors": [
+      "#5E6AD2",
+      "#FFFFFF",
+      "#828FFF",
+      "#5E69D1",
+      "#F7F8F8",
+      "#D0D6E0",
+      "#8A8F98",
+      "#62666D",
+      "#010102",
+      "#0F1011",
+      "#141516",
+      "#18191A",
+      "#191A1B",
+      "#23252A",
+      "#34343A",
+      "#3E3E44",
+      "#F5F6F6",
+      "#F6F7F7",
+      "#000000",
+      "#7A7FAD",
+      "#27A644"
+    ],
+    "designTokens": {
+      "accent": "#5E6AD2",
+      "bg": "#010102",
+      "surface": "#0F1011",
+      "ink": "#F7F8F8",
+      "muted": "#D0D6E0",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/linear.app/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/linear.app/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以极深近黑背景承托浅灰文字，仅用薰衣草蓝作为彩色强调，形成聚焦产品、清晰克制的营销界面。"
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "浅色",
+      "克制"
+    ],
+    "description": "Lovable's website radiates warmth through restraint",
+    "colors": [
+      "#F7F4ED",
+      "#1C1C1C",
+      "#ECEAE4",
+      "#FCFBF8",
+      "#5F5F5D",
+      "#3B82F6",
+      "#FFFFFF"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/lovable/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/lovable/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以克制的视觉表达营造温暖气质，整体界面保持收敛，让开发工具的营销呈现带有亲和而平静的观感。"
+  },
+  {
+    "id": "mastercard",
+    "name": "Mastercard",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "Mastercard's experience reads like a warm, editorial magazine built from soft stone and signal orange",
+    "colors": [
+      "#F3F0EE",
+      "#141413",
+      "#EB001B",
+      "#F79E1B",
+      "#CF4500",
+      "#F37338",
+      "#9A3A0A",
+      "#FCFBFA",
+      "#FFFFFF",
+      "#F4F4F4",
+      "#262627",
+      "#696969",
+      "#555555",
+      "#565656",
+      "#D1CDC7",
+      "#3860BE",
+      "#000000",
+      "#2B2B2B",
+      "#E8E2DA"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/mastercard/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/mastercard/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以柔和石色和醒目橙色构建温暖的编辑式体验，让金融产品页面呈现杂志般的视觉气质与内容感。"
+  },
+  {
+    "id": "meta",
+    "name": "Meta",
+    "category": "电商与零售",
+    "tags": [
+      "电商与零售",
+      "DESIGN.md",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "Meta's design system spans hardware commerce (Quest VR, Ray-Ban Meta AI glasses) and brand surfaces with a confident product-merchandising voice",
+    "colors": [
+      "#0064E0",
+      "#0457CB",
+      "#0091FF",
+      "#FFFFFF",
+      "#000000",
+      "#1876F2",
+      "#385898",
+      "#A121CE",
+      "#31A24C",
+      "#24E400",
+      "#F2A918",
+      "#F7B928",
+      "#FFE200",
+      "#E41E3F",
+      "#F0284A",
+      "#F1F4F7",
+      "#0A1317",
+      "#1C1E21",
+      "#444950",
+      "#4B4C4F",
+      "#5D6C7B",
+      "#8595A4",
+      "#CED0D4",
+      "#DEE3E9",
+      "#BCC0C4"
+    ],
+    "designTokens": {
+      "accent": "#0064E0",
+      "bg": "#FFFFFF",
+      "surface": "#F1F4F7",
+      "ink": "#1C1E21",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/meta/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/meta/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "围绕硬件商品展示建立自信的产品陈列语气，将消费硬件电商与品牌页面纳入统一的视觉表达。"
+  },
+  {
+    "id": "minimax",
+    "name": "Minimax",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "MiniMax presents itself as a premium AI infrastructure brand through a striking duality — bold black-pill CTAs and stark white canvas for marketing, paired with vibrant gradient product cards (orange-red, magenta-pink, purple, blue) that turn each model release into a distinctive visual identity",
+    "colors": [
+      "#0A0A0A",
+      "#FFFFFF",
+      "#181E25",
+      "#FF5530",
+      "#EA5EC1",
+      "#1456F0",
+      "#3B82F6",
+      "#1D4ED8",
+      "#17437D",
+      "#3DAEFF",
+      "#BFDBFE",
+      "#A855F7",
+      "#F7F8FA",
+      "#F2F3F5",
+      "#E5E7EB",
+      "#EAECF0",
+      "#000000",
+      "#222222",
+      "#45515E",
+      "#5F5F5F",
+      "#8E8E93",
+      "#A8AAB2",
+      "#E8FFEA",
+      "#1BA673"
+    ],
+    "designTokens": {
+      "accent": "#0A0A0A",
+      "bg": "#FFFFFF",
+      "surface": "#F7F8FA",
+      "ink": "#0A0A0A",
+      "muted": "#A8AAB2",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/minimax/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/minimax/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以纯白画布和醒目黑色胶囊按钮建立营销基底，再用橙红、粉紫与蓝色渐变卡片区分不同模型产品。"
+  },
+  {
+    "id": "mintlify",
+    "name": "Mintlify",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "浅色",
+      "渐变与光效",
+      "插画与趣味"
+    ],
+    "description": "Mintlify presents documentation infrastructure with a dual-mode aesthetic — atmospheric sky-gradient marketing heroes (cloud illustration backdrops, soft cream-to-blue washes) paired with dense developer-grade documentation surfaces",
+    "colors": [
+      "#0A0A0A",
+      "#FFFFFF",
+      "#00D4A4",
+      "#00B48A",
+      "#7CEBCB",
+      "#3772CF",
+      "#C37D0D",
+      "#1BA673",
+      "#D45656",
+      "#888888",
+      "#87A8C8",
+      "#F5E9D8",
+      "#1A3D4A",
+      "#2D5A4F",
+      "#F55A3C",
+      "#CC3A1F",
+      "#F7F7F7",
+      "#FAFAFA",
+      "#1C1C1E",
+      "#E5E5E5",
+      "#EDEDED",
+      "#1F1F1F",
+      "#3A3A3C",
+      "#5A5A5C",
+      "#A8A8AA",
+      "#B3B3B3"
+    ],
+    "designTokens": {
+      "accent": "#0A0A0A",
+      "bg": "#FFFFFF",
+      "surface": "#F7F7F7",
+      "ink": "#0A0A0A",
+      "muted": "#A8A8AA",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/mintlify/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/mintlify/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将带云朵插画、奶油色至蓝色渐变的营销首屏，与信息密集的开发者文档界面结合，形成双重视觉模式。"
+  },
+  {
+    "id": "miro",
+    "name": "Miro",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "浅色",
+      "插画与趣味"
+    ],
+    "description": "Miro presents itself as the AI-powered visual workspace through a confident, almost playful brand voice — anchored by its signature canary yellow ({colors.brand-yellow}) wordmark over white canvas, broken open by colorful pastel feature tints (rose, teal, coral, orange, mint) that echo the actual sticky-note color palette used on the live whiteboard",
+    "colors": [
+      "#1C1C1E",
+      "#FFFFFF",
+      "#FFD02F",
+      "#FCB900",
+      "#FFF4C4",
+      "#746019",
+      "#4262FF",
+      "#5B76FE",
+      "#2A41B6",
+      "#FF9999",
+      "#FFC6C6",
+      "#600000",
+      "#FFD8F4",
+      "#FDE0F0",
+      "#0FBCB0",
+      "#C3FAF5",
+      "#187574",
+      "#FFE6CD",
+      "#FBD4D4",
+      "#E3C5C5",
+      "#00B473",
+      "#F7F8FA",
+      "#FAFBFC",
+      "#FFF8E0",
+      "#F5F3FF",
+      "#E0E2E8",
+      "#EEF0F3",
+      "#C7CAD5",
+      "#050038",
+      "#2C2C34",
+      "#555A6A",
+      "#6B6F7E",
+      "#8E91A0",
+      "#A5A8B5"
+    ],
+    "designTokens": {
+      "accent": "#1C1C1E",
+      "bg": "#FFFFFF",
+      "surface": "#F7F8FA",
+      "ink": "#1C1C1E",
+      "muted": "#A5A8B5",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/miro/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/miro/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白底和金丝雀黄标识建立活泼的工作空间气质，搭配玫瑰、青绿、珊瑚与薄荷粉彩，呼应白板便签。"
+  },
+  {
+    "id": "mistral.ai",
+    "name": "Mistral AI",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "浅色",
+      "渐变与光效",
+      "影像主导"
+    ],
+    "description": "Mistral AI brands itself with a singular signature — atmospheric sunset gradients (mustard, orange, deep red) layered over photography of mountains, plus a horizontal \"sunset stripe\" bar that closes every page",
+    "colors": [
+      "#FA520F",
+      "#CC3A05",
+      "#FFFFFF",
+      "#FFD06A",
+      "#FFB83E",
+      "#FFA110",
+      "#FF8105",
+      "#FF8A00",
+      "#FFD900",
+      "#FFF8E0",
+      "#FFFAEB",
+      "#FFF0C2",
+      "#E6D5A8",
+      "#FFE295",
+      "#1F1F1F",
+      "#3D3D3D",
+      "#2C2C2C",
+      "#4A4A4A",
+      "#6A6A6A",
+      "#8A8A8A",
+      "#A8A8A8",
+      "#E5E5E5",
+      "#EDEDED",
+      "#C7C7C7",
+      "#FAFAFA",
+      "#1C1C1E"
+    ],
+    "designTokens": {
+      "accent": "#FA520F",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "ink": "#1F1F1F",
+      "muted": "#A8A8A8",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/mistral.ai/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/mistral.ai/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以芥末黄、橙与深红构成日落渐变，叠加山岳摄影，并用横向日落色条收束页面，形成鲜明视觉标记。"
+  },
+  {
+    "id": "mongodb",
+    "name": "MongoDB",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "MongoDB carries a strong dual-mode visual identity — dark deep-teal hero bands with bright MongoDB green ({colors.brand-green}) CTAs paired with stark white documentation surfaces",
+    "colors": [
+      "#00ED64",
+      "#00B545",
+      "#008C34",
+      "#001E2B",
+      "#00684A",
+      "#00A35C",
+      "#C3F0D2",
+      "#003D4F",
+      "#7B3FF2",
+      "#FA6E39",
+      "#F06BB8",
+      "#3D4F9F",
+      "#FFF8E0",
+      "#946F3F",
+      "#FFFFFF",
+      "#F9FBFA",
+      "#F4F7F6",
+      "#E3FCEF",
+      "#E1E5E8",
+      "#ECEFF1",
+      "#C1CCD6",
+      "#1C2D38",
+      "#3D4F5B",
+      "#5C6C7A",
+      "#7C8C9A",
+      "#A8B3BC"
+    ],
+    "designTokens": {
+      "accent": "#00ED64",
+      "bg": "#FFFFFF",
+      "surface": "#F9FBFA",
+      "ink": "#001E2B",
+      "muted": "#A8B3BC",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/mongodb/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/mongodb/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深青色首屏和鲜亮绿色主要按钮建立产品展示，再切换至纯白文档表面，形成对照清晰的双模式界面。"
+  },
+  {
+    "id": "nike",
+    "name": "Nike",
+    "category": "电商与零售",
+    "tags": [
+      "电商与零售",
+      "DESIGN.md",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "A photography-first commerce system built on extreme typographic contrast — towering uppercase Futura display lockups burned into editorial campaign imagery, sitting above a dense, neutral, near-monochrome retail chrome of pill-shaped black CTAs, gray search and tag pills, and tight 8px-grid product cards",
+    "colors": [
+      "#111111",
+      "#FFFFFF",
+      "#F5F5F5",
+      "#39393B",
+      "#4B4B4D",
+      "#707072",
+      "#9E9EA0",
+      "#CACACB",
+      "#E5E5E5",
+      "#D30005",
+      "#780700",
+      "#007D48",
+      "#1EAA52",
+      "#1151FF",
+      "#0034E3",
+      "#ED1AA0",
+      "#FFB0DD",
+      "#BEAFFD",
+      "#D6D1FF",
+      "#0A7281",
+      "#4C012D"
+    ],
+    "designTokens": {
+      "accent": "#111111",
+      "bg": "#FFFFFF",
+      "ink": "#111111",
+      "muted": "#707072",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/nike/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/nike/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以摄影和高耸的大写标题制造强烈对比，配合近乎单色的密集零售界面、黑色胶囊按钮与紧凑商品卡片。"
+  },
+  {
+    "id": "nintendo-2001",
+    "name": "Nintendo.com (2001)",
+    "category": "复古网页",
+    "tags": [
+      "复古网页",
+      "DESIGN.md",
+      "渐变与光效",
+      "复古"
+    ],
+    "description": "An analysis of Nintendo.com's 2001 design language — a brushed-periwinkle \"console chrome\" interface where every panel is a beveled metal plate, navigation glows amber over a halftone-dotted carbon bar, and bold outlined display type sits on circuit-board hero fields",
+    "colors": [
+      "#E60012",
+      "#F68D1F",
+      "#ECAB37",
+      "#E48600",
+      "#7A8ABA",
+      "#9FBEE7",
+      "#ACACE7",
+      "#C0D5E6",
+      "#8BA1D4",
+      "#3D4F97",
+      "#60619C",
+      "#DEDEDE",
+      "#FFFFFF",
+      "#21242E",
+      "#5A5F8C",
+      "#206479",
+      "#A7282B"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/nintendo-2001/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/nintendo-2001/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以浅紫蓝拉丝金属斜面面板塑造游戏机外壳感，搭配琥珀发光导航、电路背景和描边粗字，呈现复古网页。"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "插画与趣味"
+    ],
+    "description": "Notion presents itself as the all-in-one workspace through a confident, illustration-rich brand voice — anchored by a deep navy hero band ({colors.brand-navy}) decorated with brand-colored sticky-note dots and mesh wire illustrations, a signature purple pill primary CTA ({colors.primary}), and a rich palette of pastel-tinted feature cards that echo the color",
+    "colors": [
+      "#5645D4",
+      "#4534B3",
+      "#3A2A99",
+      "#FFFFFF",
+      "#0A1530",
+      "#070F24",
+      "#1A2A52",
+      "#0075DE",
+      "#005BAB",
+      "#DD5B00",
+      "#793400",
+      "#FF64C8",
+      "#A02E6D",
+      "#7B3FF2",
+      "#D6B6F6",
+      "#391C57",
+      "#2A9D99",
+      "#1AAE39",
+      "#F5D75E",
+      "#523410",
+      "#FFE8D4",
+      "#FDE0EC",
+      "#D9F3E1",
+      "#E6E0F5",
+      "#DCECFA",
+      "#FEF7D6",
+      "#F9E79F",
+      "#F8F5E8",
+      "#F0EEEC",
+      "#F6F5F4",
+      "#FAFAF9",
+      "#E5E3DF",
+      "#EDE9E4",
+      "#C8C4BE",
+      "#000000",
+      "#1A1A1A",
+      "#37352F",
+      "#5D5B54",
+      "#787671",
+      "#A4A097",
+      "#BBB8B1",
+      "#E03131"
+    ],
+    "designTokens": {
+      "accent": "#5645D4",
+      "bg": "#FFFFFF",
+      "surface": "#F6F5F4",
+      "ink": "#1A1A1A",
+      "muted": "#BBB8B1",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/notion/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/notion/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深藏蓝首屏、便签色圆点与网格线插画建立丰富视觉，搭配紫色胶囊按钮和粉彩功能卡片组织产品信息。"
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "An engineering-grade marketing system organized around two surface modes — a deep black canvas for hero and footer chapters and a flat paper-white canvas for body content — connected by a single, almost violently saturated NVIDIA Green accent that carries every CTA, every active tab, and the small decorative corner squares that mark out cards",
+    "colors": [
+      "#76B900",
+      "#000000",
+      "#5A8D00",
+      "#FFFFFF",
+      "#F7F7F7",
+      "#1A1A1A",
+      "#CCCCCC",
+      "#5E5E5E",
+      "#757575",
+      "#898989",
+      "#A7A7A7",
+      "#0046A4",
+      "#E52020",
+      "#650B0B",
+      "#DF6500",
+      "#EF9100",
+      "#3F8500",
+      "#FEEEB2",
+      "#952FC6",
+      "#4D1368",
+      "#F9D4FF",
+      "#BFF230"
+    ],
+    "designTokens": {
+      "accent": "#76B900",
+      "bg": "#FFFFFF",
+      "surface": "#F7F7F7",
+      "ink": "#000000",
+      "muted": "#757575",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/nvidia/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/nvidia/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深黑首屏与页尾、纸白正文区建立工程感界面，用高饱和绿色贯穿按钮、活动标签及卡片角部标记。"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "浅色",
+      "克制",
+      "渐变与光效",
+      "影像主导"
+    ],
+    "description": "An almost defiantly minimal documentation-first system that treats the home page like a Markdown README — paper-white canvas, 36px center-aligned heading, a single black pill CTA, an inline terminal install snippet, and a hand-drawn llama mascot as the only ornamental element",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#090909",
+      "#525252",
+      "#737373",
+      "#A3A3A3",
+      "#FAFAFA",
+      "#E5E5E5",
+      "#D4D4D4",
+      "#171717",
+      "#FF5F56",
+      "#FFBD2E",
+      "#27C93F"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#000000",
+      "muted": "#A3A3A3",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/ollama/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/ollama/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将首页处理成极简文档，采用纸白背景、居中标题、黑色胶囊按钮与终端安装片段，仅以手绘羊驼点缀。"
+  },
+  {
+    "id": "opencode.ai",
+    "name": "OpenCode AI",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "浅色"
+    ],
+    "description": "A terminal-native marketing system rendered entirely in Berkeley Mono — every word on the page, from the hero headline down to the footer fine print, is monospaced",
+    "colors": [
+      "#201D1D",
+      "#FDFCFC",
+      "#0F0000",
+      "#302C2C",
+      "#424245",
+      "#646262",
+      "#6E6E73",
+      "#9A9898",
+      "#F8F7F7",
+      "#F1EEEE",
+      "#007AFF",
+      "#0056B3",
+      "#004085",
+      "#FF9F0A",
+      "#CC7F08",
+      "#995F06",
+      "#FF3B30",
+      "#D70015",
+      "#A50011",
+      "#30D158"
+    ],
+    "designTokens": {
+      "accent": "#201D1D",
+      "bg": "#FDFCFC",
+      "surface": "#F1EEEE",
+      "ink": "#201D1D",
+      "muted": "#646262",
+      "font": "mono"
+    },
+    "source": "https://getdesign.md/opencode.ai/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/opencode.ai/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以终端原生的视觉语言组织营销页面，从首屏标题到页尾细字统一使用等宽字体，形成一致的技术气质。"
+  },
+  {
+    "id": "pinterest",
+    "name": "Pinterest",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "A photography-first discovery system organized around the Pinterest Red CTA, the masonry pin grid, and a soft warm-cream chrome that gets out of the imagery's way",
+    "colors": [
+      "#E60023",
+      "#FFFFFF",
+      "#CC001F",
+      "#000000",
+      "#211922",
+      "#33332E",
+      "#262622",
+      "#62625B",
+      "#91918C",
+      "#C8C8C1",
+      "#DADAD3",
+      "#E5E5E0",
+      "#FBFBF9",
+      "#F6F6F3",
+      "#435EE5",
+      "#617BFF",
+      "#7E238B",
+      "#6845AB",
+      "#103C25",
+      "#C7F0DA",
+      "#9E0A0A"
+    ],
+    "designTokens": {
+      "accent": "#E60023",
+      "bg": "#FFFFFF",
+      "surface": "#F6F6F3",
+      "ink": "#000000",
+      "muted": "#62625B",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/pinterest/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/pinterest/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以摄影主导内容发现体验，通过红色主要按钮、瀑布流图片网格及柔和暖奶油色界面，让图像成为中心。"
+  },
+  {
+    "id": "playstation",
+    "name": "PlayStation",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "A three-surface marketing system organized around alternating black, white, and PlayStation Blue chapters that scroll past the viewer like a console launch trailer",
+    "colors": [
+      "#0070D1",
+      "#0064B7",
+      "#004D8D",
+      "#FFFFFF",
+      "#53B1FF",
+      "#D53B00",
+      "#AA2F00",
+      "#D63D00",
+      "#000000",
+      "#121314",
+      "#181818",
+      "#1F2024",
+      "#6B6B6B",
+      "#CCCCCC",
+      "#F3F3F3",
+      "#F5F7FA",
+      "#C81B3A",
+      "#FFCE21",
+      "#F5A623",
+      "#EE8E00",
+      "#DEFF20"
+    ],
+    "designTokens": {
+      "accent": "#0070D1",
+      "surface": "#F5F7FA",
+      "ink": "#000000",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/playstation/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/playstation/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以黑、白与蓝色章节交替组织营销内容，让页面滚动带有主机发布预告片般的节奏，形成鲜明场景变化。"
+  },
+  {
+    "id": "posthog",
+    "name": "PostHog",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版",
+      "插画与趣味"
+    ],
+    "description": "A playful developer-tools system rendered on a warm cream canvas with hand-drawn hedgehog mascots dotted across every page like marginalia in a sketchbook",
+    "colors": [
+      "#F7A501",
+      "#DD9001",
+      "#B17816",
+      "#23251D",
+      "#4D4F46",
+      "#33342D",
+      "#6C6E63",
+      "#9B9C92",
+      "#B6B7AF",
+      "#BFC1B7",
+      "#DCDFD2",
+      "#FFFFFF",
+      "#EEEFE9",
+      "#E5E7E0",
+      "#FCFCFA",
+      "#1D4ED8",
+      "#1078A3",
+      "#2C84E0",
+      "#DCEAF6",
+      "#CD4239",
+      "#F7D6D3",
+      "#2C8C66",
+      "#D9EDDF",
+      "#7C44A6",
+      "#E7D8EE"
+    ],
+    "designTokens": {
+      "accent": "#F7A501",
+      "bg": "#EEEFE9",
+      "surface": "#FFFFFF",
+      "ink": "#23251D",
+      "muted": "#6C6E63",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/posthog/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/posthog/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以温暖奶油色画布和遍布页面的手绘刺猬形象呈现开发工具，营造类似速写本页边涂鸦的轻松趣味。"
+  },
+  {
+    "id": "raycast",
+    "name": "Raycast",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "Raycast's marketing system reads like an extended product screenshot",
+    "colors": [
+      "#FFFFFF",
+      "#E8E8E8",
+      "#000000",
+      "#F4F4F6",
+      "#CDCDCD",
+      "#D3D3D4",
+      "#9C9C9D",
+      "#6A6B6C",
+      "#434345",
+      "#07080A",
+      "#0D0D0D",
+      "#101111",
+      "#121212",
+      "#18191A",
+      "#242728",
+      "#57C1FF",
+      "#FF6161",
+      "#59D499",
+      "#FFC533",
+      "#FF5757",
+      "#A1131A"
+    ],
+    "designTokens": {
+      "accent": "#FFFFFF",
+      "bg": "#07080A",
+      "surface": "#121212",
+      "ink": "#F4F4F6",
+      "muted": "#9C9C9D",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/raycast/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/raycast/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将营销页面塑造成延展的产品截图，让产品界面的视觉语言贯穿展示，整体观感强调产品自身的呈现。"
+  },
+  {
+    "id": "renault",
+    "name": "Renault",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "Renault's web presence pairs the freshly-modernised Renault diamond (the 2021 flat-line rhombus mark) with a stark black-and-white canvas, a signature Sunlight Yellow accent, and the proprietary NouvelR display typeface",
+    "colors": [
+      "#FFED00",
+      "#E6D200",
+      "#000000",
+      "#222222",
+      "#333333",
+      "#666666",
+      "#8A8A8A",
+      "#C4C4C4",
+      "#FFFFFF",
+      "#F7F7F7",
+      "#111111",
+      "#F2F2F2",
+      "#0000EE",
+      "#BE6464",
+      "#F0AD4E",
+      "#8DC572",
+      "#337AB7"
+    ],
+    "designTokens": {
+      "accent": "#FFED00",
+      "bg": "#FFFFFF",
+      "surface": "#FFFFFF",
+      "ink": "#000000",
+      "muted": "#666666",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/renault/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/renault/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以鲜明黑白画布搭配阳光黄色强调，结合扁平线条菱形标识与定制展示字体，构成现代汽车品牌界面。"
+  },
+  {
+    "id": "replicate",
+    "name": "Replicate",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "Replicate's marketing surfaces pair the warm-cream developer-tools aesthetic of an indie ML playground with a confident hot-orange brand accent and a signature display typeface (rb-freigeist-neue) sized aggressively large at 72px+",
+    "colors": [
+      "#EA2804",
+      "#C01F00",
+      "#FFFFFF",
+      "#202020",
+      "#3A3A3A",
+      "#575757",
+      "#646464",
+      "#8D8D8D",
+      "#BBBBBB",
+      "#FCFCFC",
+      "#F9F7F3",
+      "#F3F0E8",
+      "#000000",
+      "#FF6A3D",
+      "#F4A8A0",
+      "#2B9A66",
+      "#24292E"
+    ],
+    "designTokens": {
+      "accent": "#EA2804",
+      "bg": "#F9F7F3",
+      "surface": "#FFFFFF",
+      "ink": "#202020",
+      "muted": "#646464",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/replicate/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/replicate/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以暖奶油色呈现独立机器学习实验场般的开发工具氛围，搭配鲜亮橙色强调与超大展示字体，形成张力。"
+  },
+  {
+    "id": "resend",
+    "name": "Resend",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "Resend's marketing surfaces sit on a near-pure black canvas with off-white text and a single signature color — the deep editorial-serif Domaine Display headline mark — that gives an otherwise utilitarian developer-tool brand its print-magazine confidence",
+    "colors": [
+      "#FCFDFF",
+      "#000000",
+      "#A1A4A5",
+      "#888E90",
+      "#464A4D",
+      "#0A0A0C",
+      "#101012",
+      "#06060A",
+      "#FF801F",
+      "#FFC53D",
+      "#3B9EFF",
+      "#11FF99",
+      "#FF2047",
+      "#F1F7FE"
+    ],
+    "designTokens": {
+      "accent": "#FCFDFF",
+      "bg": "#000000",
+      "surface": "#0A0A0C",
+      "ink": "#FCFDFF",
+      "muted": "#A1A4A5",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/resend/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/resend/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以接近纯黑的背景和灰白文字构成开发工具界面，通过深具编辑感的衬线标题，融入纸质杂志般的自信。"
+  },
+  {
+    "id": "revolut",
+    "name": "Revolut",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "Revolut's marketing surfaces pair a stark black canvas with the brand's cobalt-violet (#494fdf) and a wide accent palette of deep, fully-saturated product colours — teal, light-blue, deep pink, light-green, warning orange",
+    "colors": [
+      "#494FDF",
+      "#4F55F1",
+      "#3A40C4",
+      "#FFFFFF",
+      "#191C1F",
+      "#1F2226",
+      "#3A3D40",
+      "#505A63",
+      "#5C5E60",
+      "#8D969E",
+      "#C9C9CD",
+      "#000000",
+      "#F4F4F4",
+      "#0A0A0A",
+      "#16181A",
+      "#E2E2E7",
+      "#00A87E",
+      "#376CD5",
+      "#007BC2",
+      "#428619",
+      "#006400",
+      "#B09000",
+      "#EC7E00",
+      "#E61E49",
+      "#E23B4A",
+      "#8B0000",
+      "#936D62"
+    ],
+    "designTokens": {
+      "accent": "#494FDF",
+      "surface": "#FFFFFF",
+      "ink": "#191C1F",
+      "muted": "#505A63",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/revolut/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/revolut/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以鲜明黑色画布和钴紫色建立金融产品基调，再搭配青绿、浅蓝、深粉、浅绿与橙色等饱和产品强调色。"
+  },
+  {
+    "id": "runwayml",
+    "name": "Runway",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "Runway's interface is a cinematic reel brought to life as a website — a dark, editorial, film-production-grade design where full-bleed photography and video ARE the primary UI elements",
+    "colors": [
+      "#767D88",
+      "#7D848E",
+      "#000000",
+      "#030303",
+      "#1A1A1A",
+      "#FFFFFF",
+      "#FEFEFE",
+      "#E9ECF2",
+      "#27272A",
+      "#404040",
+      "#3F3F3F",
+      "#A7A7A7",
+      "#C9CCD1",
+      "#D0D4D4",
+      "#6B7280",
+      "#0C0C0C",
+      "#999999"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/runwayml/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/runwayml/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将网站塑造成电影片段般的视觉体验，以深色编辑式编排和满幅摄影、视频作为主要界面元素，突出影像。"
+  },
+  {
+    "id": "sanity",
+    "name": "Sanity",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "Sanity's website is a developer-content platform rendered as a nocturnal command center -- dark, precise, and deeply structured",
+    "colors": [
+      "#0B0B0B",
+      "#212121",
+      "#353535",
+      "#797979",
+      "#B9B9B9",
+      "#EDEDED",
+      "#FFFFFF",
+      "#0052EF",
+      "#F36458",
+      "#000000",
+      "#55BEFF",
+      "#AFE3FF",
+      "#19D600",
+      "#DD0000",
+      "#37CD84",
+      "#072227"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/sanity/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/sanity/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将开发者内容平台呈现为夜间指挥中心，以深色、精确而结构分明的界面气质，传达清晰严密的技术秩序。"
+  },
+  {
+    "id": "sentry",
+    "name": "Sentry",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色",
+      "插画与趣味"
+    ],
+    "description": "An inspired interpretation of Sentri's design language — a developer-tools brand built on a deep purple-violet midnight canvas, electric lime accents, and a slightly subversive illustrated personality",
+    "colors": [
+      "#150F23",
+      "#1F1633",
+      "#FFFFFF",
+      "#C2EF4E",
+      "#FA7FAA",
+      "#6A5FC1",
+      "#422082",
+      "#79628C",
+      "#F0F0F0",
+      "#EFEFEF",
+      "#362D59",
+      "#CFCFDB",
+      "#E5E7EB",
+      "#1A1A1A",
+      "#BDB8C0",
+      "#3F3849",
+      "#9DC1F5"
+    ],
+    "designTokens": {
+      "accent": "#150F23",
+      "ink": "#1F1633",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/sentry/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/sentry/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深紫罗兰夜色画布搭配电光青柠色强调，再融入略带反叛感的插画个性，构成鲜明的开发工具视觉。"
+  },
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "category": "电商与零售",
+    "tags": [
+      "电商与零售",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "影像主导"
+    ],
+    "description": "An inspired interpretation of Shopifi's design language — a cinematic commerce platform that runs two parallel design tracks",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#0A0A0A",
+      "#FBFBF5",
+      "#1E2C31",
+      "#D4D4D8",
+      "#A1A1AA",
+      "#71717A",
+      "#52525B",
+      "#3F3F46",
+      "#E4E4E7",
+      "#C1FBD4",
+      "#D4F9E0",
+      "#9DABAD",
+      "#9797A2",
+      "#BDBDCA",
+      "#99B3AD"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "ink": "#000000",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/shopify/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/shopify/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以电影感视觉塑造电商平台，并行组织两条设计表达路线，让营销呈现带有叙事氛围和多层次的品牌气质。"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "An inspired interpretation of Slacc's design language — a workplace messaging brand built on a deep aubergine primary, with cream-lavender hero gradients, blue inline links, and pill CTAs",
+    "colors": [
+      "#4A154B",
+      "#481A54",
+      "#611F69",
+      "#592466",
+      "#FFFFFF",
+      "#1D1D1D",
+      "#696969",
+      "#1264A3",
+      "#3860BE",
+      "#F4EDE4",
+      "#F9F0FF",
+      "#E6E6E6",
+      "#000000",
+      "#CC4117",
+      "#007A5A",
+      "#D9BDDE"
+    ],
+    "designTokens": {
+      "accent": "#4A154B",
+      "bg": "#FFFFFF",
+      "ink": "#1D1D1D",
+      "muted": "#696969",
+      "font": "sans"
+    },
+    "source": "local",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/slack/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。",
+      "此本地文件未列入上游 README 的 Collection；保留本地证据，未猜测远端文档地址。"
+    ],
+    "descriptionZh": "以深茄紫为主色，搭配奶油色至淡紫色的首屏渐变、蓝色行内链接与胶囊按钮，形成温暖的协作工具气质。"
+  },
+  {
+    "id": "spacex",
+    "name": "SpaceX",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "深色",
+      "克制",
+      "影像主导"
+    ],
+    "description": "An inspired interpretation of Spasex's design language — a mission-oriented aerospace brand built on pure black canvas, full-bleed photographic and video heroes of rockets and Mars landscapes, and uppercase D-DIN display type set in tight vertical leading",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#F0F0FA",
+      "#0A0A0A",
+      "#3A3A3F",
+      "#E0E0E8",
+      "#0000EE",
+      "#5A5A5F"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "ink": "#000000",
+      "muted": "#5A5A5F",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/spacex/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/spacex/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以纯黑画布承托火箭与火星景观的满幅摄影及视频首屏，搭配行距紧凑的大写展示字，强化任务导向气质。"
+  },
+  {
+    "id": "spotify",
+    "name": "Spotify",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "深色",
+      "渐变与光效"
+    ],
+    "description": "Spotify's web interface is a dark, immersive music player that wraps listeners in a near-black cocoon (#121212, #181818, #1f1f1f) where album art and content become the primary source of color",
+    "colors": [
+      "#121212",
+      "#181818",
+      "#1F1F1F",
+      "#1ED760",
+      "#F3727F",
+      "#FFA42B",
+      "#539DF5",
+      "#FFFFFF",
+      "#B3B3B3",
+      "#CBCBCB",
+      "#FDFDFD",
+      "#252525",
+      "#272727",
+      "#4D4D4D",
+      "#7C7C7C",
+      "#EEEEEE",
+      "#1DB954",
+      "#000000"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/spotify/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/spotify/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以多层近黑表面营造沉浸式音乐播放界面，让专辑封面与内容成为主要色彩来源，突出听觉场景的包围感。"
+  },
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "category": "电商与零售",
+    "tags": [
+      "电商与零售",
+      "DESIGN.md",
+      "浅色"
+    ],
+    "description": "Starbucks' design system is a warm, confident retail flagship wearing the green of their storefront apron across every surface",
+    "colors": [
+      "#F2F0EB",
+      "#EDEBE9",
+      "#006241",
+      "#CBA258",
+      "#00754A",
+      "#1E3932",
+      "#2B5148",
+      "#D4E9E2",
+      "#DFC49D",
+      "#FAF6EE",
+      "#FFFFFF",
+      "#F9F9F9",
+      "#000000",
+      "#33433D",
+      "#C82014",
+      "#FBBC05",
+      "#D6DBDE",
+      "#E7E7E7"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/starbucks/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/starbucks/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以贯穿各处的门店围裙绿色塑造零售旗舰界面，整体气质温暖自信，通过一致的绿色表达建立品牌氛围。"
+  },
+  {
+    "id": "stripe",
+    "name": "Stripe",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "编辑式排版",
+      "渐变与光效"
+    ],
+    "description": "An inspired interpretation of Stripi's design language — a financial-infrastructure brand built on a deep navy ink, an electric indigo primary, and a recurring atmospheric gradient mesh that occupies the upper third of nearly every marketing page",
+    "colors": [
+      "#533AFD",
+      "#4434D4",
+      "#2E2B8C",
+      "#665EFD",
+      "#B9B9F9",
+      "#1C1E54",
+      "#0D253D",
+      "#273951",
+      "#64748D",
+      "#61718A",
+      "#FFFFFF",
+      "#F6F9FC",
+      "#F5E9D4",
+      "#E3E8EE",
+      "#A8C3DE",
+      "#EA2261",
+      "#F96BEE",
+      "#9B6829",
+      "#003770"
+    ],
+    "designTokens": {
+      "accent": "#533AFD",
+      "bg": "#FFFFFF",
+      "surface": "#F6F9FC",
+      "ink": "#0D253D",
+      "muted": "#64748D",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/stripe/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/stripe/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深藏蓝文字、鲜亮靛蓝主色和反复出现的网格渐变构成金融科技视觉，让营销页面上部带有氛围层次。"
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "category": "技术产品",
+    "tags": [
+      "技术产品",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "克制"
+    ],
+    "description": "An inspired interpretation of Supabaze's design language — an open-source database platform built on a clean white-and-near-black system with a single signature emerald-green CTA, a custom humanist sans display tier, and dense product UI mockups composited above the hero",
+    "colors": [
+      "#3ECF8E",
+      "#24B47E",
+      "#4ADE80",
+      "#171717",
+      "#212121",
+      "#707070",
+      "#9A9A9A",
+      "#B2B2B2",
+      "#FFFFFF",
+      "#FAFAFA",
+      "#1C1C1C",
+      "#202020",
+      "#DFDFDF",
+      "#C7C7C7",
+      "#EDEDED",
+      "#EFEFEF",
+      "#D4D4D4",
+      "#6B01C2",
+      "#644FC1",
+      "#EDDBF9",
+      "#FFDB13",
+      "#FF2201",
+      "#C7007E",
+      "#054CFF",
+      "#E2005A"
+    ],
+    "designTokens": {
+      "accent": "#3ECF8E",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "ink": "#171717",
+      "muted": "#707070",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/supabase/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/supabase/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以白色与近黑构建清晰界面，配以翡翠绿主要按钮、人文无衬线标题和密集产品模型图，突出开发平台。"
+  },
+  {
+    "id": "superhuman",
+    "name": "Superhuman",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "克制",
+      "编辑式排版"
+    ],
+    "description": "An inspired interpretation of Superhumon's design language — a fast-email productivity brand split between an editorial dark hero (deep indigo navy with violet-sky atmospheric backdrop and a portrait subject) and a quiet white content body with off-warm-grey ink",
+    "colors": [
+      "#1B1938",
+      "#0E0C1F",
+      "#FFFFFF",
+      "#292827",
+      "#73706D",
+      "#9A9794",
+      "#FAFAF8",
+      "#C9B4FA",
+      "#0E3030",
+      "#155555",
+      "#E8E4DD",
+      "#3F3A52",
+      "#BCBAC9",
+      "#5A5772"
+    ],
+    "designTokens": {
+      "accent": "#1B1938",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAF8",
+      "ink": "#292827",
+      "muted": "#73706D",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/superhuman/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/superhuman/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将靛蓝深色首屏、紫色天空氛围与人物影像组合，再切换到安静白色正文区，以暖灰文字建立阅读层次。"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "category": "汽车与硬件",
+    "tags": [
+      "汽车与硬件",
+      "DESIGN.md",
+      "影像主导"
+    ],
+    "description": "Tesla's website is an exercise in radical subtraction — a digital showroom where the product is everything and the interface is almost nothing",
+    "colors": [
+      "#3E6AE1",
+      "#FFFFFF",
+      "#F4F4F4",
+      "#171A20",
+      "#393C41",
+      "#5C5E62",
+      "#8E8E8E",
+      "#EEEEEE",
+      "#D0D1D2"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/tesla/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/tesla/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以极度精简的视觉构成数字展厅，将产品置于展示中心，尽量收敛界面的存在感，让注意力集中于产品。"
+  },
+  {
+    "id": "theverge",
+    "name": "The Verge",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md"
+    ],
+    "description": "The Verge's 2024 redesign feels like somebody wired a Condé Nast magazine to a chiptune soundboard",
+    "colors": [
+      "#131313",
+      "#3CFFD0",
+      "#5200FF",
+      "#FFFFFF",
+      "#2D2D2D",
+      "#309875",
+      "#3860BE",
+      "#1EAEDB",
+      "#3D00BF",
+      "#313131",
+      "#000000",
+      "#949494",
+      "#E9E9E9",
+      "#8C8C8C",
+      "#C2C2C2",
+      "#0500FF"
+    ],
+    "designTokens": {
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/theverge/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/theverge/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "将杂志式的编辑气质与芯片音乐般的复古电子感结合，让科技媒体页面呈现印刷内容和数字文化交融的趣味。"
+  },
+  {
+    "id": "together.ai",
+    "name": "Together AI",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "An inspired interpretation of Together AI's design language — an AI infrastructure platform whose surface alternates between near-black hero bands (with a three-color orange-magenta-periwinkle gradient as the single piece of brand chrome) and bright white research / pricing / docs bands, knit together by a custom display sans and an uppercase mono eyebrow fa",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#959494",
+      "#010120",
+      "#313641",
+      "#FC4C02",
+      "#EF2CC1",
+      "#BDBBFF",
+      "#C8F6F9"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "ink": "#000000",
+      "muted": "#959494",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/together.ai/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/together.ai/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近黑首屏搭配橙、品红与浅紫蓝渐变，再交替使用明亮白色研究和文档区，结合展示字与大写等宽眉题。"
+  },
+  {
+    "id": "uber",
+    "name": "Uber",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版",
+      "插画与趣味"
+    ],
+    "description": "An inspired interpretation of Uber's design language — a transportation-and-delivery super-app brand whose web surface is a black-and-white duet, framed by a custom geometric display sans, accented by a single signature pill shape (radius 999px) on every interactive element, and decorated only by editorial 4:3 illustrations of riders, drivers, and city objec",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#5E5E5E",
+      "#AFAFAF",
+      "#4B4B4B",
+      "#EFEFEF",
+      "#F3F3F3",
+      "#E2E2E2",
+      "#0000EE",
+      "#282828"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#EFEFEF",
+      "ink": "#000000",
+      "muted": "#AFAFAF",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/uber/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/uber/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以黑白双调、几何无衬线展示字和统一胶囊造型构成界面，仅用乘客、司机与城市主题插画补充编辑式装饰。"
+  },
+  {
+    "id": "vercel",
+    "name": "Vercel",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "An inspired interpretation of Vercel's design language — a developer-platform brand whose surface is a stark black-and-ink duet on near-white canvas, broken at hero scale by a multi-color mesh gradient (cyan / blue / magenta / amber) that acts as the entire decorative system, paired with a custom geometric sans for headlines and a monospaced caption face for",
+    "colors": [
+      "#171717",
+      "#FFFFFF",
+      "#4D4D4D",
+      "#888888",
+      "#EBEBEB",
+      "#A1A1A1",
+      "#FAFAFA",
+      "#F5F5F5",
+      "#0070F3",
+      "#0761D1",
+      "#D3E5FF",
+      "#EE0000",
+      "#F7D4D6",
+      "#C50000",
+      "#F5A623",
+      "#FFEFCF",
+      "#AB570A",
+      "#7928CA",
+      "#D8CCF1",
+      "#4C2889",
+      "#50E3C2",
+      "#AAFFEC",
+      "#29BC9B",
+      "#FF0080",
+      "#EB367F",
+      "#007CF0",
+      "#00DFD8",
+      "#FF4D4D",
+      "#F9CB28",
+      "#F2F2F2"
+    ],
+    "designTokens": {
+      "accent": "#171717",
+      "bg": "#FFFFFF",
+      "surface": "#FAFAFA",
+      "ink": "#171717",
+      "muted": "#888888",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/vercel/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/vercel/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近白画布和黑色文字建立技术产品界面，首屏用青蓝、品红与琥珀色网格渐变点缀，搭配等宽说明字。"
+  },
+  {
+    "id": "vodafone",
+    "name": "Vodafone",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "An inspired interpretation of Vodafone's design language — a telecom super-brand whose web surface alternates between editorial photography hero bands with massive uppercase display headlines and clean white content bands, anchored by the company's signature scarlet red CTA and the proprietary Vodafone display sans set at impossibly heavy 800 weight",
+    "colors": [
+      "#E60000",
+      "#FFFFFF",
+      "#25282B",
+      "#7E7E7E",
+      "#BEBEBE",
+      "#F2F2F2"
+    ],
+    "designTokens": {
+      "accent": "#E60000",
+      "bg": "#FFFFFF",
+      "surface": "#F2F2F2",
+      "ink": "#25282B",
+      "muted": "#BEBEBE",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/vodafone/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/vodafone/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以巨幅大写重字与编辑摄影首屏吸引注意，再交替使用洁净白色内容区，并以鲜红主要按钮维持视觉重心。"
+  },
+  {
+    "id": "voltagent",
+    "name": "VoltAgent",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色"
+    ],
+    "description": "An inspired interpretation of Voltagent's design language — a developer-focused AI agent engineering platform whose surface is an unrelenting near-black canvas broken only by a single electric-green brand accent, code-editor mockups inside the hero, and a precise grid of dark feature cards that read like a documentation site dressed as marketing",
+    "colors": [
+      "#00D992",
+      "#2FD6A1",
+      "#10B981",
+      "#101010",
+      "#F2F2F2",
+      "#FFFFFF",
+      "#BDBDBD",
+      "#8B949E",
+      "#3D3A39",
+      "#B8B3B0",
+      "#1A1A1A",
+      "#F5F6F7"
+    ],
+    "designTokens": {
+      "accent": "#00D992",
+      "bg": "#101010",
+      "surface": "#1A1A1A",
+      "ink": "#F2F2F2",
+      "muted": "#8B949E",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/voltagent/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/voltagent/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以持续的近黑画布和单一电光绿强调呈现开发平台，配合首屏代码编辑器模型与精密排列的深色功能卡片。"
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "category": "开发工具",
+    "tags": [
+      "开发工具",
+      "DESIGN.md",
+      "编辑式排版",
+      "影像主导"
+    ],
+    "description": "An inspired interpretation of Warp's design language — an agentic terminal-and-development-environment brand whose surface is a warm near-charcoal canvas (a tint warmer than pure black), broken only by clean Inter typography, the occasional Instrument Serif italic moment, and dense terminal-mockup imagery; CTAs are unusually understated, with shape geometry ",
+    "colors": [
+      "#F7F5F0",
+      "#2B2622",
+      "#C9C0AD",
+      "#DAD2C1",
+      "#AEA69C",
+      "#383330",
+      "#3F3A36"
+    ],
+    "designTokens": {
+      "accent": "#F7F5F0",
+      "bg": "#2B2622",
+      "surface": "#383330",
+      "ink": "#F7F5F0",
+      "muted": "#AEA69C",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/warp/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/warp/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以偏暖炭黑背景搭配清晰无衬线字，间或加入衬线斜体，结合密集终端模型图与低调按钮，形成技术氛围。"
+  },
+  {
+    "id": "webflow",
+    "name": "Webflow",
+    "category": "设计与创意",
+    "tags": [
+      "设计与创意",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "An inspired interpretation of Webflow's design language — a visual web development platform whose surface contrasts a deep near-black #080808 primary against a generous white canvas, broken by a five-stop chromatic accent system (purple / pink / blue / orange / green) that maps to the brand's product categories, and anchored by the proprietary WF Visual Sans",
+    "colors": [
+      "#080808",
+      "#FFFFFF",
+      "#222222",
+      "#363636",
+      "#5A5A5A",
+      "#898989",
+      "#ABABAB",
+      "#D8D8D8",
+      "#7A3DFF",
+      "#ED52CB",
+      "#3B89FF",
+      "#006ACC",
+      "#146EF5",
+      "#FF6B00",
+      "#00D722",
+      "#FFAE13",
+      "#EE1D36"
+    ],
+    "designTokens": {
+      "accent": "#080808",
+      "bg": "#FFFFFF",
+      "ink": "#080808",
+      "muted": "#898989",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/webflow/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/webflow/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以深近黑与宽松白色画布形成对照，将紫、粉、蓝、橙、绿五种强调色映射到产品类别，统一展示字体。"
+  },
+  {
+    "id": "wired",
+    "name": "WIRED",
+    "category": "媒体与消费科技",
+    "tags": [
+      "媒体与消费科技",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "An inspired interpretation of Wired's design language — a flagship technology-magazine brand whose surface is a strict editorial duet of stark black wordmark on white canvas, anchored by a tall narrow custom display serif for hero headlines, a humanist serif body face for long-form reading, and a clean sans face for metadata; layout reads like a printed maga",
+    "colors": [
+      "#000000",
+      "#FFFFFF",
+      "#1A1A1A",
+      "#757575",
+      "#E0E0E0",
+      "#F5F5F5",
+      "#057DBC"
+    ],
+    "designTokens": {
+      "accent": "#000000",
+      "bg": "#FFFFFF",
+      "surface": "#F5F5F5",
+      "ink": "#000000",
+      "muted": "#757575",
+      "font": "serif"
+    },
+    "source": "https://getdesign.md/wired/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/wired/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以黑色标识和白色画布形成编辑式基调，组合窄高衬线标题、人文衬线正文与无衬线元信息，呼应印刷杂志。"
+  },
+  {
+    "id": "wise",
+    "name": "Wise",
+    "category": "金融科技",
+    "tags": [
+      "金融科技",
+      "DESIGN.md",
+      "深色",
+      "浅色"
+    ],
+    "description": "An inspired interpretation of Wise's design language — a global money-transfer brand whose surface combines an unusually heavy near-black display sans (weight 900 at 64–126 px) with a vivid lime-green brand accent, sage-tinted surface neutrals, and rounded white cards on a pale green-tinted canvas; the whole system reads more like a Scandinavian fintech maga",
+    "colors": [
+      "#9FE870",
+      "#0E0F0C",
+      "#CDFFAD",
+      "#C5EDAB",
+      "#E2F6D5",
+      "#163300",
+      "#454745",
+      "#868685",
+      "#FFFFFF",
+      "#E8EBE6",
+      "#2EAD4B",
+      "#054D28",
+      "#FFD11A",
+      "#B86700",
+      "#4A3B1C",
+      "#D03238",
+      "#A72027",
+      "#A7000D",
+      "#320707",
+      "#FFC091",
+      "#38C8FF"
+    ],
+    "designTokens": {
+      "accent": "#9FE870",
+      "bg": "#FFFFFF",
+      "surface": "#E8EBE6",
+      "ink": "#0E0F0C",
+      "muted": "#868685",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/wise/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/wise/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以超粗近黑展示字搭配鲜亮青柠绿，并用鼠尾草色中性面、浅绿底和圆角白卡片，形成清新的金融科技视觉。"
+  },
+  {
+    "id": "x.ai",
+    "name": "xAI",
+    "category": "AI 品牌",
+    "tags": [
+      "AI 品牌",
+      "DESIGN.md",
+      "深色",
+      "浅色",
+      "渐变与光效"
+    ],
+    "description": "An inspired interpretation of xAI's design language — Elon Musk's frontier-AI company whose web surface is a strict near-black canvas broken only by white pill outlines, occasional warm sunset / dusk gradient accents, a custom geometric sans (Universal Sans) for display, and an uppercase tracked monospace caption face; the whole system reads as engineered-co",
+    "colors": [
+      "#FFFFFF",
+      "#0A0A0A",
+      "#FAFAF7",
+      "#DADBDF",
+      "#7D8187",
+      "#212327",
+      "#1A1C20",
+      "#191919",
+      "#363A3F",
+      "#FF7A17",
+      "#FFC285",
+      "#7C3AED",
+      "#C4B5FD",
+      "#A0C3EC",
+      "#0D1726"
+    ],
+    "designTokens": {
+      "accent": "#FFFFFF",
+      "bg": "#0A0A0A",
+      "surface": "#1A1C20",
+      "ink": "#FFFFFF",
+      "muted": "#7D8187",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/x.ai/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/x.ai/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以近黑画布、白色胶囊描边和偶尔出现的暖色日落渐变构成界面，搭配几何标题与加宽字距的大写等宽字。"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "category": "效率与协作",
+    "tags": [
+      "效率与协作",
+      "DESIGN.md",
+      "浅色",
+      "编辑式排版"
+    ],
+    "description": "An inspired interpretation of Zapier's design language — a workflow-automation platform whose surface combines warm-cream neutrals (#fffefb canvas, #f8f4f0 soft cream) with deep coffee ink (#201515) and a single saturated orange CTA accent (#ff4f00); typography pairs the proprietary Degular Display family at hero scale with Inter for sub-displays and body, g",
+    "colors": [
+      "#FF4F00",
+      "#FFFEFB",
+      "#201515",
+      "#2F2A26",
+      "#36342E",
+      "#605D52",
+      "#939084",
+      "#C5C0B1",
+      "#F8F4F0"
+    ],
+    "designTokens": {
+      "accent": "#FF4F00",
+      "bg": "#FFFEFB",
+      "surface": "#F8F4F0",
+      "ink": "#201515",
+      "muted": "#C5C0B1",
+      "font": "sans"
+    },
+    "source": "https://getdesign.md/zapier/design-md",
+    "kind": "reference",
+    "license": {
+      "document": {
+        "id": "MIT",
+        "status": "declared-in-readme-license-file-missing",
+        "source": "https://github.com/VoltAgent/awesome-design-md#license",
+        "evidence": "design-md-library/references/awesome-design-md/README.md#License",
+        "fullTextRedistributable": false,
+        "note": "本地 README 声明 MIT 并链接 LICENSE，但当前副本未包含许可证正文；未进行联网核验。"
+      },
+      "brandAssets": {
+        "id": "NOT-GRANTED",
+        "note": "参考文档许可不授予品牌商标、标志、摄影、插画、人物、文案、专有字体或其他品牌素材的使用权；相关素材须单独核实授权。"
+      }
+    },
+    "notes": [
+      "本地文件：design-md-library/references/awesome-design-md/design-md/zapier/DESIGN.md",
+      "来源链接仅由本地上游 README/配套 README 核对，未访问网络，也未验证远端当前可用性。",
+      "colors 来自原文颜色声明（优先 frontmatter colors），未从品牌印象补造；没有可提取值时为空数组。",
+      "仅发布名称、简要说明、分类标签、颜色事实和来源/许可证据；不附 DESIGN.md 全文或品牌资产。"
+    ],
+    "descriptionZh": "以暖奶油色背景、深咖啡色文字与单一饱和橙色按钮建立界面，搭配定制展示字体和清晰正文无衬线字。"
+  }
+]
