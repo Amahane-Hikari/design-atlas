@@ -9,6 +9,7 @@
  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%233d6655'/%3E%3Ctext x='24' y='35' text-anchor='middle' font-size='36' fill='%23f2edce'%3E✳%3C/text%3E%3C/svg%3E">
  <link rel="stylesheet" href="app.css">
  <link rel="stylesheet" href="cases.css">
+ <link rel="stylesheet" href="studio.css">
 </head>
 <body>
  <a class="skip-link" href="#main">跳到主要内容</a>
@@ -19,6 +20,7 @@
    <button data-view="cases" class="nav-item"><span data-icon="external"></span>公开网站案例<span class="nav-count" id="nav-cases">—</span></button>
    <button data-view="library" class="nav-item active"><span data-icon="grid"></span>设计资源库<span class="nav-count" id="nav-total">30</span></button>
    <button data-view="builder" class="nav-item"><span data-icon="layers"></span>页面拼装台<span class="new-label">LAB</span></button>
+   <button data-view="projects" class="nav-item"><span data-icon="file"></span>我的项目<span class="nav-count" id="nav-projects">0</span></button>
    <button data-view="themes" class="nav-item"><span data-icon="palette"></span>主题实验室</button>
    <button data-view="favorites" class="nav-item"><span data-icon="heart"></span>我的收藏<span class="nav-count" id="favorite-count">0</span></button>
   </nav>
@@ -31,14 +33,14 @@
   <div class="sidebar-bottom">
    <div class="sidebar-note"><span>FROM IDEAS<br>TO INTERFACES.</span><b aria-hidden="true">↗</b><p>一点灵感，一点尝试。<br>做出属于你的好界面。</p><button data-view="builder">开始我的设计 <span>↗</span></button></div>
    <button class="about-link" id="about-button"><span data-icon="info"></span>关于这个工作台<span>↗</span></button>
-   <div class="local-status"><i></i> 本地自动保存 <span>v2.0</span></div>
+   <div class="local-status"><i></i> 本地自动保存 <span>v2.1</span></div>
   </div>
  </aside>
  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
  <div class="app-shell">
   <header class="topbar">
    <div class="breadcrumbs"><button id="mobile-menu" class="icon-btn mobile-only" aria-label="打开导航"><span data-icon="menu"></span></button><span>我的工作空间</span><i>/</i><strong id="breadcrumb-current">设计资源库</strong></div>
-   <div class="top-actions"><span class="save-status" id="save-status"><i></i>已保存在此浏览器</span><button class="top-icon" id="keyboard-help" aria-label="快捷键与使用说明"><span data-icon="help"></span></button><span class="user-avatar" aria-label="本地个人工作空间">A</span></div>
+   <div class="top-actions"><button class="global-search-trigger" data-studio-action="search" aria-label="搜索全部设计与操作"><span>⌕ 搜索全部</span><kbd>Ctrl K</kbd></button><span class="save-status" id="save-status"><i></i>已保存在此浏览器</span><button class="top-icon" id="keyboard-help" aria-label="快捷键与使用说明"><span data-icon="help"></span></button><span class="user-avatar" aria-label="本地个人工作空间">A</span></div>
   </header>
   <main id="main" tabindex="-1"><div class="loading-state"><span class="loading-mark">✳</span><p>正在打开你的设计工作台…</p></div></main>
   <footer class="app-footer"><span>CRAFTED FOR YOUR NEXT IDEA.</span><span>原创演示 MIT · 第三方资源独立授权 <i>✳</i></span></footer>

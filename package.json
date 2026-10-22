@@ -1,6 +1,6 @@
 {
   "name": "design-atlas-local",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "description": "本地前端设计资源与实时拼装工作台",
@@ -9,7 +9,8 @@
     "build": "node scripts/build-offline.mjs",
     "check": "node scripts/check.mjs",
     "refresh": "node scripts/refresh-local-catalog.mjs",
-    "check:cases": "node scripts/check-cases.mjs"
+    "check:cases": "node scripts/check-cases.mjs",
+    "check:studio": "node scripts/check-workspace.mjs && node scripts/check-studio.mjs"
   },
   "engines": {
     "node": ">=20"

@@ -78,7 +78,13 @@ node scripts/check-case-pack.mjs .\my-cases.json
 
 ## 模块和离线构建
 
-依赖顺序为 `pattern-engine → engine → case-model → case-ui → app` 的装配顺序。`case-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
+依赖顺序为 `pattern-engine → engine → case-model → case-ui → workspace-model → studio-model → studio-ui → app`。`case-model` 和 `workspace-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
+
+`studio-model.js` 提供全局检索、同类布局替换及独占锁下的项目库写入。`studio-ui.js` 负责项目库、命令搜索与持久化，调用 app 桥接接口打开资源或提交项目事务；不要直接持有和修改 app 的草稿对象。新增可搜索资源时补充 `getItems()` 和对应打开行为。
+
+项目库使用 `design-atlas.workspace` / `schemaVersion:1` 封包和独立存储键 `design-atlas.workspace.v1`。这与当前草稿 `design-atlas.project.v1`、案例扩展包分别管理。项目库校验保留合法唯一图层 UID，保证重复校验结果稳定；导入先完整验证，再整体写入。保存动作必须 await `writeWorkspaceAtomically`，比较、写入与读回都位于 Web Locks 独占锁内。不支持 Web Locks 时拒写库并引导下载项目，不使用会丢数据的跨标签页降级。
+
+源码分屏在 `app.js` 的 `renderCode` / `runCode` 中实现。完整 HTML、项目 JSON 与组合片段是三种独立预览来源，不自动相互改写；关闭窗口会取消更新定时器并清空 iframe。预览保持 `sandbox="allow-scripts"` 和原有 CSP。
 
 离线打包采用固定模块清单、独立作用域与显式命名导入；新增文件时更新 `scripts/build-offline.mjs` 的 order。构建遇到未知依赖或不支持的 import/export 语法会报错。
 
