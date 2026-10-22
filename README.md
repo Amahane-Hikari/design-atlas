@@ -1,8 +1,17 @@
-# Design Atlas 3.1 · 前端设计工作室
+# Design Atlas 4.0 · 前端设计工作室
 
 一个可以在浏览器里探索设计、调整主题、拼装页面并带走源代码的工作台。核心交互不依赖外部 CDN，也不需要账号或后端。
 
 在线使用：[Design Atlas](https://design-atlas-gold.vercel.app/) · 源码仓库：[luomo66ccff/design-atlas](https://github.com/luomo66ccff/design-atlas)。
+
+## v4：「制图室」视觉重构与任意元素自由编辑
+
+- **全新视觉「制图室 · Cartographer」**：暖调纸张底色、石墨墨色侧栏、唯一的朱砂红信号色；衬线大标题配等宽「坐标」小字，细线分隔、网格纸卡片、等高线装饰与极淡纸纹。深色模式同步重做。新样式集中在 `dist/atlas.css`，原有 520 个颜色变量按角色重新映射（`scripts/tokenize-colors.mjs` 的 `paletteMap`），未单独重写的旧组件也会自动融入新配色。
+- **任意元素自由编辑**：在画布中选中模块后，再点其中任何元素（标题、段落、按钮、图片、卡片、容器……）即可：
+  - 直接拖动移位（Shift 锁定方向，接近原位自动吸附），右侧手柄改宽度，右下角缩放，顶部圆点旋转（Shift 吸附 15°）；
+  - 方向键微调 1px、Shift+方向键 10px，Delete 隐藏元素，Esc 选择父级；
+  - 在「元素」面板精确设置 X / Y、旋转、缩放、宽度、不透明度、层级，文字颜色、字号、字重、对齐、行高、字距、斜体、大写，背景、圆角、内边距、边框、阴影、模糊与可见性。
+  所有修改都写入 `block.style.free`，导出为作用于该模块的 CSS，可撤销。
 
 ## v3.1：元素级编辑、图片素材与深色模式
 
@@ -150,6 +159,7 @@ dist/fx-runtime.js            模块样式与动效协议、导出用特效运�
 dist/fx-blocks.js             22 个 v3 原创模块
 dist/media-blocks.js          17 个 v3.1 图片与数据模块
 dist/tokens.css               外壳颜色变量与深色模式（脚本生成）
+dist/atlas.css                v4「制图室」设计系统与组件样式
 dist/v3.css                   工作室、特效实验室与外壳样式
 dist/engine.js                42 个模块的统一接口与源码生成引擎
 dist/pattern-engine.js       12 个新增模块的定义、渲染与交互
