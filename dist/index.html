@@ -4,12 +4,13 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#f7f8f5">
- <meta name="description" content="属于你的前端设计工作台。探索设计参考与开源资源，修改主题，拼装页面，实时预览并复制源码。">
+ <meta name="description" content="属于你的前端设计工作台。64 个原创组件、18 套整页模板与 60+ 种动效，在画布上直接拖拽、双击改字，导出干净的原生代码。">
  <title>Design Atlas · 前端设计工作台</title>
  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%233d6655'/%3E%3Ctext x='24' y='35' text-anchor='middle' font-size='36' fill='%23f2edce'%3E✳%3C/text%3E%3C/svg%3E">
  <link rel="stylesheet" href="app.css">
  <link rel="stylesheet" href="cases.css">
  <link rel="stylesheet" href="studio.css">
+ <link rel="stylesheet" href="v3.css">
 </head>
 <body>
  <a class="skip-link" href="#main">跳到主要内容</a>
@@ -17,23 +18,24 @@
   <a class="logo" href="#library" aria-label="Design Atlas 首页"><span class="logo-mark">✳</span><span>design<span class="logo-bottom">atlas<span class="logo-dot">®</span></span></span></a>
   <div class="workspace-label"><i></i> PERSONAL WORKSPACE <button id="close-sidebar" class="icon-btn mobile-only" aria-label="关闭导航">×</button></div>
   <nav class="primary-nav">
-   <button data-view="cases" class="nav-item"><span data-icon="external"></span>公开网站案例<span class="nav-count" id="nav-cases">—</span></button>
-   <button data-view="library" class="nav-item active"><span data-icon="grid"></span>设计资源库<span class="nav-count" id="nav-total">30</span></button>
-   <button data-view="builder" class="nav-item"><span data-icon="layers"></span>页面拼装台<span class="new-label">LAB</span></button>
-   <button data-view="projects" class="nav-item"><span data-icon="file"></span>我的项目<span class="nav-count" id="nav-projects">0</span></button>
-   <button data-view="themes" class="nav-item"><span data-icon="palette"></span>主题实验室</button>
-   <button data-view="favorites" class="nav-item"><span data-icon="heart"></span>我的收藏<span class="nav-count" id="favorite-count">0</span></button>
+   <button data-view="cases" class="nav-item" data-tip="公开网站案例"><span data-icon="external"></span>公开网站案例<span class="nav-count" id="nav-cases">—</span></button>
+   <button data-view="library" class="nav-item active" data-tip="设计资源库"><span data-icon="grid"></span>设计资源库<span class="nav-count" id="nav-total">30</span></button>
+   <button data-view="builder" class="nav-item" data-tip="页面拼装台"><span data-icon="layers"></span>页面拼装台<span class="new-label">LAB</span></button>
+   <button data-view="projects" class="nav-item" data-tip="我的项目"><span data-icon="file"></span>我的项目<span class="nav-count" id="nav-projects">0</span></button>
+   <button data-view="themes" class="nav-item" data-tip="主题实验室"><span data-icon="palette"></span>主题实验室</button>
+   <button data-view="fx" class="nav-item" data-tip="特效实验室"><span data-icon="spark"></span>特效实验室<span class="new-label hot">NEW</span></button>
+   <button data-view="favorites" class="nav-item" data-tip="我的收藏"><span data-icon="heart"></span>我的收藏<span class="nav-count" id="favorite-count">0</span></button>
   </nav>
   <div class="nav-heading">你的设计工具箱</div>
   <nav class="secondary-nav">
-   <button data-section="references" class="nav-item"><span data-icon="book"></span>本地设计参考<span class="nav-count" id="nav-references">—</span></button>
-   <button data-section="opensource" class="nav-item"><span data-icon="code"></span>开源资源索引<span class="nav-count" id="nav-opensource">—</span></button>
-   <button data-section="skills" class="nav-item"><span data-icon="spark"></span>本地设计 Skills<span class="nav-count" id="nav-skills">—</span></button>
+   <button data-section="references" class="nav-item" data-tip="本地设计参考"><span data-icon="book"></span>本地设计参考<span class="nav-count" id="nav-references">—</span></button>
+   <button data-section="opensource" class="nav-item" data-tip="开源资源索引"><span data-icon="code"></span>开源资源索引<span class="nav-count" id="nav-opensource">—</span></button>
+   <button data-section="skills" class="nav-item" data-tip="本地设计 Skills"><span data-icon="spark"></span>本地设计 Skills<span class="nav-count" id="nav-skills">—</span></button>
   </nav>
   <div class="sidebar-bottom">
    <div class="sidebar-note"><span>FROM IDEAS<br>TO INTERFACES.</span><b aria-hidden="true">↗</b><p>一点灵感，一点尝试。<br>做出属于你的好界面。</p><button data-view="builder">开始我的设计 <span>↗</span></button></div>
    <button class="about-link" id="about-button"><span data-icon="info"></span>关于这个工作台<span>↗</span></button>
-   <div class="local-status"><i></i> 本地自动保存 <span>v2.1</span></div>
+   <div class="local-status"><i></i> 本地自动保存 <span>v3.0</span></div>
   </div>
  </aside>
  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>

@@ -1,0 +1,288 @@
+// Section styles, motion effects and the canvas editing bridge. Original code, MIT. No DOM access at module scope.
+const hex=v=>typeof v==='string'&&/^#[0-9a-f]{6}$/i.test(v);
+const pick=(list,v,d)=>list.some(x=>x[0]===v)?v:d;
+const num=(v,min,max,d)=>{const n=Number(v);return Number.isFinite(n)?Math.round(Math.max(min,Math.min(max,n))):d};
+
+export const FX_OPTIONS={
+ tone:[['auto','跟随主题'],['tint','柔和色调'],['invert','反转明暗'],['accent','强调色底'],['dark','深色'],['light','纯白']],
+ pattern:[['none','无背景'],['grid','网格'],['dots','圆点'],['lines','斜纹'],['grain','颗粒'],['gradient','柔和渐变'],['aurora','极光'],['mesh','流体渐变'],['spotlight','跟随光斑'],['stars','星点'],['beams','光束'],['rings','同心圆'],['waves','波浪']],
+ width:[['auto','默认'],['narrow','窄栏'],['wide','加宽'],['full','满版']],
+ align:[['auto','默认'],['left','居左'],['center','居中']],
+ divider:[['none','无'],['wave','波浪'],['slant','斜切'],['curve','弧形'],['zigzag','锯齿']],
+ sticky:[['none','不固定'],['top','吸顶'],['glass','毛玻璃吸顶']],
+ hide:[['none','全部设备'],['mobile','手机隐藏'],['desktop','桌面隐藏']],
+ enter:[['none','无'],['fade','淡入'],['fade-up','上浮'],['fade-down','下落'],['slide-left','从左滑入'],['slide-right','从右滑入'],['zoom-in','放大出现'],['zoom-out','缩小落定'],['blur','模糊聚焦'],['flip','翻转'],['rotate','旋入'],['clip','幕布揭示'],['bounce','弹跳']],
+ trigger:[['scroll','滚动到时'],['load','页面加载时']],
+ ease:[['smooth','柔和'],['spring','弹性'],['snappy','利落'],['linear','匀速']],
+ hover:[['none','无'],['lift','上浮'],['glow','光晕'],['tilt','3D 倾斜'],['scale','放大'],['shine','流光扫过'],['border','描边高亮']],
+ text:[['none','无'],['gradient','渐变'],['shimmer','流光'],['highlight','荧光笔'],['outline','空心描边'],['underline','下划线'],['glow','辉光'],['split','逐字出现']],
+ loop:[['none','无'],['float','漂浮'],['pulse','呼吸'],['sway','摇摆']],
+ cursor:[['none','系统光标'],['glow','柔光跟随'],['dot','圆点光标'],['ring','光圈拖尾']],
+ intro:[['none','无'],['fade','淡入'],['curtain','幕布上升'],['mark','品牌标记']]
+};
+export const STYLE_DEFAULTS={tone:'auto',bg:'',bg2:'',accent:'',pattern:'none',patternOpacity:60,padTop:-1,padBottom:-1,width:'auto',align:'auto',radius:-1,zoom:100,divider:'none',sticky:'none',hide:'none',enter:'none',trigger:'scroll',stagger:false,duration:700,delay:0,ease:'smooth',hover:'none',text:'none',loop:'none',css:''};
+export const EFFECT_DEFAULTS={progress:false,backTop:false,grain:false,scrollbar:false,cursor:'none',intro:'none',reveal:'none'};
+
+// Returns only the keys that differ from defaults, so unchanged blocks stay compact in JSON.
+export function normalizeBlockStyle(raw){
+ const s=raw&&typeof raw==='object'&&!Array.isArray(raw)?raw:{},o=FX_OPTIONS,out={};
+ const full={tone:pick(o.tone,s.tone,'auto'),bg:hex(s.bg)?s.bg.toLowerCase():'',bg2:hex(s.bg2)?s.bg2.toLowerCase():'',accent:hex(s.accent)?s.accent.toLowerCase():'',pattern:pick(o.pattern,s.pattern,'none'),patternOpacity:num(s.patternOpacity,5,100,60),padTop:s.padTop==null||Number(s.padTop)<0?-1:num(s.padTop,0,240,-1),padBottom:s.padBottom==null||Number(s.padBottom)<0?-1:num(s.padBottom,0,240,-1),width:pick(o.width,s.width,'auto'),align:pick(o.align,s.align,'auto'),radius:s.radius==null||Number(s.radius)<0?-1:num(s.radius,0,48,-1),zoom:num(s.zoom,70,140,100),divider:pick(o.divider,s.divider,'none'),sticky:pick(o.sticky,s.sticky,'none'),hide:pick(o.hide,s.hide,'none'),enter:pick(o.enter,s.enter,'none'),trigger:pick(o.trigger,s.trigger,'scroll'),stagger:s.stagger===true,duration:num(s.duration,150,2400,700),delay:num(s.delay,0,2000,0),ease:pick(o.ease,s.ease,'smooth'),hover:pick(o.hover,s.hover,'none'),text:pick(o.text,s.text,'none'),loop:pick(o.loop,s.loop,'none'),css:typeof s.css==='string'?s.css.slice(0,8000):''};
+ for(const k of Object.keys(STYLE_DEFAULTS))if(full[k]!==STYLE_DEFAULTS[k])out[k]=full[k];
+ return out;
+}
+export function normalizeEffects(raw){
+ const e=raw&&typeof raw==='object'&&!Array.isArray(raw)?raw:{},o=FX_OPTIONS;
+ return {progress:e.progress===true,backTop:e.backTop===true,grain:e.grain===true,scrollbar:e.scrollbar===true,cursor:pick(o.cursor,e.cursor,'none'),intro:pick(o.intro,e.intro,'none'),reveal:pick(o.enter,e.reveal,'none')};
+}
+const lum=h=>{const c=[1,3,5].map(i=>parseInt(h.slice(i,i+2),16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722};
+const inkFor=h=>lum(h)>.36?'#141414':'#ffffff';
+const palette=(bg,ink,surface)=>`--bg:${bg};--surface:${surface};--ink:${ink};--muted:color-mix(in srgb,${ink} 62%,${bg});--line:color-mix(in srgb,${ink} 14%,transparent);--tint:color-mix(in srgb,var(--accent) 10%,${surface});background:var(--bg);color:var(--ink);`;
+
+// Attributes, inline variables and decorative layers for one section. `theme` is the normalized project theme.
+export function sectionFx(style,theme,effects={}){
+ const s={...STYLE_DEFAULTS,...style},t=theme,attrs=[],css=[];let pre='';
+ const enter=s.enter!=='none'?s.enter:(effects.reveal&&effects.reveal!=='none'?effects.reveal:'none');
+ if(s.accent){css.push(`--accent:${s.accent};--button-ink:${inkFor(s.accent)};`)}
+ const accent=s.accent||t.accent;
+ if(s.tone==='invert')css.push(palette(t.ink,t.bg,`color-mix(in srgb,${t.ink} 86%,${t.bg})`));
+ else if(s.tone==='tint')css.push(palette(`color-mix(in srgb,${accent} 9%,${t.bg})`,t.ink,t.surface));
+ else if(s.tone==='accent')css.push(palette(accent,inkFor(accent),`color-mix(in srgb,${inkFor(accent)} 10%,${accent})`)+`--accent:${inkFor(accent)};--button-ink:${accent};`);
+ else if(s.tone==='dark')css.push(palette('#111214','#f3f3f0','#1c1d21'));
+ else if(s.tone==='light')css.push(palette('#ffffff','#161616','#f6f6f3'));
+ if(s.bg){const ink=s.tone==='auto'?(lum(s.bg)<.3&&lum(t.ink)<.3?'#f4f4f1':lum(s.bg)>.45&&lum(t.ink)>.45?'#161616':t.ink):null;css.push(ink?palette(s.bg,ink,`color-mix(in srgb,${ink} 7%,${s.bg})`):`--bg:${s.bg};background:var(--bg);`)}
+ if(s.bg2)css.push(`background:linear-gradient(135deg,var(--bg) 0%,${s.bg2} 100%);`);
+ if(s.padTop>=0)css.push(`padding-top:${s.padTop}px;`);
+ if(s.padBottom>=0)css.push(`padding-bottom:${s.padBottom}px;`);
+ if(s.radius>=0)css.push(`--radius:${s.radius}px;`);
+ if(s.zoom!==100)css.push(`zoom:${s.zoom/100};`);
+ if(s.pattern!=='none'){css.push(`--fx-po:${s.patternOpacity};`);pre+=`<div class="fx-bg" data-fx-bg="${s.pattern}" aria-hidden="true">${['aurora','stars','waves','beams'].includes(s.pattern)?'<i></i><i></i><i></i>':''}</div>`}
+ if(s.divider!=='none')pre+=`<div class="fx-divider" data-shape="${s.divider}" aria-hidden="true"></div>`;
+ for(const k of ['width','align','sticky','hide','hover','text','loop'])if(s[k]!==STYLE_DEFAULTS[k])attrs.push(`data-${k}="${s[k]}"`);
+ if(enter!=='none'){attrs.push(`data-enter="${enter}"`);if(s.trigger==='load')attrs.push('data-trigger="load"');if(s.stagger)attrs.push('data-stagger');css.push(`--fx-d:${s.duration}ms;--fx-delay:${s.delay}ms;`);if(s.ease!=='smooth')attrs.push(`data-ease="${s.ease}"`)}
+ return {attrs:attrs.length?' '+attrs.join(' '):'',style:css.length?` style="${css.join('').replace(/"/g,'&quot;')}"`:'',pre};
+}
+export function scopedCSS(blocks){return blocks.filter(b=>!b.hidden&&b.style?.css).map(b=>`#s-${String(b.uid).replace(/[^\w-]/g,'')}{\n${String(b.style.css).replace(/<\/style/gi,'')}\n}`).join('\n');}
+
+const uri=svg=>`url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
+const NOISE=uri(`<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`);
+const zig=Array.from({length:30},(_,i)=>`L${i*40+20} 46 L${i*40+40} 18`).join(' ');
+const SHAPES={wave:'M0 0H1200V26C1050 58 900 58 750 32S450 0 300 22 90 56 0 30Z',slant:'M0 0H1200V0L0 60Z',curve:'M0 0H1200V6Q600 116 0 6Z',zigzag:`M0 0H1200V18 ${zig.replace(/^L/,'L')} L0 18Z`};
+const shape=d=>uri(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'><path d='${d}'/></svg>`);
+const WAVE=uri(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 80' preserveAspectRatio='none'><path d='M0 40C100 10 200 10 300 40S500 70 600 40V80H0Z'/></svg>`);
+const CARDS=':is(.panel,.fx-card,.work-grid>article,.task,.price-card)';
+const HEADS=':is(.section-heading h2,.block-quote blockquote,.fx-title)';
+const LOOPS='.panel,.window,.split-visual,.product-art,.editorial-orbit,.paper-card,.fx-card,.work-art,.orbital,.lamp,.fx-float';
+
+export const FX_CSS=String.raw`
+/* Design Atlas FX runtime · original · MIT */
+::selection{background:color-mix(in srgb,var(--accent) 32%,transparent)}
+.section-heading h2{font-size:calc(clamp(26px,4vw,46px)*var(--hs,1))}.hero-copy .section-heading h2{font-size:calc(clamp(36px,6vw,72px)*var(--hs,1))}
+.section-heading h2,.panel h3,.block-quote blockquote,.fx-title{font-family:var(--font-heading,var(--font))}.section-heading h2,.fx-title{font-weight:var(--heading-weight,600)}
+.block{background-clip:padding-box}
+.block[data-width=narrow]{padding-left:max(6%,calc((100% - 760px)/2));padding-right:max(6%,calc((100% - 760px)/2))}
+.block[data-width=wide]{padding-left:max(4%,calc((100% - 1360px)/2));padding-right:max(4%,calc((100% - 1360px)/2))}
+.block[data-width=full]{padding-left:3.5%;padding-right:3.5%}
+.block[data-align=center]{text-align:center}.block[data-align=center] .section-heading p{margin-left:auto;margin-right:auto}.block[data-align=center] .actions{justify-content:center}
+.block[data-align=left]{text-align:left}.block[data-align=left] .actions{justify-content:flex-start}.block[data-align=left] .section-heading p{margin-left:0}
+.block[data-sticky]{position:sticky;top:0;z-index:40;background:var(--bg)}
+.block[data-sticky=glass]{background:color-mix(in srgb,var(--bg) 70%,transparent);-webkit-backdrop-filter:blur(16px) saturate(1.5);backdrop-filter:blur(16px) saturate(1.5)}
+@media(max-width:760px){.block[data-hide=mobile]{display:none!important}}@media(min-width:761px){.block[data-hide=desktop]{display:none!important}}
+
+.fx-bg{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:calc(var(--fx-po,60)/100)}
+.fx-bg[data-fx-bg=grid]{background-image:linear-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1px);background-size:46px 46px;-webkit-mask-image:radial-gradient(ellipse at 50% 35%,#000 20%,transparent 72%);mask-image:radial-gradient(ellipse at 50% 35%,#000 20%,transparent 72%)}
+.fx-bg[data-fx-bg=dots]{background-image:radial-gradient(color-mix(in srgb,var(--ink) 40%,transparent) 1.2px,transparent 1.7px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.fx-bg[data-fx-bg=lines]{background-image:repeating-linear-gradient(135deg,color-mix(in srgb,var(--ink) 12%,transparent) 0 1px,transparent 1px 15px)}
+.fx-bg[data-fx-bg=grain]{background-image:${NOISE};background-size:180px;mix-blend-mode:multiply}
+.fx-bg[data-fx-bg=gradient]{background:radial-gradient(ellipse at 0% 0%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 55%),radial-gradient(ellipse at 100% 100%,color-mix(in srgb,var(--accent-2,var(--accent)) 28%,transparent),transparent 55%)}
+.fx-bg[data-fx-bg=aurora] i{position:absolute;width:62%;height:120%;top:-35%;left:-12%;border-radius:50%;background:var(--accent);filter:blur(70px);opacity:.42;animation:fx-aurora 16s ease-in-out infinite alternate}
+.fx-bg[data-fx-bg=aurora] i:nth-child(2){left:45%;top:-10%;background:var(--accent-2,#d6a1ff);animation-delay:-6s}.fx-bg[data-fx-bg=aurora] i:nth-child(3){left:15%;top:40%;background:color-mix(in srgb,var(--accent) 50%,#7dd3fc);animation-delay:-11s}
+@keyframes fx-aurora{50%{translate:12% 14%;scale:1.15}to{translate:-8% 22%;scale:.9;rotate:25deg}}
+.fx-bg[data-fx-bg=mesh]{inset:-40%;background:conic-gradient(from 0deg at 50% 50%,color-mix(in srgb,var(--accent) 45%,transparent),color-mix(in srgb,var(--accent-2,var(--accent)) 40%,transparent),transparent,color-mix(in srgb,var(--accent) 35%,transparent));filter:blur(70px);animation:fx-spin 24s linear infinite}
+@keyframes fx-spin{to{rotate:360deg}}
+.fx-bg[data-fx-bg=spotlight]{background:radial-gradient(520px circle at var(--px,50%) var(--py,35%),color-mix(in srgb,var(--accent) 30%,transparent),transparent 62%)}
+.fx-bg[data-fx-bg=stars] i{position:absolute;inset:0;background-image:radial-gradient(1.4px 1.4px at 12% 22%,var(--ink),transparent),radial-gradient(1px 1px at 32% 78%,var(--ink),transparent),radial-gradient(1.6px 1.6px at 58% 34%,var(--accent),transparent),radial-gradient(1px 1px at 76% 64%,var(--ink),transparent),radial-gradient(1.3px 1.3px at 88% 16%,var(--accent),transparent),radial-gradient(1px 1px at 44% 52%,var(--ink),transparent);background-size:340px 300px;animation:fx-twinkle 4s ease-in-out infinite alternate}
+.fx-bg[data-fx-bg=stars] i:nth-child(2){background-size:260px 230px;background-position:60px 40px;animation-delay:-2s}.fx-bg[data-fx-bg=stars] i:nth-child(3){background-size:420px 380px;background-position:130px 90px;animation-duration:6s}
+@keyframes fx-twinkle{from{opacity:.25}to{opacity:1}}
+.fx-bg[data-fx-bg=beams] i{position:absolute;top:-20%;bottom:-20%;width:18%;left:12%;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--accent) 40%,transparent),transparent);filter:blur(18px);rotate:14deg;animation:fx-beam 9s ease-in-out infinite alternate}
+.fx-bg[data-fx-bg=beams] i:nth-child(2){left:46%;width:10%;animation-delay:-3s}.fx-bg[data-fx-bg=beams] i:nth-child(3){left:72%;width:14%;animation-delay:-6s}
+@keyframes fx-beam{to{translate:40% 0;opacity:.4}}
+.fx-bg[data-fx-bg=rings]{background:repeating-radial-gradient(circle at 80% 30%,transparent 0 38px,color-mix(in srgb,var(--ink) 11%,transparent) 38px 39px);-webkit-mask-image:radial-gradient(circle at 80% 30%,#000,transparent 70%);mask-image:radial-gradient(circle at 80% 30%,#000,transparent 70%)}
+.fx-bg[data-fx-bg=waves] i{position:absolute;left:0;bottom:-2px;width:200%;height:46%;background:color-mix(in srgb,var(--accent) 22%,transparent);-webkit-mask:${WAVE} 0 100%/50% 100% repeat-x;mask:${WAVE} 0 100%/50% 100% repeat-x;animation:fx-wave 14s linear infinite}
+.fx-bg[data-fx-bg=waves] i:nth-child(2){height:34%;opacity:.7;animation-duration:9s;animation-direction:reverse}.fx-bg[data-fx-bg=waves] i:nth-child(3){height:22%;opacity:.5;animation-duration:20s}
+@keyframes fx-wave{to{translate:-50% 0}}
+.fx-divider{position:absolute;left:0;right:0;top:-1px;height:clamp(28px,5vw,64px);background:var(--page-bg,var(--bg));pointer-events:none;z-index:0}
+${Object.entries(SHAPES).map(([k,d])=>`.fx-divider[data-shape=${k}]{-webkit-mask:${shape(d)} 0 0/100% 100% no-repeat;mask:${shape(d)} 0 0/100% 100% no-repeat}`).join('\n')}
+
+[data-enter]{--fx-ease:cubic-bezier(.22,.8,.24,1);--fx-anim:fx-fade-up}
+[data-ease=spring]{--fx-ease:cubic-bezier(.34,1.56,.64,1)}[data-ease=snappy]{--fx-ease:cubic-bezier(.16,1,.3,1)}[data-ease=linear]{--fx-ease:linear}
+[data-stagger]{--fx-step:95ms}
+${FX_OPTIONS.enter.slice(1).map(([k])=>`[data-enter=${k}]{--fx-anim:fx-${k}}`).join('')}
+[data-enter=flip]{perspective:1200px}
+.fx-ready [data-enter]:not(.fx-in):not(.fx-replay) .fx-t{opacity:0}
+.fx-ready [data-enter].fx-in .fx-t,[data-enter].fx-replay .fx-t{animation:var(--fx-anim) var(--fx-d,700ms) var(--fx-ease) calc(var(--fx-delay,0ms) + var(--fx-i,0) * var(--fx-step,0ms)) backwards}
+@keyframes fx-fade{from{opacity:0}}
+@keyframes fx-fade-up{from{opacity:0;translate:0 44px}}
+@keyframes fx-fade-down{from{opacity:0;translate:0 -44px}}
+@keyframes fx-slide-left{from{opacity:0;translate:-72px 0}}
+@keyframes fx-slide-right{from{opacity:0;translate:72px 0}}
+@keyframes fx-zoom-in{from{opacity:0;scale:.84}}
+@keyframes fx-zoom-out{from{opacity:0;scale:1.14}}
+@keyframes fx-blur{from{opacity:0;filter:blur(16px);scale:1.03}}
+@keyframes fx-flip{from{opacity:0;rotate:x -38deg;translate:0 30px}}
+@keyframes fx-rotate{from{opacity:0;rotate:-7deg;translate:0 46px;scale:.95}}
+@keyframes fx-clip{from{clip-path:inset(0 0 100% 0);translate:0 28px}to{clip-path:inset(0 0 0 0)}}
+@keyframes fx-bounce{0%{opacity:0;translate:0 70px;scale:.9}55%{opacity:1;translate:0 -12px;scale:1.02}78%{translate:0 5px}to{translate:0 0;scale:1}}
+
+[data-hover] ${CARDS}{transition:translate .4s cubic-bezier(.22,.8,.24,1),scale .4s cubic-bezier(.22,.8,.24,1),box-shadow .4s,outline-offset .3s,outline-color .3s,transform .25s}
+[data-hover=lift] ${CARDS}:hover{translate:0 -8px;box-shadow:0 26px 50px -22px color-mix(in srgb,var(--ink) 45%,transparent)}
+[data-hover=glow] ${CARDS}:hover{box-shadow:0 0 0 1px var(--accent),0 18px 60px -12px color-mix(in srgb,var(--accent) 60%,transparent)}
+[data-hover=scale] ${CARDS}:hover{scale:1.035}
+[data-hover=border] ${CARDS}{outline:2px solid transparent;outline-offset:10px}[data-hover=border] ${CARDS}:hover{outline-color:var(--accent);outline-offset:4px}
+[data-hover=tilt] ${CARDS}{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d}
+[data-hover=tilt] ${CARDS}::after,[data-hover=shine] ${CARDS}::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s}
+[data-hover=tilt] ${CARDS}{position:relative}[data-hover=tilt] ${CARDS}::after{background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),color-mix(in srgb,#fff 32%,transparent),transparent 45%)}[data-hover=tilt] ${CARDS}:hover::after{opacity:1}
+[data-hover=shine] ${CARDS}{position:relative;overflow:hidden}[data-hover=shine] ${CARDS}::after{opacity:1;background:linear-gradient(115deg,transparent 30%,color-mix(in srgb,#fff 45%,transparent) 48%,transparent 66%);translate:-110% 0;transition:translate .9s cubic-bezier(.22,.8,.24,1)}[data-hover=shine] ${CARDS}:hover::after{translate:110% 0}
+
+[data-text=gradient] ${HEADS}{background:linear-gradient(100deg,var(--accent),var(--accent-2,var(--ink)));-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-text=shimmer] ${HEADS}{background:linear-gradient(110deg,var(--ink) 38%,var(--accent) 50%,var(--ink) 62%) 0 0/260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:fx-shimmer 4s linear infinite}
+@keyframes fx-shimmer{from{background-position:100% 0}to{background-position:-160% 0}}
+[data-text=highlight] ${HEADS}{text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 48%,transparent);text-decoration-thickness:.36em;text-underline-offset:-.2em;text-decoration-skip-ink:none}
+[data-text=outline] ${HEADS}{color:transparent;-webkit-text-stroke:1.4px var(--ink)}
+[data-text=underline] ${HEADS}{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:3px;text-underline-offset:.22em}
+[data-text=glow] ${HEADS}{text-shadow:0 0 28px color-mix(in srgb,var(--accent) 75%,transparent),0 0 6px color-mix(in srgb,var(--accent) 45%,transparent)}
+.fx-ch{display:inline-block;white-space:pre}
+.fx-ready [data-text=split]:not(.fx-in):not(.fx-replay) .fx-ch{opacity:0}
+.fx-ready [data-text=split].fx-in .fx-ch,[data-text=split].fx-replay .fx-ch{animation:fx-char .7s cubic-bezier(.22,.8,.24,1) calc(var(--fx-delay,0ms) + var(--c,0) * 28ms) backwards}
+@keyframes fx-char{from{opacity:0;translate:0 .45em;filter:blur(8px)}}
+
+[data-loop] .fx-l{animation:var(--fx-loop) 6s ease-in-out calc(var(--fx-li,0) * -1.1s) infinite}
+[data-loop=float]{--fx-loop:fx-float}[data-loop=pulse]{--fx-loop:fx-pulse}[data-loop=sway]{--fx-loop:fx-sway}
+.fx-ready [data-enter].fx-in .fx-t.fx-l,[data-enter].fx-replay .fx-t.fx-l{animation:var(--fx-anim) var(--fx-d,700ms) var(--fx-ease) calc(var(--fx-delay,0ms) + var(--fx-i,0) * var(--fx-step,0ms)) backwards,var(--fx-loop) 6s ease-in-out calc(var(--fx-li,0) * -1.1s) infinite}
+@keyframes fx-float{50%{translate:0 -12px}}@keyframes fx-pulse{50%{scale:1.035}}@keyframes fx-sway{25%{rotate:1.6deg}75%{rotate:-1.6deg}}
+
+.fx-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:1000;background:linear-gradient(90deg,var(--accent),var(--accent-2,var(--accent)));transform-origin:0 50%;scale:var(--fx-p,0) 1;pointer-events:none}
+.fx-grain{position:fixed;inset:-60%;z-index:998;pointer-events:none;opacity:.08;background-image:${NOISE};animation:fx-grain 1.2s steps(5) infinite}
+@keyframes fx-grain{20%{translate:-6% 4%}40%{translate:5% -6%}60%{translate:-3% 7%}80%{translate:7% 2%}}
+.fx-top{position:fixed;right:22px;bottom:22px;z-index:997;width:46px;height:46px;border-radius:50%;background:var(--accent);color:var(--button-ink);font-size:18px;box-shadow:0 10px 30px -10px color-mix(in srgb,var(--ink) 50%,transparent);opacity:0;translate:0 14px;pointer-events:none;transition:opacity .3s,translate .3s}
+.fx-top.show{opacity:1;translate:0 0;pointer-events:auto}
+.fx-cursor{position:fixed;left:0;top:0;z-index:1001;pointer-events:none;translate:var(--cx,-100px) var(--cy,-100px)}
+.fx-cursor[data-kind=glow]{width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--accent) 22%,transparent),transparent 65%);z-index:-1;position:fixed}
+.fx-cursor[data-kind=dot]{width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--accent);mix-blend-mode:difference}
+.fx-cursor[data-kind=ring]{width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;border:1.5px solid var(--accent);transition:translate .18s cubic-bezier(.22,.8,.24,1),scale .2s}
+.fx-cursor.press{scale:.7}
+@media(hover:none){.fx-cursor{display:none}}
+.fx-intro{position:fixed;inset:0;z-index:1002;display:grid;place-items:center;background:var(--accent);color:var(--button-ink);font-size:clamp(28px,6vw,64px);font-weight:600;letter-spacing:-2px;pointer-events:none}
+.fx-intro[data-kind=fade]{background:var(--bg);color:var(--ink);animation:fx-intro-fade .9s .25s ease forwards}.fx-intro[data-kind=fade] span{display:none}
+.fx-intro[data-kind=curtain]{animation:fx-curtain 1s .45s cubic-bezier(.76,0,.24,1) forwards}.fx-intro[data-kind=curtain] span{animation:fx-intro-fade .4s .35s ease forwards}
+.fx-intro[data-kind=mark]{background:var(--bg);color:var(--accent);animation:fx-intro-fade .6s 1.1s ease forwards}.fx-intro[data-kind=mark] span{animation:fx-mark 1.2s cubic-bezier(.22,.8,.24,1) both}
+@keyframes fx-intro-fade{to{opacity:0;visibility:hidden}}@keyframes fx-curtain{to{translate:0 -100%;visibility:hidden}}@keyframes fx-mark{from{opacity:0;scale:.6;rotate:-90deg}60%{opacity:1;scale:1.1;rotate:0deg}to{scale:1}}
+main[data-scrollbar]{scrollbar-color:color-mix(in srgb,var(--accent) 70%,transparent) transparent}
+html:has(main[data-scrollbar]){scrollbar-color:color-mix(in srgb,var(--accent) 70%,transparent) var(--bg);scrollbar-width:thin}
+@media(prefers-reduced-motion:reduce){.fx-bg *,.fx-bg,.fx-grain,.fx-intro{animation:none!important}.fx-intro{display:none}}
+`;
+
+export const FX_JS=String.raw`
+(()=>{const root=document.documentElement,ED=window.__ATLAS_EDITOR__,edit=!!ED&&ED.mode==='edit',reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const hooks=window.__atlasHooks=window.__atlasHooks||[];if(!edit&&!reduce)root.classList.add('fx-ready');
+const io='IntersectionObserver' in window?new IntersectionObserver(list=>list.forEach(x=>{if(x.isIntersecting){x.target.classList.add('fx-in');io.unobserve(x.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'}):null;
+const LOOPS='${LOOPS}';
+const split=el=>{if(el.dataset.fxSplit)return;el.dataset.fxSplit='1';let c=0;const walk=n=>{[...n.childNodes].forEach(k=>{if(k.nodeType===3){const f=document.createDocumentFragment();[...k.textContent].forEach(ch=>{const s=document.createElement('span');s.className='fx-ch';s.textContent=ch;s.style.setProperty('--c',c++);f.append(s)});k.replaceWith(f)}else if(k.nodeType===1&&k.tagName!=='BR')walk(k)})};walk(el)};
+function init(sec){if(!sec||!sec.matches||!sec.matches('main>section'))return;sec.querySelectorAll('.fx-t,.fx-l').forEach(x=>{x.classList.remove('fx-t','fx-l')});
+ if(sec.dataset.enter){let t=[...sec.children].filter(x=>!x.matches('.fx-bg,.fx-divider,[aria-hidden=true]'));if(sec.hasAttribute('data-stagger'))t=t.flatMap(x=>{const d=getComputedStyle(x).display;return x.children.length>1&&/grid|flex/.test(d)?[...x.children]:[x]});t.slice(0,40).forEach((x,i)=>{x.classList.add('fx-t');x.style.setProperty('--fx-i',i)})}
+ if(sec.dataset.loop)[...sec.querySelectorAll(LOOPS)].slice(0,12).forEach((x,i)=>{x.classList.add('fx-l');x.style.setProperty('--fx-li',i)});
+ if(sec.dataset.text==='split'&&!edit)sec.querySelectorAll('.section-heading h2,.block-quote blockquote,.fx-title').forEach(split);
+ if((sec.dataset.enter||sec.dataset.text==='split')&&root.classList.contains('fx-ready')){if(sec.dataset.trigger==='load'||!io)sec.classList.add('fx-in');else io.observe(sec)}
+ hooks.forEach(fn=>{try{fn(sec,{edit})}catch{}})}
+document.querySelectorAll('main>section').forEach(init);
+window.__atlasFx={init,replay(sec){const d=parseFloat(getComputedStyle(sec).getPropertyValue('--fx-d'))||700;sec.classList.remove('fx-replay');void sec.offsetWidth;sec.classList.add('fx-replay');clearTimeout(sec.__fxT);sec.__fxT=setTimeout(()=>sec.classList.remove('fx-replay'),d+(parseFloat(getComputedStyle(sec).getPropertyValue('--fx-delay'))||0)+1600)}};
+const progress=document.querySelector('.fx-progress'),top=document.querySelector('.fx-top'),cursor=edit?null:document.querySelector('.fx-cursor');let ticking=false;
+const onScroll=()=>{ticking=false;const h=document.documentElement.scrollHeight-innerHeight;if(progress)progress.style.setProperty('--fx-p',h>0?Math.min(1,scrollY/h):0);if(top)top.classList.toggle('show',scrollY>innerHeight*.6);hooks.forEach(fn=>{if(fn.scroll)try{fn.scroll()}catch{}})};
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+if(top)top.addEventListener('click',()=>scrollTo({top:0,behavior:reduce?'auto':'smooth'}));
+const card=t=>t.closest&&t.closest('[data-hover=tilt] :is(.panel,.fx-card,.work-grid>article,.task,.price-card),.fx-tilt');
+document.addEventListener('pointermove',e=>{const t=e.target;if(cursor){cursor.style.setProperty('--cx',e.clientX+'px');cursor.style.setProperty('--cy',e.clientY+'px')}if(reduce||!t.closest)return;
+ const sec=t.closest('main>section');if(sec){const bg=sec.querySelector(':scope>.fx-bg[data-fx-bg=spotlight]');if(bg){const r=sec.getBoundingClientRect();sec.style.setProperty('--px',(e.clientX-r.left)+'px');sec.style.setProperty('--py',(e.clientY-r.top)+'px')}}
+ const sp=t.closest('[data-spotlight]');if(sp){const r=sp.getBoundingClientRect();sp.style.setProperty('--mx',(e.clientX-r.left)+'px');sp.style.setProperty('--my',(e.clientY-r.top)+'px')}
+ const c=card(t);if(c){const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--rx',((.5-y)*10).toFixed(2)+'deg');c.style.setProperty('--ry',((x-.5)*12).toFixed(2)+'deg');c.style.setProperty('--gx',(x*100).toFixed(1)+'%');c.style.setProperty('--gy',(y*100).toFixed(1)+'%')}},{passive:true});
+document.addEventListener('pointerout',e=>{const c=card(e.target);if(c&&!c.contains(e.relatedTarget)){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')}});
+if(cursor){addEventListener('pointerdown',()=>cursor.classList.add('press'));addEventListener('pointerup',()=>cursor.classList.remove('press'))}
+})();`;
+
+// Injected only into the builder canvas. The canvas is a sandboxed iframe; all edits are proposals that the workbench validates.
+export const EDITOR_CSS=String.raw`
+html[data-atlas-mode=edit] main>section{cursor:default}
+html[data-atlas-mode=edit] main>section:hover{outline:1.5px dashed color-mix(in srgb,#5b8cff 70%,transparent);outline-offset:-1.5px}
+html[data-atlas-mode=edit] main>section.atlas-selected{outline:2px solid #4f7cff;outline-offset:-2px}
+html[data-atlas-mode=edit] .fx-intro,html[data-atlas-mode=edit] .fx-cursor{display:none!important}
+.atlas-ui{all:initial;position:fixed;z-index:2147483000;font:500 12px/1.2 "Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:#fff;pointer-events:none}
+.atlas-tag{background:#4f7cff;padding:5px 9px;border-radius:7px 7px 7px 0;box-shadow:0 6px 18px -6px #1d3a8a88;white-space:nowrap;display:flex;gap:6px;align-items:center}
+.atlas-tag.hover{background:#1f2430e6}
+.atlas-bar{display:flex;gap:2px;padding:4px;border-radius:11px;background:#14171ff2;box-shadow:0 12px 30px -8px #0009,0 0 0 1px #ffffff14;pointer-events:auto}
+.atlas-bar button{all:unset;cursor:pointer;color:#e9ecf5;width:30px;height:28px;display:grid;place-items:center;border-radius:7px;font-size:14px}
+.atlas-bar button:hover{background:#ffffff1f}.atlas-bar button[data-a=remove]:hover{background:#ff5d5d33;color:#ffb4b4}
+.atlas-bar button[data-a=drag]{cursor:grab;font-size:15px;letter-spacing:-2px}
+.atlas-bar i{width:1px;margin:5px 3px;background:#ffffff22}
+.atlas-line{height:4px;border-radius:4px;background:#4f7cff;box-shadow:0 0 0 3px #4f7cff40}
+.atlas-line::before,.atlas-line::after{content:'';position:absolute;top:-4px;width:12px;height:12px;border-radius:50%;background:#4f7cff}.atlas-line::before{left:-6px}.atlas-line::after{right:-6px}
+.atlas-line span{position:absolute;left:50%;top:-30px;translate:-50% 0;background:#4f7cff;padding:5px 10px;border-radius:20px;white-space:nowrap}
+.atlas-ghost{background:#4f7cff;padding:9px 14px;border-radius:10px;box-shadow:0 18px 40px -10px #1d3a8a99;rotate:-2deg}
+main>section.atlas-dragging{opacity:.35}
+[data-atlas-editing]{outline:2px solid #4f7cff!important;outline-offset:4px;border-radius:3px;cursor:text;background-clip:padding-box;caret-color:#4f7cff}
+[data-atlas-editing]:focus{outline-color:#4f7cff}
+.atlas-empty{min-height:70vh;display:grid;place-items:center;text-align:center;margin:24px;border:2px dashed color-mix(in srgb,var(--ink) 22%,transparent);border-radius:22px;color:var(--muted);font-size:14px;line-height:1.8}
+.atlas-empty b{display:block;font-size:44px;color:var(--accent);font-weight:400}
+html[data-atlas-mode=edit] .atlas-text-hit{cursor:text}
+`;
+
+export const EDITOR_JS=String.raw`
+(()=>{const ED=window.__ATLAS_EDITOR__;if(!ED)return;const root=document.documentElement;root.dataset.atlasMode=ED.mode;const edit=ED.mode==='edit';
+const post=m=>parent.postMessage(Object.assign({atlas:ED.token},m),'*');
+const ui=(cls,html='')=>{const el=document.createElement('div');el.className='atlas-ui '+cls;el.innerHTML=html;el.hidden=true;document.body.append(el);return el};
+const tag=ui('atlas-tag hover'),sel=ui('atlas-tag'),bar=ui('atlas-bar','<button data-a="drag" title="拖动排序">⋮⋮</button><i></i><button data-a="up" title="上移 Alt+↑">↑</button><button data-a="down" title="下移 Alt+↓">↓</button><button data-a="duplicate" title="复制 Ctrl+D">⧉</button><button data-a="replay" title="重播动效">▶</button><button data-a="hide" title="隐藏">◐</button><i></i><button data-a="remove" title="删除 Delete">✕</button>'),line=ui('atlas-line','<span>放到这里</span>'),ghost=ui('atlas-ghost');
+let selected=ED.selected||'',hover=null,editing=null,drag=null,dropBefore=void 0,raf=0;
+const sections=()=>[...document.querySelectorAll('main>section[data-block-id]')];
+const byId=id=>id?document.querySelector('main>section[data-block-id="'+CSS.escape(id)+'"]'):null;
+const name=s=>ED.names[s.dataset.blockId]||'模块';
+function place(){raf=0;const s=byId(selected);sections().forEach(x=>x.classList.toggle('atlas-selected',x===s));
+ const vr=s&&s.getBoundingClientRect();if(edit&&s&&!drag&&vr.bottom>30&&vr.top<innerHeight-30){const r=vr;sel.hidden=false;sel.textContent=name(s);sel.style.left=Math.max(4,r.left)+'px';sel.style.top=(r.top>26?r.top-24:Math.max(4,r.top+4))+'px';bar.hidden=false;bar.querySelector('[data-a=replay]').hidden=!s.dataset.enter&&s.dataset.text!=='split';const y=r.top>48?r.top-42:Math.min(Math.max(8,r.top+8),innerHeight-44);bar.style.left=Math.max(8,r.right-bar.offsetWidth-6)+'px';bar.style.top=(r.bottom<60?-100:y)+'px'}else{sel.hidden=true;bar.hidden=true}
+ if(edit&&hover&&hover!==s&&!drag){const r=hover.getBoundingClientRect();tag.hidden=false;tag.textContent=name(hover);tag.style.left=Math.max(4,r.left)+'px';tag.style.top=(r.top>26?r.top-24:Math.max(4,r.top+4))+'px'}else tag.hidden=true}
+const schedule=()=>{if(!raf)raf=requestAnimationFrame(place)};
+function select(id,scroll,instant){selected=id||'';schedule();const s=byId(selected);if(scroll&&s){const r=s.getBoundingClientRect();if(r.bottom<80||r.top>innerHeight-80)s.scrollIntoView({block:r.height>innerHeight*.8?'start':'center',behavior:instant?'auto':'smooth'})}}
+addEventListener('scroll',()=>{schedule();clearTimeout(window.__atlasScrollT);window.__atlasScrollT=setTimeout(()=>post({type:'atlas-scroll',y:scrollY}),120)},{passive:true});addEventListener('resize',schedule);
+document.addEventListener('pointerover',e=>{const s=e.target.closest&&e.target.closest('main>section[data-block-id]');if(s!==hover){hover=s;schedule()}});
+document.addEventListener('pointerleave',()=>{hover=null;schedule()});
+// Text editing: match an element's own text with a known text field of its block.
+const own=el=>{let t='';for(const n of el.childNodes){if(n.nodeType===3)t+=n.textContent;else if(n.nodeName==='BR')t+='\n'}return t.replace(/[ \t]+\n/g,'\n').trim()};
+function field(el,uid){const t=own(el);if(!t)return null;const props=ED.props[uid]||{};for(const [k,p] of Object.entries(props)){if(p.t==='text'&&String(p.v).trim()===t)return {key:k,multi:p.m}}
+ for(const [k,p] of Object.entries(props)){if(p.t!=='list')continue;const rows=String(p.v).split(p.s==='c'?',':'\n');for(let r=0;r<rows.length;r++){const f=rows[r].split('|');for(let i=0;i<f.length;i++)if(f[i].trim()&&f[i].trim()===t)return {key:k,row:r,col:i}}}return null}
+function startEdit(target){const s=target.closest('main>section[data-block-id]');if(!s)return false;let el=target;while(el&&el!==s){const f=field(el,s.dataset.blockId);if(f){begin(el,s,f);return true}el=el.parentElement}return false}
+function begin(el,s,f){finish(true);const span=document.createElement('span');span.dataset.atlasEditing='';const nodes=[...el.childNodes].filter(n=>n.nodeType===3||n.nodeName==='BR');const first=nodes.find(n=>n.textContent.trim()||n.nodeName==='BR');if(!first)return;el.insertBefore(span,first);let started=false;nodes.forEach(n=>{if(n===first)started=true;if(started||n.nodeType===3&&n.textContent.trim())span.append(n)});
+ const before=own(span);span.contentEditable='plaintext-only';if(span.contentEditable!=='plaintext-only')span.contentEditable='true';editing={span,uid:s.dataset.blockId,f,before};span.focus();const r=document.createRange();r.selectNodeContents(span);const g=getSelection();g.removeAllRanges();g.addRange(r)}
+function finish(commit){if(!editing)return;const {span,uid,f,before}=editing;editing=null;let v=span.innerText.replace(/ /g,' ').replace(/\n{3,}/g,'\n\n').trim();if(!f.multi&&f.row==null)v=v.replace(/\s*\n\s*/g,' ');if(f.row!=null)v=v.replace(/[\n|,]/g,' ');span.removeAttribute('contenteditable');delete span.dataset.atlasEditing;if(commit&&v!==before)post({type:'atlas-edit',uid,key:f.key,row:f.row,col:f.col,value:v});else if(!commit){span.textContent='';before.split('\n').forEach((l,i)=>{if(i)span.append(document.createElement('br'));span.append(l)})}}
+document.addEventListener('focusout',e=>{if(editing&&e.target===editing.span)finish(true)});
+document.addEventListener('dblclick',e=>{if(!edit)return;if(startEdit(e.target))e.preventDefault()});
+document.addEventListener('click',e=>{if(e.target.closest('.atlas-ui'))return;if(editing&&editing.span.contains(e.target))return;const s=e.target.closest('main>section[data-block-id]');
+ if(edit){if(!e.target.matches('input,textarea,select,label,option')){e.preventDefault();e.stopPropagation()}if(s){select(s.dataset.blockId);post({type:'atlas-select',uid:s.dataset.blockId})}}},true);
+document.addEventListener('submit',e=>{if(edit){e.preventDefault();e.stopImmediatePropagation()}},true);
+bar.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!selected)return;const a=b.dataset.a;if(a==='drag')return;if(a==='replay'){const s=byId(selected);if(s&&window.__atlasFx)window.__atlasFx.replay(s);return}post({type:'atlas-action',uid:selected,action:a})});
+// Drag sorting and drop targets. Hidden blocks are never rendered, so positions are expressed as "before this visible block".
+function gap(y){const list=sections().filter(s=>!drag||s.dataset.blockId!==drag.uid);for(const s of list){const r=s.getBoundingClientRect();if(y<r.top+r.height/2)return {before:s.dataset.blockId,y:r.top}}const last=list[list.length-1];return {before:null,y:last?last.getBoundingClientRect().bottom:Math.min(innerHeight-40,120)}}
+function showLine(y,label){const g=gap(y);dropBefore=g.before;line.hidden=false;line.style.left='16px';line.style.width=(innerWidth-32)+'px';line.style.top=Math.max(6,Math.min(innerHeight-8,g.y-2))+'px';line.querySelector('span').textContent=label||'放到这里'}
+function hideLine(){line.hidden=true;dropBefore=void 0}
+let auto=0;const autoScroll=y=>{cancelAnimationFrame(auto);const v=y<70?-(70-y)/3:y>innerHeight-70?(y-innerHeight+70)/3:0;if(v){auto=requestAnimationFrame(()=>{scrollBy(0,v);if(drag)showLine(drag.y,drag.label);autoScroll(y)})}};
+bar.addEventListener('pointerdown',e=>{const b=e.target.closest('[data-a=drag]');if(!b||!selected||e.button!==0)return;e.preventDefault();b.setPointerCapture(e.pointerId);drag={uid:selected,y:e.clientY,label:'移动「'+name(byId(selected))+'」'};byId(selected).classList.add('atlas-dragging');ghost.hidden=false;ghost.textContent='⋮⋮ '+name(byId(selected));schedule();
+ const move=ev=>{drag.y=ev.clientY;ghost.style.left=(ev.clientX+14)+'px';ghost.style.top=(ev.clientY+10)+'px';showLine(ev.clientY,drag.label);autoScroll(ev.clientY)};move(e);
+ const end=ev=>{b.removeEventListener('pointermove',move);b.removeEventListener('pointerup',end);b.removeEventListener('pointercancel',end);cancelAnimationFrame(auto);const s=byId(drag.uid);if(s)s.classList.remove('atlas-dragging');ghost.hidden=true;const target=dropBefore;const uid=drag.uid;drag=null;hideLine();schedule();if(ev.type==='pointerup'&&target!==void 0&&target!==uid)post({type:'atlas-move',uid,before:target})};
+ b.addEventListener('pointermove',move);b.addEventListener('pointerup',end);b.addEventListener('pointercancel',end)});
+addEventListener('message',e=>{if(e.source!==parent)return;const m=e.data||{};if(m.atlas!==ED.token)return;
+ if(m.type==='select'){select(m.uid,m.scroll)}
+ else if(m.type==='dragover'){showLine(m.y,m.label);autoScroll(m.y)}else if(m.type==='dragleave'){hideLine();cancelAnimationFrame(auto)}
+ else if(m.type==='drop'){const b=dropBefore;hideLine();cancelAnimationFrame(auto);if(b!==void 0)post({type:'atlas-insert',blockType:m.blockType,before:b})}
+ else if(m.type==='patch'){if(m.names)Object.assign(ED.names,m.names);if(m.props)Object.assign(ED.props,m.props);if(typeof m.css==='string'){const st=document.querySelector('style');if(st&&st.textContent!==m.css)st.textContent=m.css}(m.blocks||[]).forEach(p=>{const old=byId(p.uid);if(!old)return;const t=document.createElement('template');t.innerHTML=p.html;const s=t.content.firstElementChild;if(!s)return;old.replaceWith(s);if(window.__atlasFx)window.__atlasFx.init(s)});schedule()}
+ else if(m.type==='replay'){const s=byId(m.uid);if(s&&window.__atlasFx)window.__atlasFx.replay(s)}
+ else if(m.type==='scroll'){scrollTo(0,m.y)}});
+document.addEventListener('keydown',e=>{if(editing){if(e.key==='Escape'){e.preventDefault();finish(false);editing=null}else if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();finish(true)}return}
+ if(e.target.matches('input,textarea,select,[contenteditable]'))return;const k=e.key,mod=e.ctrlKey||e.metaKey;if(['Delete','Backspace','Escape'].includes(k)||mod&&/^[zydcvse]$/i.test(k)||e.altKey&&/^Arrow(Up|Down)$/.test(k)){e.preventDefault();post({type:'atlas-key',key:k,mod,shift:e.shiftKey,alt:e.altKey})}});
+if(!sections().length&&edit){const m=document.querySelector('main');if(m)m.insertAdjacentHTML('beforeend','<div class="atlas-empty"><div><b>✳</b>画布还空着。<br>从左侧把组件拖到这里，或点击组件直接加入。</div></div>')}
+const go=()=>{if(ED.scroll)scrollTo(0,ED.scroll);select(selected,!!ED.reveal,true);post({type:'atlas-ready',y:scrollY})};if(document.readyState==='complete')go();else addEventListener('load',go);
+})();`;

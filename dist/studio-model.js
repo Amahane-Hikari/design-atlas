@@ -31,7 +31,7 @@ export function replaceProjectBlock(project,blockId,nextType){
   if(index<0)throw Error('找不到待替换的图层。');
   const old=next.blocks[index];
   if(!replacementOptions(old.type).some(x=>x.id===nextType))throw Error('请选择同一类别中的其他布局。');
-  const block=createBlock(nextType);block.uid=old.uid;block.hidden=old.hidden;
+  const block=createBlock(nextType,old.style);block.uid=old.uid;block.hidden=old.hidden;if(old.label)block.label=old.label;
   for(const key of Object.keys(block.props))if(Object.hasOwn(old.props,key))block.props[key]=old.props[key];
   next.blocks[index]=block;return next;
 }
