@@ -2,7 +2,7 @@
 
 一个可以在浏览器里探索设计、调整主题、拼装页面并带走源代码的工作台。核心交互不依赖外部 CDN，也不需要账号或后端。
 
-源码仓库：[luomo66ccff/design-atlas](https://github.com/luomo66ccff/design-atlas)。
+在线使用：[Design Atlas](https://design-atlas-gold.vercel.app/) · 源码仓库：[luomo66ccff/design-atlas](https://github.com/luomo66ccff/design-atlas)。
 
 ## Vercel 部署
 
