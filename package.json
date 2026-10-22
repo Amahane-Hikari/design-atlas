@@ -1,6 +1,6 @@
 {
   "name": "design-atlas-local",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": true,
   "type": "module",
   "description": "本地前端设计资源与可视化页面工作室",
@@ -11,7 +11,8 @@
     "refresh": "node scripts/refresh-local-catalog.mjs",
     "check:cases": "node scripts/check-cases.mjs",
     "check:studio": "node scripts/check-workspace.mjs && node scripts/check-studio.mjs",
-    "check:fx": "node scripts/check-fx.mjs"
+    "check:fx": "node scripts/check-fx.mjs",
+    "tokenize": "node scripts/tokenize-colors.mjs"
   },
   "engines": {
     "node": ">=20"

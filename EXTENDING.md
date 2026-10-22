@@ -84,6 +84,14 @@ node scripts/check-case-pack.mjs .\my-cases.json
 - 画布编辑桥 `EDITOR_JS` 只在拼装台预览中注入：它通过带一次性 token 的 postMessage 提出「选择、改字、移动、插入、操作」请求，工作台校验图层、字段与模块类型后才写入项目。导出与详情预览不包含编辑桥。
 - 画布双击改字按「元素自身文本 = 某个文本字段 / 列表单元」匹配，所以渲染时请直接输出转义后的字段值；拼接了其他文字的元素只能在检查器中修改。
 
+## v3.1 素材、元素样式与图片位
+
+- **素材**：项目可带 `assets`：`{"a-<id>":{"d":"data:image/webp;base64,…","n":"名称","w":1600,"h":900}}`。`normalizeAssets` 只接受 PNG / JPEG / WebP / GIF 的 base64 data URL，单张约 1.4M 字符、最多 24 张、合计约 4.5M 字符；SVG、远程地址和其他格式都会被丢弃。导出页面只包含被模块引用的图片。
+- **图片位**：渲染器给任意元素加 `data-media="slot"` 就成为可替换的图片位，`block.style.media` 把槽名映射到素材 ID，渲染为作用于 `#s-<uid>` 的背景图规则，并隐藏原有的占位图形。新模块建议用 `media-blocks.js` 里的 `ph(slot,i)` 占位，槽名用小写字母、数字和连字符。
+- **元素样式**：给文本元素加 `data-f="eyebrow|title|subtitle|button|secondary"`，即可在画布里点选并在「元素」面板单独设置；`block.style.els` 只接受颜色、字号（50–240%）、字重、对齐、字距、斜体、大写、隐藏。
+- **背景图**：`block.style.image` 指向素材，配合 `imageFit`、`imagePos`、`overlay`、`overlayColor`、`imageBlur`；渐变用 `bg2`、`bg3`、`gradType`、`gradAngle`；滚动特效为 `scroll`。
+- **外壳颜色**：修改 `app.css`、`cases.css`、`studio.css`、`v3.css` 后运行 `node scripts/tokenize-colors.mjs`，新写的颜色会变成变量并自动生成深色值；只在 `[data-ui=dark]` 规则里写的颜色保持原样。
+
 ## 案例数据与来源
 
 内置网站案例位于 `dist/data/site-cases.json`。每条包含来源、核对日期、实际阅读范围、借鉴建议与配方关联。新增内置案例必须读过原站内容，使用 `content-reviewed`；只有完成真实浏览器观察的范围才记录为 `browser-sampled`，并写明页面与动作。
@@ -92,7 +100,7 @@ node scripts/check-case-pack.mjs .\my-cases.json
 
 ## 模块和离线构建
 
-依赖顺序为 `fx-runtime → fx-blocks → pattern-engine → engine → case-model → case-ui → workspace-model → studio-model → studio-ui → builder-ui → app`。`case-model` 和 `workspace-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
+依赖顺序为 `fx-runtime → fx-blocks → media-blocks → pattern-engine → engine → case-model → case-ui → workspace-model → studio-model → studio-ui → builder-ui → app`。`case-model` 和 `workspace-model` 本身无网络、DOM 或存储依赖。`case-ui` 通过 app 提供的桥接接口提交整页修改；主题、追加、替换都是一次项目事务，可一步撤销。
 
 `studio-model.js` 提供全局检索、同类布局替换及独占锁下的项目库写入。`studio-ui.js` 负责项目库、命令搜索与持久化，调用 app 桥接接口打开资源或提交项目事务；不要直接持有和修改 app 的草稿对象。新增可搜索资源时补充 `getItems()` 和对应打开行为。
 

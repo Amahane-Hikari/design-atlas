@@ -20,7 +20,7 @@ for(const [label,items] of [['skills',catalog.skills],['references',refs],['reso
 check(!JSON.stringify({catalog,refs}).match(/C:\\\\Users|luomo0712|art_v2_|sk-proj-/i),'published index contains no local user path or credential');
 const offline=await readFile(new URL('../dist/offline.html',import.meta.url),'utf8');
 const inline=[...offline.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/g)];
-check(inline.length===2,'offline has embedded data and application');
+check(inline.length===3,'offline has theme bootstrap, embedded data and application');
 for(const [,code] of inline){new Script(code);assertions++}
 check(!/<script\b[^>]*\bsrc=|<link\b[^>]*rel="stylesheet"/.test(offline),'offline does not require external runtime files');
 console.log(JSON.stringify({status:'PASS',assertions,blocks:BLOCKS.length,templates:TEMPLATES.length,themes:THEMES.length,skills:catalog.skills.length,references:refs.length,resources:catalog.resources.length,specialLicenses:catalog.resources.filter(x=>x.projectType==='source-available').length},null,2));

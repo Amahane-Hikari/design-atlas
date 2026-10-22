@@ -4,9 +4,11 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width,initial-scale=1">
  <meta name="theme-color" content="#f7f8f5">
- <meta name="description" content="属于你的前端设计工作台。64 个原创组件、18 套整页模板与 60+ 种动效，在画布上直接拖拽、双击改字，导出干净的原生代码。">
+ <meta name="description" content="属于你的前端设计工作台。81 个原创组件、24 套整页模板与 80+ 种动效，在画布上直接拖拽、改字、换图，导出干净的原生代码。">
  <title>Design Atlas · 前端设计工作台</title>
  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%233d6655'/%3E%3Ctext x='24' y='35' text-anchor='middle' font-size='36' fill='%23f2edce'%3E✳%3C/text%3E%3C/svg%3E">
+ <script>try{const m=localStorage.getItem("design-atlas.ui-theme");document.documentElement.dataset.ui=m==="dark"||m!=="light"&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}catch{}</script>
+ <link rel="stylesheet" href="tokens.css">
  <link rel="stylesheet" href="app.css">
  <link rel="stylesheet" href="cases.css">
  <link rel="stylesheet" href="studio.css">
@@ -35,14 +37,14 @@
   <div class="sidebar-bottom">
    <div class="sidebar-note"><span>FROM IDEAS<br>TO INTERFACES.</span><b aria-hidden="true">↗</b><p>一点灵感，一点尝试。<br>做出属于你的好界面。</p><button data-view="builder">开始我的设计 <span>↗</span></button></div>
    <button class="about-link" id="about-button"><span data-icon="info"></span>关于这个工作台<span>↗</span></button>
-   <div class="local-status"><i></i> 本地自动保存 <span>v3.0</span></div>
+   <div class="local-status"><i></i> 本地自动保存 <span>v3.1</span></div>
   </div>
  </aside>
  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>
  <div class="app-shell">
   <header class="topbar">
    <div class="breadcrumbs"><button id="mobile-menu" class="icon-btn mobile-only" aria-label="打开导航"><span data-icon="menu"></span></button><span>我的工作空间</span><i>/</i><strong id="breadcrumb-current">设计资源库</strong></div>
-   <div class="top-actions"><button class="global-search-trigger" data-studio-action="search" aria-label="搜索全部设计与操作"><span>⌕ 搜索全部</span><kbd>Ctrl K</kbd></button><span class="save-status" id="save-status"><i></i>已保存在此浏览器</span><button class="top-icon" id="keyboard-help" aria-label="快捷键与使用说明"><span data-icon="help"></span></button><span class="user-avatar" aria-label="本地个人工作空间">A</span></div>
+   <div class="top-actions"><button class="global-search-trigger" data-studio-action="search" aria-label="搜索全部设计与操作"><span>⌕ 搜索全部</span><kbd>Ctrl K</kbd></button><span class="save-status" id="save-status"><i></i>已保存在此浏览器</span><button class="top-icon" id="ui-theme" aria-label="切换深色模式" title="切换深色 / 浅色"><span data-icon="moon"></span></button><button class="top-icon" id="keyboard-help" aria-label="快捷键与使用说明"><span data-icon="help"></span></button><span class="user-avatar" aria-label="本地个人工作空间">A</span></div>
   </header>
   <main id="main" tabindex="-1"><div class="loading-state"><span class="loading-mark">✳</span><p>正在打开你的设计工作台…</p></div></main>
   <footer class="app-footer"><span>CRAFTED FOR YOUR NEXT IDEA.</span><span>原创演示 MIT · 第三方资源独立授权 <i>✳</i></span></footer>
