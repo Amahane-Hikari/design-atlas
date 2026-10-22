@@ -263,7 +263,7 @@ const exported=[...moduleSource.matchAll(/^export (?:const|function) (\w+)/gm)].
 const transformed=moduleSource.replace(/^import\s*\{([^}]+)\}\s*from\s*['"]\.\/engine\.js['"];?\s*$/gm,'const {$1}=__engine;').replace(/^export (const|function) /gm,'$1 ');
 check(!/^\s*(?:import|export)\b/m.test(transformed),'named imports are compatible with offline transformation');
 new Script(transformed);assertions++;
-const dependencyNames=['fx-runtime.js','fx-blocks.js','pattern-engine.js','engine.js'];
+const dependencyNames=['fx-runtime.js','fx-blocks.js','media-blocks.js','pattern-engine.js','engine.js'];
 const dependencySources=await Promise.all(dependencyNames.map(file=>readFile(new URL(`../dist/${file}`,import.meta.url),'utf8')));
 let bundle='const __atlasModules=Object.create(null);\n';
 for(const [index,file] of [...dependencyNames,'workspace-model.js'].entries()){

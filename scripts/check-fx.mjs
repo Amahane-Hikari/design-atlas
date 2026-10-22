@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {Script} from 'node:vm';
-import {BLOCKS,THEMES,TEMPLATES,FONTS,STYLES,createBlock,createProject,validateProject,generateDocument,generateParts,normalizeTheme,editorProps} from '../dist/engine.js';
+import {BLOCKS,THEMES,TEMPLATES,FONTS,STYLES,createBlock,createProject,validateProject,generateDocument,generateParts,normalizeTheme,editorProps,mediaSlots} from '../dist/engine.js';
+import {MEDIA_BLOCKS} from '../dist/media-blocks.js';
 import {FX_BLOCKS} from '../dist/fx-blocks.js';
-import {FX_OPTIONS,STYLE_DEFAULTS,normalizeBlockStyle,normalizeEffects,sectionFx} from '../dist/fx-runtime.js';
+import {FX_OPTIONS,STYLE_DEFAULTS,ASSET_LIMITS,normalizeBlockStyle,normalizeEffects,normalizeAssets,normalizeElementStyle,sectionFx} from '../dist/fx-runtime.js';
 import {RECIPES,validateRecipe,recipePlan} from '../dist/case-model.js';
 import {replaceProjectBlock,replacementOptions} from '../dist/studio-model.js';
 import {createBuilderUI,renderFxLab} from '../dist/builder-ui.js';
@@ -14,7 +15,7 @@ const scripts=html=>[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(m=>m
 // Every new module renders, escapes, keeps duplicate instances unique and ships parseable JS.
 for(const b of FX_BLOCKS){const p=createProject();p.blocks=[createBlock(b.id),createBlock(b.id)];const html=generateDocument(validateProject(p)),ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);check(ids.length===new Set(ids).size,'unique IDs '+b.id);check(!html.includes('undefined'),'complete output '+b.id);scripts(html).forEach(code=>new Script(code));
  const x=createProject();x.blocks=[createBlock(b.id)];for(const k of Object.keys(x.blocks[0].props))x.blocks[0].props[k]='<img src=x onerror=alert(1)>|<b>|"q"';check(!/<img src=x/.test(generateDocument(x)),'escaped fields '+b.id);}
-check(BLOCKS.length>=60&&TEMPLATES.length>=18&&THEMES.length>=16,'expanded registry');
+check(BLOCKS.length>=81&&TEMPLATES.length>=24&&THEMES.length>=16,'expanded registry');
 for(const t of TEMPLATES){const p=createProject(t.id),html=generateDocument(p);check(!html.includes('undefined'),'template renders '+t.id);check(validateProject(JSON.parse(JSON.stringify(p))).blocks.every((b,i)=>JSON.stringify(b.style)===JSON.stringify(p.blocks[i].style)),'template styles round-trip '+t.id)}
 
 // Block styles accept only known values; anything else falls back to defaults.
@@ -55,6 +56,31 @@ check(recipePlan(createProject(),recipe,'append',registry).newBlocks[0].style.pa
 const r=createProject();r.blocks=[createBlock('hero-editorial',{enter:'zoom-in',tone:'dark'}),createBlock('footer')];r.blocks[0].label='首屏';const alt=replacementOptions('hero-editorial')[0];const rr=replaceProjectBlock(r,r.blocks[0].uid,alt.id);check(rr.blocks[0].style.enter==='zoom-in'&&rr.blocks[0].label==='首屏','layout replacement keeps style and label');
 check(typeof createBuilderUI==='function'&&typeof renderFxLab==='function','studio modules load without a DOM');
 
+// v3.1: image assets, element styles, image slots and the new modules.
+const PNG='data:image/png;base64,'+'iVBORw0KGgo'.padEnd(400,'A')+'==';
+const assets=normalizeAssets({'a-ok001':{d:PNG,n:'图'.repeat(90),w:99999,h:20},'a-svg01':{d:'data:image/svg+xml;base64,PHN2Zz4=',n:'x'},'a-js0001':{d:'javascript:alert(1)'},'bad id':{d:PNG},'a-big001':{d:'data:image/png;base64,'+'A'.repeat(ASSET_LIMITS.bytes)},'a-url001':{d:'https://example.com/x.png'},'a-inj001':{d:'data:image/png;base64,AAAA")}body{display:none}/*'}});
+check(Object.keys(assets).join()==='a-ok001'&&assets['a-ok001'].n.length===60&&assets['a-ok001'].w===8000,'only bounded raster data URLs are kept');
+check(Object.keys(normalizeAssets(Object.fromEntries(Array.from({length:40},(_,i)=>[`a-n${String(i).padStart(4,'0')}`,{d:PNG}])))).length===ASSET_LIMITS.count,'asset count capped');
+const es=normalizeElementStyle({color:'red',size:999,weight:550,align:'justify',tracking:-50,italic:'yes',upper:true,hidden:true});
+check(!('color' in es)&&es.size===240&&!('weight' in es)&&!('align' in es)&&es.tracking===-10&&!('italic' in es)&&es.upper&&es.hidden,'element styles validated');
+const st=normalizeBlockStyle({els:{title:{color:'#ABCDEF'},hack:{color:'#000000'}},media:{photo:'a-ok001','Bad Slot':'a-ok001',x:'not-an-id'},image:'a-ok001',scroll:'parallax',gradType:'conic',gradAngle:999,bg3:'#123456'});
+check(st.els.title.color==='#abcdef'&&!st.els.hack&&Object.keys(st.media).join()==='photo'&&st.gradAngle===360&&st.scroll==='parallax','block media, element and gradient keys validated');
+const mp=createProject('photographer');mp.assets={'a-ok001':{d:PNG,n:'a',w:10,h:10}};mp.blocks[1].style={...mp.blocks[1].style,media:{bg:'a-ok001'},els:{title:{color:'#ff0000',size:120,hidden:false},eyebrow:{hidden:true}},image:'a-missing1'};
+const mv=validateProject(JSON.parse(JSON.stringify(mp))),md=generateDocument(mv);
+check(Object.keys(mv.assets).length===1,'projects keep validated assets');
+check(md.includes(`[data-media="bg"]{background:url("${PNG}")`)&&md.includes('[data-f="title"]{color:#ff0000')&&md.includes('zoom:1.2')&&md.includes('[data-f="eyebrow"]{display:none!important}'),'image slots and element styles become scoped CSS');
+check(!md.includes('class="fx-img"'),'missing background asset renders nothing');
+const unref=createProject();unref.assets={'a-ok001':{d:PNG,n:'a',w:1,h:1}};check(!generateDocument(unref).includes('iVBORw0KGgo'),'unreferenced assets are not exported');
+check(mediaSlots(createBlock('gallery-masonry')).length===6&&mediaSlots(createBlock('hero-split'))[0]==='visual'&&mediaSlots(createBlock('faq')).length===0,'image slots discovered from markup');
+for(const b of MEDIA_BLOCKS){const p=createProject();p.blocks=[createBlock(b.id),createBlock(b.id)];const html=generateDocument(validateProject(p)),ids=[...html.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]);check(ids.length===new Set(ids).size&&!html.includes('undefined'),'media module complete '+b.id);scripts(html).forEach(code=>new Script(code));
+ const x=createProject();x.blocks=[createBlock(b.id)];for(const k of Object.keys(x.blocks[0].props))x.blocks[0].props[k]='<img src=x onerror=alert(1)>|<b>|"q"';check(!/<img src=x/.test(generateDocument(x)),'media module escapes '+b.id)}
+for(const id of ['photographer','boutique','motion-studio','analytics','link-in-bio','travel-journal'])check(TEMPLATES.some(t=>t.id===id)&&!generateDocument(createProject(id)).includes('undefined'),'template '+id);
+check(generateDocument(e,{editor:{mode:'edit',field:'title',token:'t'}}).includes('"field":"title"'),'editor receives the selected element');
+const shellCSS=(await Promise.all(['app.css','cases.css','studio.css','v3.css'].map(f=>readFile(new URL('../dist/'+f,import.meta.url),'utf8')))).join('\n'),tokens=await readFile(new URL('../dist/tokens.css',import.meta.url),'utf8');
+const used=new Set([...shellCSS.matchAll(/var\(--c-([0-9a-f]{6,8})\)/g)].map(m=>m[1])),[lightPart,darkPart]=tokens.split(':root[data-ui=dark]');
+check(used.size>400&&[...used].every(h=>lightPart.includes(`--c-${h}:`)&&darkPart.includes(`--c-${h}:`)),'every shell colour token has light and dark values');
+
 const offline=await readFile(new URL('../dist/offline.html',import.meta.url),'utf8');
+check(offline.includes('MEDIA_BLOCK_JS')&&offline.includes('--c-3d6655')&&offline.includes('data-ui'),'offline bundle contains 3.1 modules, tokens and theme bootstrap');
 check(offline.includes('createBuilderUI')&&offline.includes('FX_BLOCK_JS')&&offline.includes('.studio-bar'),'offline bundle contains v3 studio, effects and styles');
-console.log(JSON.stringify({status:'PASS',assertions,blocks:BLOCKS.length,newBlocks:FX_BLOCKS.length,templates:TEMPLATES.length,themes:THEMES.length,effects:Object.fromEntries(Object.entries(FX_OPTIONS).map(([k,v])=>[k,v.length-1]))},null,2));
+console.log(JSON.stringify({status:'PASS',assertions,blocks:BLOCKS.length,newBlocks:FX_BLOCKS.length+MEDIA_BLOCKS.length,templates:TEMPLATES.length,themes:THEMES.length,effects:Object.fromEntries(Object.entries(FX_OPTIONS).map(([k,v])=>[k,v.length-1]))},null,2));
