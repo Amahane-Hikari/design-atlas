@@ -84,6 +84,13 @@ node scripts/check-case-pack.mjs .\my-cases.json
 - 画布编辑桥 `EDITOR_JS` 只在拼装台预览中注入：它通过带一次性 token 的 postMessage 提出「选择、改字、移动、插入、操作」请求，工作台校验图层、字段与模块类型后才写入项目。导出与详情预览不包含编辑桥。
 - 画布双击改字按「元素自身文本 = 某个文本字段 / 列表单元」匹配，所以渲染时请直接输出转义后的字段值；拼接了其他文字的元素只能在检查器中修改。
 
+## v4 自由编辑协议
+
+- `block.style.free` 以「子元素路径」为键：`"3/2"` 表示模块的第 3 个内容子元素中的第 2 个子元素（顶层计数会跳过 `.fx-bg`、`.fx-img`、`.fx-divider` 装饰层）。路径最多 12 层、每层 1–999，最多 80 条。
+- 每条只接受 `x`、`y`、`rotate`、`scale`、`w`、`opacity`、`z`、`color`、`bg`、`size`、`weight`、`align`、`lh`、`tracking`、`radius`、`pad`、`border`、`borderColor`、`shadow`、`blur`、`italic`、`upper`、`hidden`，由 `normalizeFree` 限定范围；编译为 `#s-<uid>>:nth-child(n of :not(装饰层))>…` 规则，位移、旋转、缩放使用独立的 `translate` / `rotate` / `scale` 属性，不覆盖模块自身的 `transform`。
+- 路径依赖模块的 DOM 结构：给列表增删条目后，后面元素的路径会顺延。自定义模块时尽量保持结构稳定；需要长期稳定的文本字段优先使用 `data-f`。
+- 外壳样式：新组件样式写进 `atlas.css` 并使用 `--a-*` 设计变量；改动旧样式文件后运行 `npm run tokenize` 重新生成颜色变量。
+
 ## v3.1 素材、元素样式与图片位
 
 - **素材**：项目可带 `assets`：`{"a-<id>":{"d":"data:image/webp;base64,…","n":"名称","w":1600,"h":900}}`。`normalizeAssets` 只接受 PNG / JPEG / WebP / GIF 的 base64 data URL，单张约 1.4M 字符、最多 24 张、合计约 4.5M 字符；SVG、远程地址和其他格式都会被丢弃。导出页面只包含被模块引用的图片。

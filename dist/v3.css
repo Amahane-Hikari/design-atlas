@@ -279,3 +279,8 @@ html{scrollbar-width:thin;scrollbar-color:var(--c-c2ceaf) transparent}
 :root[data-ui=dark] .studio-stage{background:#0d0e0c}
 #ui-theme svg{transition:rotate .5s cubic-bezier(.22,.8,.24,1)}#ui-theme:hover svg{rotate:-25deg}
 @media(prefers-reduced-motion:reduce){#main>*{animation:none}}
+.el-nav{display:flex;gap:5px;margin:0 0 10px}.el-nav .mini-btn{height:28px;padding:0 10px;font-size:11px}
+.xy{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.num{display:flex;align-items:center;gap:6px;border:1px solid var(--st-line);border-radius:8px;background:var(--c-ffffff);padding:0 8px}
+.num span{font:600 11px var(--f-mono,monospace);color:var(--st-muted)}.num em{font-style:normal;font-size:10.5px;color:var(--st-muted)}
+.num input{border:0!important;box-shadow:none!important;padding:7px 0!important;width:100%;min-width:0;font-variant-numeric:tabular-nums;background:transparent!important}

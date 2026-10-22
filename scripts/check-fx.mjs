@@ -4,7 +4,7 @@ import {Script} from 'node:vm';
 import {BLOCKS,THEMES,TEMPLATES,FONTS,STYLES,createBlock,createProject,validateProject,generateDocument,generateParts,normalizeTheme,editorProps,mediaSlots} from '../dist/engine.js';
 import {MEDIA_BLOCKS} from '../dist/media-blocks.js';
 import {FX_BLOCKS} from '../dist/fx-blocks.js';
-import {FX_OPTIONS,STYLE_DEFAULTS,ASSET_LIMITS,normalizeBlockStyle,normalizeEffects,normalizeAssets,normalizeElementStyle,sectionFx} from '../dist/fx-runtime.js';
+import {FX_OPTIONS,STYLE_DEFAULTS,ASSET_LIMITS,normalizeBlockStyle,normalizeEffects,normalizeAssets,normalizeElementStyle,normalizeFree,sectionFx} from '../dist/fx-runtime.js';
 import {RECIPES,validateRecipe,recipePlan} from '../dist/case-model.js';
 import {replaceProjectBlock,replacementOptions} from '../dist/studio-model.js';
 import {createBuilderUI,renderFxLab} from '../dist/builder-ui.js';
@@ -79,6 +79,16 @@ check(generateDocument(e,{editor:{mode:'edit',field:'title',token:'t'}}).include
 const shellCSS=(await Promise.all(['app.css','cases.css','studio.css','v3.css'].map(f=>readFile(new URL('../dist/'+f,import.meta.url),'utf8')))).join('\n'),tokens=await readFile(new URL('../dist/tokens.css',import.meta.url),'utf8');
 const used=new Set([...shellCSS.matchAll(/var\(--c-([0-9a-f]{6,8})\)/g)].map(m=>m[1])),[lightPart,darkPart]=tokens.split(':root[data-ui=dark]');
 check(used.size>400&&[...used].every(h=>lightPart.includes(`--c-${h}:`)&&darkPart.includes(`--c-${h}:`)),'every shell colour token has light and dark values');
+
+// v4: free editing of any element by child path.
+const fr=normalizeFree({x:12.6,y:-9999,rotate:400,scale:1,w:-5,opacity:150,z:3,color:'red',bg:'#ABCDEF',size:999,weight:450,align:'justify',lh:20,tracking:99,radius:-3,pad:12,border:3,borderColor:'#000000',shadow:'neon',blur:5,hidden:true,evil:'x'});
+check(fr.x===13&&fr.y===-2400&&fr.rotate===180&&fr.scale===10&&!('w' in fr)&&!('opacity' in fr)&&fr.z===3&&!('color' in fr)&&fr.bg==='#abcdef'&&fr.size===240&&!('weight' in fr)&&!('align' in fr)&&fr.lh===80&&fr.tracking===60&&!('radius' in fr)&&fr.pad===12&&!('shadow' in fr)&&fr.hidden&&!('evil' in fr),'free element styles clamped and filtered');
+const fs1=normalizeBlockStyle({free:{'2/1':{x:10},'0/1':{x:1},'1/a':{x:1},'1/2}body{display:none':{x:1},'3':{},'1/1/1/1/1/1/1/1/1/1/1/1/1':{x:1}}});
+check(Object.keys(fs1.free).join()==='2/1','free paths validated (no zero, letters, injection, empty or too deep)');
+const fp=createProject();fp.blocks=[createBlock('hero-editorial',{free:{'2/1':{x:24,y:-8,rotate:-6,scale:120,bg:'#112233',shadow:'soft',hidden:false},'2/2':{hidden:true}}})];
+const fd=generateDocument(validateProject(JSON.parse(JSON.stringify(fp))));
+check(fd.includes(`>:nth-child(2 of :not(.fx-bg,.fx-img,.fx-divider))>:nth-child(1){translate:24px -8px;rotate:-6deg;scale:1.2;background:#112233;box-shadow:`)&&fd.includes('>:nth-child(2)'+'{display:none!important}'),'free styles become scoped CSS with decor-safe selectors');
+check(generateDocument(fp,{editor:{mode:'edit',free:'2/1',token:'t'}}).includes('"free":"2/1"')&&generateDocument(fp,{editor:{mode:'edit',free:'2/1"};alert(1);//',token:'t'}}).includes('"free":""'),'editor keeps a valid selected path only');
 
 const offline=await readFile(new URL('../dist/offline.html',import.meta.url),'utf8');
 check(offline.includes('MEDIA_BLOCK_JS')&&offline.includes('--c-3d6655')&&offline.includes('data-ui'),'offline bundle contains 3.1 modules, tokens and theme bootstrap');
