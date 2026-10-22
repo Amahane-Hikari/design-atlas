@@ -1,0 +1,3392 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-22",
+  "cases": [
+    {
+      "id": "site-antfu",
+      "name": "Anthony Fu",
+      "url": "https://antfu.me/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页以开源作者身份为起点，把创建、参与和维护的项目分组呈现，再接入文章、演讲、摄影与赞助入口。适合研究怎样让技术贡献成为个人介绍的主体，同时为不同兴趣的访客提供清楚的去向。",
+      "tags": [
+        "开源作者",
+        "项目索引",
+        "技术写作",
+        "双语入口"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "按创建和维护关系分组项目，解释自己的贡献",
+        "给每个项目补一句用途，降低术语阅读门槛",
+        "将赞助入口放在成果之后，先建立支持理由"
+      ],
+      "caution": "适合已有持续贡献的开发者；项目少时不宜堆出大量空分类。",
+      "recipe": "developer-home",
+      "theme": "precision",
+      "evidence": {
+        "level": "browser-sampled",
+        "checkedAt": "2026-10-22",
+        "url": "https://antfu.me/",
+        "title": "Anthony Fu",
+        "notes": "已读取原站内容，并补充根代理的真实浏览器桌面与窄屏抽样。下列观察仅覆盖列出的页面与动作；配方、主题仍是工作台的原创适配建议，不是原站复制或色值测量。",
+        "observations": [
+          "桌面首页把创建、参与、维护的项目作为分组链接；页面以文字为主体，导航连接写作与其他兴趣。",
+          "点击 Blog 后的 390px 文章目录按年份分段，标题、日期和阅读时长构成轻量索引；顶部导航收为图标。",
+          "抽样：首页桌面、Blog 导航跳转与 390px 文章目录；没有测试每个外链。"
+        ]
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-brittany-chiang",
+      "name": "Brittany Chiang",
+      "url": "https://brittanychiang.com/",
+      "type": "作品集",
+      "category": "开发者主页",
+      "summary": "内容依次覆盖个人介绍、带年份的工作经历、项目和写作，经历条目同时给出职责说明与技术关键词。它把可访问性专长落在具体工作上，为求职作品集提供了可追溯的职业叙事组织参考。",
+      "tags": [
+        "前端工程",
+        "职业履历",
+        "无障碍",
+        "项目说明"
+      ],
+      "patterns": [
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "深色"
+      ],
+      "takeaways": [
+        "经历条目同时写时间、职位和做成的事情",
+        "把技术标签绑定到对应经历，避免孤立技能墙",
+        "为项目保留用途与访问入口，方便招聘方继续核实"
+      ],
+      "caution": "适合履历较完整的工程师；岗位与成果必须换成自己的真实材料。",
+      "recipe": "portfolio-index",
+      "theme": "ocean",
+      "evidence": {
+        "level": "browser-sampled",
+        "checkedAt": "2026-10-22",
+        "url": "https://brittanychiang.com/",
+        "title": "Brittany Chiang",
+        "notes": "已读取原站内容，并补充根代理的真实浏览器桌面与窄屏抽样。下列观察仅覆盖列出的页面与动作；配方、主题仍是工作台的原创适配建议，不是原站复制或色值测量。",
+        "observations": [
+          "桌面首页以左侧身份与章节导航、右侧经历和项目构成分栏；深色底上用大小与明暗分出层级。",
+          "390px 窄屏改为先介绍、社交链接，再进入 About 正文；桌面章节导航收起。",
+          "抽样：桌面首页与 390px 首页；未核验完整项目页与所有动态效果。"
+        ]
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-lee-robinson",
+      "name": "Lee Robinson",
+      "url": "https://leerob.com/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "页面围绕简短履历、主题笔记和文章索引展开，简介提供默认与长版入口，主题覆盖开发者体验、文档和个人软件。适合参考怎样在有限页面中同时满足快速认识作者与深入阅读两种需求。",
+      "tags": [
+        "简历介绍",
+        "主题笔记",
+        "技术传播"
+      ],
+      "patterns": [
+        "目录导航",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "先写一段可独立理解的短简介，再提供扩展",
+        "把长期研究主题做成索引，区别于按日更新文章",
+        "文章旁标注时间，帮助读者判断内容所处背景"
+      ],
+      "caution": "适合写作与工程并重的人；短简介切换仅确认入口，未实测其行为。",
+      "recipe": "minimal-profile",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://leerob.com/",
+        "title": "Lee Robinson",
+        "notes": "已读取首页简介长短版按钮、笔记与文章目录。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-josh-comeau",
+      "name": "Josh W. Comeau",
+      "url": "https://www.joshwcomeau.com/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页以技术教程为核心，文章同时提供题目、解释性摘要和继续阅读入口，并设置主题分类与热门内容列表。它展示了教育型个人站怎样把新文章发现、基础知识查找和长期内容复用放在一起。",
+      "tags": [
+        "技术教育",
+        "教程索引",
+        "主题分类",
+        "内容运营"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "文章摘要先说读者会解决什么问题",
+        "为新内容和常青教程分别设置入口",
+        "把分类控制在稳定学科层级，方便持续扩充"
+      ],
+      "caution": "适合持续产出教程的作者；课程与演示内部交互未在本次读取中验证。",
+      "recipe": "digital-garden",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.joshwcomeau.com/",
+        "title": "Josh W. Comeau",
+        "notes": "已读取首页教程摘要、分类和热门文章列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-emil-kowalski",
+      "name": "Emil Kowalski",
+      "url": "https://emilkowal.ski/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "简短介绍之后直接排列组件、课程和文章，每个项目用一句话交代用途，末尾保留邮件订阅。内容把界面工程实践与写作连接起来，适合研究个人作品如何形成由小工具到系统课程的清晰梯度。",
+      "tags": [
+        "设计工程",
+        "组件项目",
+        "课程入口",
+        "邮件订阅"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "组件卡片写清解决的问题和目标使用者",
+        "将制作过程文章链接回具体组件",
+        "订阅框旁交代内容频率，减少不确定感"
+      ],
+      "caution": "适合有组件或课程积累的作者；本次未操作组件演示与订阅流程。",
+      "recipe": "developer-home",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://emilkowal.ski/",
+        "title": "Emil Kowalski",
+        "notes": "已读取首页项目短说明、写作列表和订阅表单。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-rauno-freiberg",
+      "name": "Rauno Freiberg",
+      "url": "https://rauno.me/",
+      "type": "作品集",
+      "category": "设计师作品集",
+      "summary": "首页用一句身份说明与少量高价值入口呈现交互设计方向，项目、实践、软件设计史和观察笔记被分开引导，另保留历年站点链接。适合研究如何以精简目录表达持续演进的设计实践。",
+      "tags": [
+        "交互设计",
+        "实践索引",
+        "年度归档"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "实验性"
+      ],
+      "takeaways": [
+        "用一句话说明设计领域，再给出三到五个入口",
+        "把实验和正式项目分开，方便不同访客选择",
+        "为历史版本留存入口，记录个人方法的演进"
+      ],
+      "caution": "适合已有外部作品支持的设计师；首页文字有限，动态效果仍待视觉检查。",
+      "recipe": "minimal-profile",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://rauno.me/",
+        "title": "Rauno Freiberg",
+        "notes": "已读取首页身份说明、实践项目入口及旧版链接。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-maggie-appleton",
+      "name": "Maggie Appleton",
+      "url": "https://maggieappleton.com/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页明确区分长文、尚在生长的笔记、设计模式和书单，并解释各类内容的成熟程度与用途。编程、设计和人类学因此形成互相连接的知识入口，适合参考数字花园怎样向读者说明阅读方式。",
+      "tags": [
+        "数字花园",
+        "视觉文章",
+        "知识分层",
+        "阅读清单"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "渐进披露"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "给笔记和成稿设置不同的内容说明",
+        "为每种知识类型写一句阅读预期",
+        "把书单和模式库接入主题网络，增加横向发现"
+      ],
+      "caution": "适合长期积累型站点；插画外观与文章内部交互未在本次文本读取中确认。",
+      "recipe": "digital-garden",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://maggieappleton.com/",
+        "title": "Maggie Appleton",
+        "notes": "已读取首页花园说明、长文、笔记、模式与书单。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-hakim-el-hattab",
+      "name": "Hakim El Hattab",
+      "url": "https://hakim.se/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "首页先介绍作者与演示产品，再汇集实用应用、界面库、动画实验和小游戏，项目旁写出具体用途，并提供扩展说明入口。适合研究创意工程师如何在同一索引中容纳商业成果和个人探索。",
+      "tags": [
+        "创意编码",
+        "界面实验",
+        "工具作品",
+        "项目集合"
+      ],
+      "patterns": [
+        "目录导航",
+        "渐进披露",
+        "交互实验"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "实验性"
+      ],
+      "takeaways": [
+        "每件实验用一句话说明访客可以做什么",
+        "给商业产品与趣味实验加类型标签",
+        "将较长背景放入可展开区域，保留快速浏览节奏"
+      ],
+      "caution": "适合跨工具与实验的创作者；只读取说明和入口，未实际运行实验。",
+      "recipe": "portfolio-index",
+      "theme": "brutal",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://hakim.se/",
+        "title": "Hakim El Hattab",
+        "notes": "已读取首页自介、应用与实验项目说明、扩展按钮。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-bruno-simon",
+      "name": "Bruno Simon",
+      "url": "https://bruno-simon.com/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "读取结果包含交互与脱困按钮、访客留言规则，以及对三维技术、课程和开发日志的幕后介绍。它提供了把作品集包装为探索体验的思路，同时也显露出需要辅助操作说明和服务状态提示的边界。",
+      "tags": [
+        "三维体验",
+        "创意工程",
+        "幕后说明",
+        "操作引导"
+      ],
+      "patterns": [
+        "产品演示",
+        "交互实验",
+        "渐进披露"
+      ],
+      "styles": [
+        "实验性",
+        "几何"
+      ],
+      "takeaways": [
+        "探索式首页始终提供恢复位置或退出入口",
+        "把技术幕后与开发日志做成独立说明",
+        "留言等联网模块应明确规则与离线状态"
+      ],
+      "caution": "只核实页面说明；未体验三维驾驶、帧率和移动操作，留言服务显示离线。",
+      "recipe": "portfolio-index",
+      "theme": "neon",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://bruno-simon.com/",
+        "title": "Bruno's",
+        "notes": "已读取首页操作按钮、留言规则和幕后技术说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-swyx",
+      "name": "Swyx",
+      "url": "https://swyx.io/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "站点以公开学习笔记为线索，首页连接研究问题、正在构建的项目、个人兴趣和近期写作，并提供带快捷键提示的搜索入口。适合参考如何把技术观察、长期主题和个人发展整理成一套可探索的目录。",
+      "tags": [
+        "公开学习",
+        "主题笔记",
+        "站内检索",
+        "项目动态"
+      ],
+      "patterns": [
+        "目录导航",
+        "命令搜索",
+        "编辑排版"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "首页先列正在思考的问题，再展示文章",
+        "搜索入口标注快捷键并保留普通点击方式",
+        "用内容类型标签区分随笔、笔记与播客"
+      ],
+      "caution": "适合内容量较大的个人站；本次只确认搜索提示与入口，未执行搜索。",
+      "recipe": "digital-garden",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://swyx.io/",
+        "title": "swyx's site",
+        "notes": "已读取首页搜索提示、研究主题、项目与写作列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-steph-ango",
+      "name": "Steph Ango",
+      "url": "https://stephango.com/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "页面用最新短文、主题词和按年月排列的写作索引形成主要结构，并把关于与近况作为少量辅助导航。读者既能沿时间浏览，也能按长期主题进入，适合参考简洁但有持续积累感的个人知识站。",
+      "tags": [
+        "常青笔记",
+        "主题索引",
+        "时间归档"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "把最近更新单独提到长列表之前",
+        "给长期主题建立可重复使用的标签",
+        "在文章条目保留年月，降低归档浏览的认知成本"
+      ],
+      "caution": "适合以文字为核心的作者；大量主题词在窄屏中的布局仍需抽样验证。",
+      "recipe": "digital-garden",
+      "theme": "editorial",
+      "evidence": {
+        "level": "browser-sampled",
+        "checkedAt": "2026-10-22",
+        "url": "https://stephango.com/",
+        "title": "Steph Ango",
+        "notes": "已读取原站内容，并补充根代理的真实浏览器桌面与窄屏抽样。下列观察仅覆盖列出的页面与动作；配方、主题仍是工作台的原创适配建议，不是原站复制或色值测量。",
+        "observations": [
+          "桌面首页用暖浅色背景、窄阅读列组织 Latest、Topics 和 Writing，主题标签保持为文字链接。",
+          "点击 Now 后进入按标题分段的近况页；390px 下保留单列正文和清晰的小标题，导航减少。",
+          "抽样：首页桌面、Now 页面跳转与 390px 近况正文；未核验主题切换或全部文章。"
+        ]
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-paco-coursey",
+      "name": "Paco Coursey",
+      "url": "https://paco.me/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "个人介绍后按正在构建、项目、写作、近况和联系分段，项目包括命令菜单、文本编辑器与主题工具，并各有短说明。它把设计工程能力落在具体工具上，也为访客提供了了解作者当前重心的入口。",
+      "tags": [
+        "设计工程",
+        "小型工具",
+        "近况更新"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "项目名称下用一行解释实际用途",
+        "把正在做的事情与历史成果分开",
+        "设置轻量近况栏目，避免整个首页随状态频繁重写"
+      ],
+      "caution": "适合偏工具开发的个人主页；项目链接存在不等于其运行状态已验收。",
+      "recipe": "developer-home",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://paco.me/",
+        "title": "Paco Coursey",
+        "notes": "已读取首页构建中、项目、写作、近况和联系分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-delba",
+      "name": "Delba",
+      "url": "https://delba.dev/",
+      "type": "作品集",
+      "category": "开发者主页",
+      "summary": "页面直接表达职业方向，把正式工作与个人项目分开，逐项说明在文档、学习平台和视频内容中承担的职责。它展示了以贡献范围而非技术堆栈组织作品集的方法，让协作型成果也能清楚说明个人价值。",
+      "tags": [
+        "开发者教育",
+        "技术写作",
+        "职业作品",
+        "职责说明"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "每条成果明确写出自己负责的部分",
+        "区分团队工作与个人实验以免归属混淆",
+        "将求职方向与联系入口放在成果索引前后呼应"
+      ],
+      "caution": "适合教育、文档与内容工程岗位；不应把团队整体成绩全部归为个人。",
+      "recipe": "portfolio-index",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://delba.dev/",
+        "title": "Portfolio",
+        "notes": "已读取首页求职意向、工作成果、个人项目与介绍。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-brian-lovin",
+      "name": "Brian Lovin",
+      "url": "https://brianlovin.com/",
+      "type": "个人网站",
+      "category": "设计师作品集",
+      "summary": "首页在简短设计师介绍后提供写作和项目索引，项目覆盖应用拆解、工具清单、问答、每日所得与网站收藏。不同内容以明确用途串在一起，适合参考如何把设计观察、策展与个人产品放进同一主页。",
+      "tags": [
+        "产品设计",
+        "应用拆解",
+        "工具策展",
+        "个人项目"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "为收藏、拆解和作品设置不同入口名称",
+        "每个小项目附一句用途说明",
+        "优先展示近期写作，让静态介绍保持更新感"
+      ],
+      "caution": "适合持续策展的设计师；外链项目与收藏质量需要另外维护和验收。",
+      "recipe": "portfolio-index",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://brianlovin.com/",
+        "title": "Brian Lovin",
+        "notes": "已读取首页设计师介绍、近期文章和项目用途列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-sara-soueidan",
+      "name": "Sara Soueidan",
+      "url": "https://www.sarasoueidan.com/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页围绕独立界面开发者与教育者身份展开，将博客、演讲、课程和订阅设置为主要入口，近期文章附日期与摘要。页面同时说明正在重构，适合参考专业定位如何与持续输出共同建立可信度。",
+      "tags": [
+        "无障碍教育",
+        "界面开发",
+        "专业写作"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "社交证明"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "首页说清服务对象和擅长解决的问题",
+        "文章摘要补充阅读价值而非重复标题",
+        "站点改版期间给出明确状态说明与稳定入口"
+      ],
+      "caution": "官网注明正在重构；本次仅研究内容组织，不以其当前外观作为稳定样板。",
+      "recipe": "developer-home",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.sarasoueidan.com/",
+        "title": "Home",
+        "notes": "已读取首页重构提示、身份说明、课程与文章摘要。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-innei",
+      "name": "Innei",
+      "url": "https://innei.in/en",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "当前读取的首页介绍产品型工程师身份，以近期文章和短记呈现界面、工作流与个人开发实践，并保留留言入口。它把个人技术定位与持续创作并置，适合参考如何组织既有技术内容又有生活片段的主页。",
+      "tags": [
+        "独立开发",
+        "近期写作",
+        "生活短记",
+        "产品实践"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "用一句定位概括个人当前的工作重心",
+        "让文章和短记带类型标记，避免混淆阅读预期",
+        "统计信息只在取得有效数据时显示"
+      ],
+      "caution": "读取被导向英文页，计数出现零值占位；未确认中文首页与留言动态。",
+      "recipe": "developer-home",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://innei.in/en",
+        "title": "Innei",
+        "notes": "已读取地区跳转后的英文首页、自介与近期写作。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-diygod",
+      "name": "DIYgod",
+      "url": "https://diygod.cc/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页提供中英文入口，以分类、标签、文章摘要和日期组织编程、创作与生活记录，另通过作者介绍形成鲜明个人定位。适合参考中文个人站怎样让日记、项目与技术分享并存，同时维持清楚的浏览路径。",
+      "tags": [
+        "中文博客",
+        "个人创作",
+        "生活记录",
+        "分类归档"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "把技术、创作和日记放入可理解的栏目",
+        "摘要保留具体事件或问题，帮助读者选择",
+        "为双语访问者提供明确语言入口"
+      ],
+      "caution": "个性化表达适合个人品牌；模板化移植前应重写介绍并检查分类是否有实际内容。",
+      "recipe": "digital-garden",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://diygod.cc/",
+        "title": "DIYgod",
+        "notes": "已读取跳转后中文首页、分类标签、文章摘要及日期。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-randy-lu",
+      "name": "Randy Lu",
+      "url": "https://lutaonan.com/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页把产品工程师与写作者身份放在一起，先提供个人产品和工作经历，再展示自我介绍与带日期的文章索引。技术、阅读和生活主题共享同一入口，适合参考独立开发者如何连接职业经历与正在经营的产品。",
+      "tags": [
+        "中文写作",
+        "独立产品",
+        "职业经历"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "把正在经营的产品放在作者定位附近",
+        "工作经历只列关键节点并连接详细介绍",
+        "文章标题旁统一日期格式，保持长列表整齐可扫读"
+      ],
+      "caution": "适合产品与写作并重的主页；不要用过去雇主替代当前项目的实际说明。",
+      "recipe": "developer-home",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://lutaonan.com/",
+        "title": "Randy's Blog",
+        "notes": "已读取首页产品链接、工作经历、自介和文章日期。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-yihui-xie",
+      "name": "谢益辉 Yihui Xie",
+      "url": "https://yihui.org/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "入口页用中英文关于和日志导航承载学术背景、软件项目与社区经历，主要内容围绕作者做过什么及为何关注这些事情。适合参考轻量个人主页怎样在少量段落内交代专业可信度，并把深入阅读交给后续栏目。",
+      "tags": [
+        "双语主页",
+        "开源软件",
+        "学术履历",
+        "社区建设"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "把语言入口与内容类型配对，减少跳转猜测",
+        "按贡献介绍软件项目而非堆砌工具名称",
+        "用简短生活细节补足专业介绍中的个人感"
+      ],
+      "caution": "适合有明确代表成果的作者；极简入口需有可持续维护的后续内容承接。",
+      "recipe": "minimal-profile",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://yihui.org/",
+        "title": "Yihui Xie | 谢益辉",
+        "notes": "已读取首页双语导航、履历、软件项目和社区说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-liruifengv",
+      "name": "liruifengv",
+      "url": "https://liruifengv.com/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页先说明开发者与开源参与者身份，再按关注方向、精选文章和近期项目展开，并保留标签、友链与关于入口。它适合参考中文开发者主页如何兼顾专业定位、内容积累与个人社区关系的日常维护。",
+      "tags": [
+        "中文开发者",
+        "开源参与",
+        "精选文章",
+        "项目动态"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "功能网格"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "用少量关注方向解释自己的工作范围",
+        "精选文章与最新项目分开，避免时间排序掩盖代表作",
+        "把友链作为辅助入口，主路径留给成果和内容"
+      ],
+      "caution": "适合已有文章与项目的作者；主题切换仅确认文本提示，未操作视觉状态。",
+      "recipe": "developer-home",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://liruifengv.com/",
+        "title": "liruifengv",
+        "notes": "已读取首页导航、开发方向、精选文章与最近项目。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-pjchender",
+      "name": "PJCHENder I/O",
+      "url": "https://pjchender.dev/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "站点采用知识文档式目录，按语言、框架、系统设计与工程主题分类，并明确说明内容主要是个人学习笔记和回顾材料。适合参考中文数字花园怎样解释笔记边界、引导查证，并让大量知识拥有稳定的查找入口。",
+      "tags": [
+        "繁体中文",
+        "学习笔记",
+        "技术目录",
+        "来源意识"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "按知识领域组织目录，避免所有笔记挤在时间流",
+        "首页说明笔记面向自用回顾的阅读边界",
+        "在内容模板中固定参考链接和版本背景位置"
+      ],
+      "caution": "适合高密度笔记库；未验证全量目录可用性，不应把个人笔记当权威文档。",
+      "recipe": "digital-garden",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://pjchender.dev/",
+        "title": "README | PJCHENder I/O",
+        "notes": "已读取首页技术目录、网站说明和引用查证提醒。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-andy-bell",
+      "name": "Andy Bell",
+      "url": "https://bell.bz/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页以改善网页体验的设计开发者身份串联工作室、教育项目、写作和音乐收藏，导航集中在少数明确栏目。适合参考有多重职业身份的创作者怎样用一条价值主线连接业务与兴趣，而不让主页变成杂乱链接集。",
+      "tags": [
+        "前端设计",
+        "教育项目",
+        "个人收藏"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "用统一价值主张连接不同职业身份",
+        "把商业服务与个人收藏各自命名",
+        "在自介段落中放上下文链接，减少孤立按钮数量"
+      ],
+      "caution": "适合跨教育与服务的个人品牌；外部业务页应独立核实，不能由自介代替验收。",
+      "recipe": "developer-home",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://bell.bz/",
+        "title": "Andy Bell",
+        "notes": "已读取跳转后首页身份、工作室教育链接与导航。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-dave-rupert",
+      "name": "Dave Rupert",
+      "url": "https://daverupert.com/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页突出近期文章，条目结合日期、标签与必要的短说明，另提供活跃项目、完整归档、书架和个人设置入口。它把持续更新与长期收藏分开，适合参考技术作者如何让多年的内容仍保持可发现性。",
+      "tags": [
+        "技术博客",
+        "时间归档",
+        "项目目录",
+        "个人书架"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "近期文章保留日期和主题标签以辅助扫读",
+        "把活跃项目单列，避免埋进旧文章",
+        "为归档和书架提供稳定入口以承接长期内容"
+      ],
+      "caution": "适合长期写作的技术作者；不能把标签数量等同于内容质量或更新频率。",
+      "recipe": "digital-garden",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://daverupert.com/",
+        "title": "The Homepage of Dave Rupert - daverupert.com",
+        "notes": "已读取首页近期文章、日期标签、项目与辅助目录。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-jhey-tompkins",
+      "name": "Jhey Tompkins",
+      "url": "https://www.jhey.dev/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "首页先说明设计与工程方向，再提供原型、实验和近期作品索引，同时穿插联系与个人状态信息。它适合参考创意开发者怎样让小型界面实验成为能力证明，并以较轻的导航引导访客进入完整项目列表。",
+      "tags": [
+        "创意编码",
+        "界面原型",
+        "实验索引"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "交互实验"
+      ],
+      "styles": [
+        "实验性",
+        "鲜明色彩"
+      ],
+      "takeaways": [
+        "用近期实验清单快速展示自己的探索方向",
+        "作品名称补充可理解的交互目标",
+        "把个人状态模块当辅助内容并提供加载失败回退"
+      ],
+      "caution": "适合实验数量充足的作者；状态文字部分为占位，未实测作品动效与交互。",
+      "recipe": "portfolio-index",
+      "theme": "neon",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.jhey.dev/",
+        "title": "Jhey Tompkins",
+        "notes": "已读取首页身份、原型入口、近期实验和状态文字。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-adam-silver",
+      "name": "Adam Silver",
+      "url": "https://adamsilver.io/",
+      "type": "个人网站",
+      "category": "设计师作品集",
+      "summary": "首页将清晰的设计价值主张、邮件订阅、读者评价与个人经历连接起来，再介绍可提供的帮助。内容围绕表单体验与可访问性形成专业定位，适合参考独立顾问如何通过教育内容建立有证据的服务入口。",
+      "tags": [
+        "表单设计",
+        "设计顾问",
+        "邮件内容",
+        "读者评价"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "价值主张明确说明能替谁解决什么问题",
+        "订阅旁写出主题、频率和预计阅读成本",
+        "把评价放在对应服务附近并说明评价者身份"
+      ],
+      "caution": "适合咨询和教育型个人品牌；评价必须获得授权，未验证订阅提交流程。",
+      "recipe": "editorial-story",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://adamsilver.io/",
+        "title": "I can help you design products that are ridiculously simple and accessible to use – Adam Silver – designer, London, UK",
+        "notes": "已读取首页订阅说明、读者评价、履历和服务分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-bmpi",
+      "name": "BMPI",
+      "url": "https://www.bmpi.dev/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页以长期写作实验室定位作者，按学习、技术和投资设置内容入口，并连接正在构建的产品、演讲与社区。适合参考跨领域独立开发者如何用明确的研究主线组织内容，同时让产品链接具有必要的上下文。",
+      "tags": [
+        "中文写作",
+        "跨域研究",
+        "独立开发",
+        "主题导航"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "把跨领域兴趣压缩成少量稳定栏目",
+        "产品入口旁交代服务目的而非只放名称",
+        "阅读统计缺失时隐藏数值，保留可靠的写作信息"
+      ],
+      "caution": "适合有明确长期主题的作者；本条仅作网页结构参考，不评价投资内容或产品效果。",
+      "recipe": "developer-home",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.bmpi.dev/",
+        "title": "BMPI",
+        "notes": "已读取首页中文定位、栏目、产品与演讲社区入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-draveness",
+      "name": "面向信仰编程",
+      "url": "https://draven.co/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页提供专题书籍和系列文章入口，再按年份组织技术文章，标题旁保留发布日期，内容涵盖语言、系统与基础设施。适合参考大型中文技术博客怎样以系列和时间双重路径承载长期积累，降低旧文被埋没的问题。",
+      "tags": [
+        "中文技术",
+        "系列文章",
+        "年度归档"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "把系统性系列放在时间流之前便于初学者进入",
+        "年度分组中保留完整日期以判断技术背景",
+        "让文章标题直接说明讨论对象或设计问题"
+      ],
+      "caution": "适合技术档案较多的站点；旧文较多时需额外标注版本适用性。",
+      "recipe": "digital-garden",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://draven.co/",
+        "title": "面向信仰编程",
+        "notes": "已读取跳转后系列导航、年度分组与文章日期。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-ruan-yifeng",
+      "name": "阮一峰",
+      "url": "https://www.ruanyifeng.com/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "入口页以中英文姓名和少量链接连接博客、两本文集与联系方式，没有在首页展开文章流。它适合参考已有多种内容资产的作者如何设置简明门户，让首次访客先选择阅读方向，再进入对应的长期内容区域。",
+      "tags": [
+        "中文门户",
+        "写作文集",
+        "个人入口"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "复古"
+      ],
+      "takeaways": [
+        "门户只保留最能代表作者的几类资产",
+        "链接文案写明是博客还是成体系的文集",
+        "联系入口与阅读入口保持清晰层次"
+      ],
+      "caution": "适合已有独立内容区域的作者；仅核实门户页，不把博客内部结构算作已读取。",
+      "recipe": "minimal-profile",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.ruanyifeng.com/",
+        "title": "阮一峰的个人网站 - Ruan YiFeng's Personal Website",
+        "notes": "已读取首页姓名、博客文集与联系链接。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-tobias-ahlin",
+      "name": "Tobias Ahlin",
+      "url": "https://tobiasahlin.com/",
+      "type": "个人网站",
+      "category": "创意作品集",
+      "summary": "首页结合个人设计定位、文章摘要、教程与项目入口，同时保留搜索框，内容横跨排版、界面细节和开发技巧。适合参考设计与工程交叉的作者如何让教学文章和小型工具共同表达专业方向，并支持按需查找。",
+      "tags": [
+        "设计开发",
+        "排版教程",
+        "项目工具",
+        "站内检索"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "功能网格"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "把工具项目与文章分区以适应不同访问意图",
+        "文章摘要直接交代使用场景和收益",
+        "内容增长后补搜索入口，同时保留清楚分类"
+      ],
+      "caution": "适合兼做教程与工具的创作者；搜索框仅确认存在，未验证检索结果质量。",
+      "recipe": "portfolio-index",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://tobiasahlin.com/",
+        "title": "Tobias Ahlin",
+        "notes": "已读取首页定位、文章摘要、搜索框与项目分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-geekplux",
+      "name": "GeekPlux",
+      "url": "https://geekplux.com/",
+      "type": "个人网站",
+      "category": "数字花园",
+      "summary": "首页用简短的工程师介绍连接中英文混合写作，设置最新文章、近期归档、常见主题和外部活动入口，并呈现搜索快捷键提示。适合参考个人技术站如何同时照顾主题探索、近况了解与跨平台内容发现。",
+      "tags": [
+        "中文随笔",
+        "软件工程",
+        "主题索引",
+        "站内搜索"
+      ],
+      "patterns": [
+        "目录导航",
+        "命令搜索",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "将置顶文章与近期列表分开说明不同作用",
+        "给常用主题展示可浏览的文章入口",
+        "跨平台链接附用途说明，避免只有平台图标"
+      ],
+      "caution": "适合跨平台长期写作者；部分统计为占位，搜索快捷键未在本次实测。",
+      "recipe": "digital-garden",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://geekplux.com/",
+        "title": "GeekPlux",
+        "notes": "已读取首页中英文定位、文章、主题、搜索与外链说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-idealclover",
+      "name": "idealclover",
+      "url": "https://idealclover.top/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "首页结合产品经理与独立开发者介绍，把博客、个人项目和逛展记录分段呈现，文章提供技术、生活、随想与测评等类型入口。适合参考中文个人站如何以多种创作维度展示作者，而不让职业介绍压过日常内容。",
+      "tags": [
+        "中文个人站",
+        "独立项目",
+        "生活创作",
+        "内容分类"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "功能网格"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "把职业身份与站点内容方向同时交代",
+        "个人项目和生活记录使用不同分段标题",
+        "文章分类围绕读者目的设置，减少难理解的自创术语"
+      ],
+      "caution": "适合技术与生活并行的作者；社交数量属页面自述，不能作为独立验证的影响力指标。",
+      "recipe": "developer-home",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://idealclover.top/",
+        "title": "idealclover",
+        "notes": "已读取首页作者卡、博客分类、个人项目与逛展分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-aaron-cheng",
+      "name": "Aaron Cheng",
+      "url": "https://www.chengfolio.com/",
+      "type": "作品集",
+      "category": "设计师作品集",
+      "summary": "首页以个人介绍和履历说明产品设计经历，将策略、复杂系统、跨团队协作与个人项目分别描述，并保留作品和博客入口。适合参考资深设计师如何将抽象能力落实到职责、背景和可进一步查阅的项目上。",
+      "tags": [
+        "产品设计",
+        "职业履历",
+        "系统设计",
+        "个人实验"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "按能力维度整理经历中的代表贡献",
+        "每个成果交代项目背景和个人职责范围",
+        "将自发实验单列，补足正式履历之外的动手能力"
+      ],
+      "caution": "适合资深设计师的职业展示；本次未读取受保护项目或内部工作材料。",
+      "recipe": "portfolio-index",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.chengfolio.com/",
+        "title": "Aaron Cheng - User Interface Designer",
+        "notes": "已读取首页关于、工作经历、职责分组与个人项目描述。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-benji-taylor",
+      "name": "Benji Taylor",
+      "url": "https://benji.org/",
+      "type": "个人网站",
+      "category": "设计师作品集",
+      "summary": "首页以更新时间和简短个人介绍展开，将当前工作、过往经历、开源工具和写作串联起来，并提供联系渠道。它适合参考设计师怎样在少量段落中形成有时间背景的职业叙事，同时为技术实践保留直接入口。",
+      "tags": [
+        "设计履历",
+        "开源工具",
+        "更新日期"
+      ],
+      "patterns": [
+        "目录导航",
+        "时间线",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "在简介旁标注更新时间，方便访客判断近况",
+        "按先后关系连接职业经历，减少孤立公司名单",
+        "用工具入口补充设计实践证据并保留联系渠道"
+      ],
+      "caution": "适合已有代表经历的人；职位与公司信息属官网自述，未作雇佣关系核验。",
+      "recipe": "minimal-profile",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://benji.org/",
+        "title": "Benji Taylor",
+        "notes": "已读取首页更新日期、职业介绍、开源工具和写作列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-rasmus-andersson",
+      "name": "Rasmus Andersson",
+      "url": "https://rsms.me/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "首页围绕项目、工作、摄影和想法建立导航，项目覆盖生成艺术、语言工具、虚拟计算机与界面实验，并以短句解释用途。适合参考跨设计与工程的创作者如何用统一的作品说明方式容纳跨度较大的探索。",
+      "tags": [
+        "跨域作品",
+        "生成艺术",
+        "工程实验",
+        "摄影入口"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "作品网格",
+        "交互实验"
+      ],
+      "styles": [
+        "极简",
+        "几何"
+      ],
+      "takeaways": [
+        "跨领域作品统一使用名称与用途两层信息",
+        "首页选代表项目，再链接完整档案",
+        "把摄影与技术工作分别归档，保留共同作者身份"
+      ],
+      "caution": "适合项目储备丰富的创作者；本次仅读取索引，未运行编程或图形实验。",
+      "recipe": "portfolio-index",
+      "theme": "brutal",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://rsms.me/",
+        "title": "rsms",
+        "notes": "已读取首页项目说明、工作摄影导航与想法列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-viking",
+      "name": "Viking",
+      "url": "https://vikingz.me/",
+      "type": "个人网站",
+      "category": "开发者主页",
+      "summary": "中文首页直接说明全栈开发与自由职业身份，连接个人产品、精选文章和作品区，文章摘要涵盖收入复盘与开发方法。适合参考独立开发者怎样让产品实践、经验分享和个人故事互相支持，形成连贯的主页内容。",
+      "tags": [
+        "中文开发者",
+        "自由职业",
+        "产品复盘",
+        "精选文章"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "自介中的产品名称链接到实际产品入口",
+        "把代表性复盘选为精选内容并写清背景",
+        "作品与教学文章互相链接，说明方法如何落地"
+      ],
+      "caution": "适合有持续产品实践的人；收入数据属于作者自述，本条不将其作为盈利验证。",
+      "recipe": "developer-home",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://vikingz.me/",
+        "title": "Viking",
+        "notes": "已读取首页自介、产品链接、精选文章摘要与作品分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-nicky-case",
+      "name": "Nicky Case",
+      "url": "https://ncase.me/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "首页把创作按可玩、可读和可观看三类组织，项目说明围绕互动故事、可探索解释和知识工具展开，同时提供低频订阅与订阅源入口。适合参考创作者如何用访客要做的动作组织作品，而非用技术门类分类。",
+      "tags": [
+        "互动叙事",
+        "可探索解释",
+        "创意教学"
+      ],
+      "patterns": [
+        "目录导航",
+        "编辑排版",
+        "交互实验"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖",
+        "实验性"
+      ],
+      "takeaways": [
+        "按玩、读、看等动作命名作品分组",
+        "每个项目用一句话描述参与体验",
+        "为关注更新提供邮件与订阅源两种轻量路径"
+      ],
+      "caution": "适合多媒介创作者；互动作品仅核实官方说明，未逐个体验游戏流程。",
+      "recipe": "portfolio-index",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://ncase.me/",
+        "title": "It's Nicky Case!",
+        "notes": "已读取首页可玩可读可看分组、项目说明与订阅入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-lynn-fisher",
+      "name": "Lynn Fisher",
+      "url": "https://lynnandtonic.com/",
+      "type": "作品集",
+      "category": "创意作品集",
+      "summary": "首页以设计师身份和少量导航建立入口，作品页汇集影视趣味、机场代码、单元素绘图和信息整理等独立项目。适合参考如何为跨度很大的个人创作保留一致索引，同时通过年度版本和历史档案延续站点个性。",
+      "tags": [
+        "趣味项目",
+        "创意索引",
+        "版本归档"
+      ],
+      "patterns": [
+        "目录导航",
+        "作品网格",
+        "编辑排版"
+      ],
+      "styles": [
+        "实验性",
+        "鲜明色彩"
+      ],
+      "takeaways": [
+        "首页只交代身份并突出作品入口",
+        "给每个独立项目保留可直接访问的链接",
+        "历史版本独立归档，避免新首页承担所有旧内容"
+      ],
+      "caution": "已读首页和作品索引；未验证响应式彩蛋、主题模式及各外部项目运行情况。",
+      "recipe": "portfolio-index",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://lynnandtonic.com/",
+        "title": "Lynn Fisher",
+        "notes": "已读取首页导航、版本标记及作品页项目列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-jessica-hische",
+      "name": "Jessica Hische",
+      "url": "https://jessicahische.is/",
+      "type": "作品集",
+      "category": "设计师作品集",
+      "summary": "官网把字体与插画、标志品牌、书籍和字库分成作品方向，同时将委托、咨询、工作坊和课程独立归入合作与资源入口。适合参考视觉创作者如何把作品欣赏、商业合作和学习内容整理为互不抢占的访问路径。",
+      "tags": [
+        "字体设计",
+        "插画作品",
+        "委托合作",
+        "学习资源"
+      ],
+      "patterns": [
+        "目录导航",
+        "作品网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "编辑感"
+      ],
+      "takeaways": [
+        "作品按委托类型分组以对应客户需求",
+        "把合作方式与作品分类分开命名",
+        "课程资源放在独立区域，给学习者清楚入口"
+      ],
+      "caution": "适合有多类商业作品的创作者；图像构图、品牌授权和购买流程未在本次验证。",
+      "recipe": "portfolio-index",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://jessicahische.is/",
+        "title": "Jessica Hische Inc.",
+        "notes": "已读取首页作品分类、合作服务、资源导航与分类标题。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-linear",
+      "name": "Linear",
+      "url": "https://linear.app/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "当前首页围绕团队与智能代理共同推进产品开发展开，用事项、反馈接入和计划等界面片段解释工作流程，并提供客户、文档与注册入口。适合参考复杂协作产品如何先展示工作对象，再逐步解释模块之间的关系。",
+      "tags": [
+        "产品协作",
+        "事项管理",
+        "流程示例",
+        "团队工具"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "深色"
+      ],
+      "takeaways": [
+        "用一条真实工作链串起反馈、事项和计划",
+        "演示内容保留状态和负责人帮助理解产品对象",
+        "在功能介绍附近连接文档与客户材料"
+      ],
+      "caution": "适合流程型协作产品；页面演示为内容样例，未操作真实工作区或确认动效。",
+      "recipe": "saas-conversion",
+      "theme": "precision",
+      "evidence": {
+        "level": "browser-sampled",
+        "checkedAt": "2026-10-22",
+        "url": "https://linear.app/",
+        "title": "Linear – The system for product development",
+        "notes": "已读取原站内容，并补充根代理的真实浏览器桌面与窄屏抽样。下列观察仅覆盖列出的页面与动作；配方、主题仍是工作台的原创适配建议，不是原站复制或色值测量。",
+        "observations": [
+          "桌面首屏使用深色留白、大标题和产品界面呈现，产品演示紧接价值说明。",
+          "点击 Product 菜单后展示分组产品能力与说明；390px 首屏改为紧凑导航与纵向标题、产品界面。",
+          "抽样：首页桌面、Product 菜单和 390px 首屏；未测试账户或真实业务操作。"
+        ]
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-raycast",
+      "name": "Raycast",
+      "url": "https://www.raycast.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页以快捷操作为价值主张，连接键盘、启动器、扩展商店和人工智能助手等内容，扩展条目按常见工具与任务解释用途。适合参考平台型效率产品如何用可识别的小任务证明价值，再引导访问更完整的生态。",
+      "tags": [
+        "快捷操作",
+        "扩展生态",
+        "任务演示",
+        "桌面效率"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "命令搜索"
+      ],
+      "styles": [
+        "深色",
+        "鲜明色彩"
+      ],
+      "takeaways": [
+        "扩展条目直接说能替用户完成哪个动作",
+        "把常见工具作为场景入口降低学习成本",
+        "将核心工具、扩展和助手分层介绍"
+      ],
+      "caution": "适合可扩展桌面工具；键盘操作、助手能力及平台兼容性未在本次实测。",
+      "recipe": "tool-demo",
+      "theme": "neon",
+      "evidence": {
+        "level": "browser-sampled",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.raycast.com/",
+        "title": "Raycast - Your shortcut to everything",
+        "notes": "已读取原站内容，并补充根代理的真实浏览器桌面与窄屏抽样。下列观察仅覆盖列出的页面与动作；配方、主题仍是工作台的原创适配建议，不是原站复制或色值测量。",
+        "observations": [
+          "桌面首屏以高对比的红黑背景、大号居中标题和简短价值说明聚焦产品定位。",
+          "390px 下顶栏收为品牌与菜单按钮，大标题继续居中，产品相关入口位于首屏下方。",
+          "抽样：桌面与 390px 首页首屏；未把背景的视觉效果推断为某个渲染技术，未操作下载或账户流程。"
+        ]
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-readwise",
+      "name": "Readwise",
+      "url": "https://readwise.io/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "页面将阅读材料中的摘录作为内容线索，随后解释集中回顾、记忆、整理与工具同步的用途，并接入用户评价。适合参考知识类产品怎样从用户已拥有的材料出发，把抽象的长期收益拆成容易理解的具体动作。",
+      "tags": [
+        "阅读回顾",
+        "知识管理",
+        "工具同步",
+        "用户评价"
+      ],
+      "patterns": [
+        "编辑排版",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "以用户熟悉的摘录作为演示起点",
+        "按回顾、记忆、整理顺序解释价值链",
+        "将集成入口放在使用方法之后回应工作流顾虑"
+      ],
+      "caution": "适合有长期使用收益的产品；摘录仅作设计内容参考，未复制长文或验证记忆效果。",
+      "recipe": "saas-conversion",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://readwise.io/",
+        "title": "Readwise: Get the most out of what you read",
+        "notes": "已读取首页摘录样例及回顾、记忆、整理、同步和评价分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-arc",
+      "name": "Arc",
+      "url": "https://arc.net/",
+      "type": "产品页",
+      "category": "消费产品",
+      "summary": "官网当前保留浏览器定位、按系统区分的下载入口和功能介绍，同时突出后续产品的导流与维护说明。适合参考消费软件如何在单一页面中同时说明产品价值、平台选择和生命周期变化，帮助访客作出合适的下一步。",
+      "tags": [
+        "浏览器产品",
+        "平台下载",
+        "产品迁移",
+        "维护说明"
+      ],
+      "patterns": [
+        "大字首屏",
+        "目录导航",
+        "功能网格"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "按操作系统拆分下载入口并标明要求",
+        "生命周期变化放在下载前的显眼位置",
+        "新旧产品之间明确迁移理由和访问路径"
+      ],
+      "caution": "官网包含维护与后续产品提示；仅作页面组织参考，不作为当前安全性或选型建议。",
+      "recipe": "app-showcase",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://arc.net/",
+        "title": "Arc from The Browser Company",
+        "notes": "已读取首页产品定位、维护文字、后续产品与系统下载链接。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-notion",
+      "name": "Notion",
+      "url": "https://www.notion.com/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "当前页面以团队与智能代理共同思考为定位，将信息收集、答案查找和任务自动化拆成主要方向，再按组织类型提供入口。适合参考功能众多的协作产品怎样先给用户一条简洁的理解主线，再连接细分资源与方案。",
+      "tags": [
+        "协作空间",
+        "知识管理",
+        "自动化",
+        "团队分流"
+      ],
+      "patterns": [
+        "大字首屏",
+        "目录导航",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "把复杂功能归入少量用户动作而非技术名称",
+        "为企业和小团队提供独立访问入口",
+        "同时保留免费开始和演示咨询两条路径"
+      ],
+      "caution": "适合多场景工作平台；只核实营销内容结构，未验证搜索准确性或自动化能力。",
+      "recipe": "saas-conversion",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.notion.com/",
+        "title": "The AI workspace that works for you. | Notion",
+        "notes": "已读取首页收集查找自动化分组、团队定位与行动入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-superhuman",
+      "name": "Superhuman",
+      "url": "https://superhuman.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "当前官网将邮件、文档和跨应用人工智能工作能力放在统一品牌下，用沟通、日程和内容处理样例解释使用场景。适合参考多产品品牌如何先建立共同价值主张，再通过具体任务让访客理解产品之间的关系。",
+      "tags": [
+        "邮件工具",
+        "文档协作",
+        "跨应用助手",
+        "场景样例"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "深色",
+        "几何"
+      ],
+      "takeaways": [
+        "用一项连续任务说明多个产品如何配合",
+        "在统一价值主张下保留清楚的产品入口",
+        "示例优先选择沟通和日程等高频场景"
+      ],
+      "caution": "当前首页已超出单一邮件产品；示例文字不等于跨应用操作已实测成功。",
+      "recipe": "product-launch",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://superhuman.com/",
+        "title": "Superhuman: Docs, Mail, and AI That Work Everywhere",
+        "notes": "已读取首页统一定位、邮件日程示例与产品导航。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-framer",
+      "name": "Framer",
+      "url": "https://www.framer.com/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "官网当前围绕从想法到发布的设计代理展开，将探索、设计和内容管理等阶段与操作示例连接，同时提供免费开始、下载和客户入口。适合参考创作平台如何把庞大的能力集合组织成一条可逐步理解的生产流程。",
+      "tags": [
+        "网站创作",
+        "设计代理",
+        "内容管理",
+        "创作流程"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "按探索到发布的阶段组织功能",
+        "每个阶段配一个可理解的输入输出样例",
+        "将下载、免费体验与客户案例放在对应决策位置"
+      ],
+      "caution": "适合创作平台的发布页；本次仅阅读阶段与示例说明，未体验编辑器或发布服务。",
+      "recipe": "tool-demo",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.framer.com/",
+        "title": "Framer: AI design agent",
+        "notes": "已读取首页定位、探索设计内容管理段落及开始下载入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-webflow",
+      "name": "Webflow",
+      "url": "https://webflow.com/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "首页围绕建设、管理和增长网站组织叙事，通过营销、设计、工程与代理商等角色入口分流，并以客户标识和功能说明建立背景。适合参考企业创作工具如何让不同决策者在同一页面中快速找到自己的关注点。",
+      "tags": [
+        "网站建设",
+        "团队角色",
+        "企业创作",
+        "客户材料"
+      ],
+      "patterns": [
+        "大字首屏",
+        "功能网格",
+        "社交证明",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "几何"
+      ],
+      "takeaways": [
+        "按团队角色命名入口以对应不同诉求",
+        "将编辑内容和控制布局拆成独立能力",
+        "把免费体验与销售联系分别承接个人和团队需求"
+      ],
+      "caution": "适合有多角色采购链的工具；客户标识为官网展示，未独立验证合作范围。",
+      "recipe": "saas-conversion",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://webflow.com/",
+        "title": "Webflow: The agentic web platform for modern businesses",
+        "notes": "已读取首页价值主张、角色分流、客户展示及可视化编辑说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-vercel",
+      "name": "Vercel",
+      "url": "https://vercel.com/",
+      "type": "产品页",
+      "category": "开发工具",
+      "summary": "首页当前把智能代理基础设施、应用扩展和平台托管作为主要场景，分别配合能力清单与客户用例，同时提供文档、演示和注册。适合参考开发平台如何按交付目标讲解底层能力，避免首次访问就陷入产品名词列表。",
+      "tags": [
+        "开发平台",
+        "基础设施",
+        "场景导航",
+        "客户用例"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "社交证明",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "几何"
+      ],
+      "takeaways": [
+        "按构建目标分组能力而非平铺全部服务",
+        "在场景旁列支撑它的少量底层能力",
+        "客户用例补充规模背景并连接进一步材料"
+      ],
+      "caution": "适合多服务开发平台；规模数字属于官网陈述，未做性能与生产可用性验证。",
+      "recipe": "saas-conversion",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://vercel.com/",
+        "title": "Agentic Infrastructure - Vercel",
+        "notes": "已读取首页导航及代理、应用扩展、平台托管与客户场景段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-resend",
+      "name": "Resend",
+      "url": "https://resend.com/",
+      "type": "产品页",
+      "category": "开发工具",
+      "summary": "首页明确面向开发者说明邮件发送价值，紧接着展示集成说明、语言入口与代码样例，并提供开始使用和文档路径。适合参考基础服务产品如何让开发者迅速判断接入方式，再逐步了解可靠性与更大规模的使用场景。",
+      "tags": [
+        "开发者服务",
+        "邮件接口",
+        "代码示例",
+        "接入文档"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "深色"
+      ],
+      "takeaways": [
+        "在价值主张后尽早给出最小接入样例",
+        "语言切换入口对应开发者已有技术环境",
+        "文档入口与开始使用并列，支持先查证再注册"
+      ],
+      "caution": "适合接口型服务；代码仅阅读未执行，送达率和服务能力未在本次验证。",
+      "recipe": "tool-demo",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://resend.com/",
+        "title": "Resend · Email for developers",
+        "notes": "已读取首页邮件定位、集成说明、语言与代码示例入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-posthog",
+      "name": "PostHog",
+      "url": "https://posthog.com/",
+      "type": "产品页",
+      "category": "开发工具",
+      "summary": "当前首页以产品上下文为线索，将免费接入、分析能力和人工智能调查样例连接起来，列出产品分析、回放、实验等模块。适合参考工程工具如何通过具体诊断任务解释多种能力，并明确区分示例数据与真实结果。",
+      "tags": [
+        "产品分析",
+        "示例调查",
+        "开发者接入",
+        "能力目录"
+      ],
+      "patterns": [
+        "产品演示",
+        "功能网格",
+        "社交证明",
+        "渐进披露"
+      ],
+      "styles": [
+        "复古",
+        "鲜明色彩"
+      ],
+      "takeaways": [
+        "用一个诊断任务串联分析与实验工具",
+        "示例区域明确标明样本数据，避免误解",
+        "为偏终端和偏网页的开发者提供不同上手入口"
+      ],
+      "caution": "官网明确调查为示意数据；未接入真实埋点或验证分析结论与产品成效。",
+      "recipe": "tool-demo",
+      "theme": "brutal",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://posthog.com/",
+        "title": "PostHog - your product’s context layer",
+        "notes": "已读取首页免费接入、安装提示、示意调查声明与能力目录。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-cal-com",
+      "name": "Cal.com",
+      "url": "https://cal.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页以更便捷的预约安排为主题，展示会面时长与预约示例，再解释连接日历、设置可用时间和选择会面方式等步骤。适合参考流程型工具如何先让访客理解最终体验，再反向说明完成配置所需的少量动作。",
+      "tags": [
+        "预约安排",
+        "步骤说明",
+        "时间选择",
+        "注册入口"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "先展示访客最终看到的预约对象",
+        "把配置过程压缩为日历、时间和方式几个步骤",
+        "注册入口说明必要条件以降低开始门槛"
+      ],
+      "caution": "适合有明确输入输出的工具；仅阅读预约样例，未提交预约或连接真实日历。",
+      "recipe": "tool-demo",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://cal.com/",
+        "title": "Cal.com | Scheduling Software for Online Bookings",
+        "notes": "已读取首页预约示例、注册说明与日历可用时间会面步骤。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-cursor",
+      "name": "Cursor",
+      "url": "https://cursor.com/",
+      "type": "产品页",
+      "category": "开发工具",
+      "summary": "当前首页将编码代理能力通过桌面、终端和团队协作场景展开，界面样例包含任务状态、文档读取和协作消息。适合参考开发工具如何让能力说明落在真实工作对象上，同时为不同工作环境提供各自入口。",
+      "tags": [
+        "编码工具",
+        "任务状态",
+        "团队协作",
+        "终端入口"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "让演示出现任务目标与执行状态以便理解",
+        "按桌面和终端等环境组织上手路径",
+        "将个人操作扩展为协作场景时解释交接关系"
+      ],
+      "caution": "适合有多端入口的开发工具；仅读取演示说明，未运行代理或验证任务完成率。",
+      "recipe": "tool-demo",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://cursor.com/",
+        "title": "AI Coding Agent for Building Ambitious Software | Cursor",
+        "notes": "已读取首页桌面演示替代说明、终端协作与代理交接段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-things",
+      "name": "Things",
+      "url": "https://culturedcode.com/things/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "页面以个人任务管理为中心，结合功能介绍、多设备截图说明和按设备区分的获取入口，另设用户评价与媒体内容区域。适合参考原生应用如何保持单一核心价值，同时清楚交代不同设备版本的选择与进一步了解路径。",
+      "tags": [
+        "任务管理",
+        "原生应用",
+        "多设备版本",
+        "获取入口"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "用一天或一个项目解释任务管理用途",
+        "各设备下载入口旁放系统要求与价格位置",
+        "把功能深入介绍与媒体阅读设置为辅助路径"
+      ],
+      "caution": "适合多设备原生应用；页面价格需按地区另查，未安装或测试跨设备同步。",
+      "recipe": "app-showcase",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://culturedcode.com/things/",
+        "title": "Things - To-Do List App for Mac & iOS",
+        "notes": "已读取首页定位、截图替代文本、设备获取与评价栏目。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-obsidian",
+      "name": "Obsidian",
+      "url": "https://obsidian.md/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页以个人思考与私密笔记定位产品，展示笔记内容和连接思路，并连接下载、同步、发布与社区资源。适合参考知识工具如何让用户先理解自己的材料将怎样被组织，再进一步了解扩展能力和数据相关的选择。",
+      "tags": [
+        "个人知识",
+        "笔记连接",
+        "社区资源",
+        "私密思考"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "目录导航"
+      ],
+      "styles": [
+        "深色",
+        "极简"
+      ],
+      "takeaways": [
+        "用笔记实例解释连接知识的过程",
+        "把基础下载与同步发布等附加能力分开",
+        "在信息架构中为隐私和安全说明保留稳定入口"
+      ],
+      "caution": "适合知识管理应用；仅核实官网内容，不据此推断具体隐私实现或同步可靠性。",
+      "recipe": "app-showcase",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://obsidian.md/",
+        "title": "Obsidian - Sharpen your thinking",
+        "notes": "已读取首页定位、笔记样例、知识连接与下载社区导航。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-figma",
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "当前官网以面向设计、代码与人工智能的协作画布为定位，把产品组合、工作角色和组织类型分别列出，并以完整产品流程解释能力。适合参考大型创意平台如何在多产品扩张时维持可查找的导航与明确的入门路径。",
+      "tags": [
+        "设计协作",
+        "产品组合",
+        "角色导航",
+        "创意画布"
+      ],
+      "patterns": [
+        "大字首屏",
+        "目录导航",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "产品导航按任务说明用途而非只放名称",
+        "为设计、工程和产品角色各保留入口",
+        "先解释完整流程，再让访客深入单个工具"
+      ],
+      "caution": "适合多工具创作平台；本次未打开编辑器，也未验证生成内容或协作体验。",
+      "recipe": "saas-conversion",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.figma.com/",
+        "title": "Figma: The collaborative canvas for design, code, and AI",
+        "notes": "已读取首页产品角色组织导航与设计构建流程段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-tana",
+      "name": "Tana",
+      "url": "https://tana.inc/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "当前首页展示的是智能会议平台，通过会话后的事项、邮件与客户关系更新样例解释会议价值，并提供下载、试用和集成入口。页面同时区分旧笔记产品，适合参考品牌扩展时如何说明新定位与既有产品的关系。",
+      "tags": [
+        "智能会议",
+        "会后行动",
+        "工具集成",
+        "产品区分"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "把会议价值写成会后能交付的具体对象",
+        "新旧产品分别说明用途和入口",
+        "试用提示交代周期与取消条件，减少开始顾虑"
+      ],
+      "caution": "当前读取的是会议产品，不能沿用旧大纲笔记定位；未参加会议或验证集成动作。",
+      "recipe": "product-launch",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://tana.inc/",
+        "title": "tana.inc",
+        "notes": "已读取首页产品区分声明、会议行动样例、试用与集成列表。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-todoist",
+      "name": "Todoist",
+      "url": "https://www.todoist.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页围绕工作与生活中的清晰安排展开，结合任务界面说明、媒体评价和按用途划分的模板入口，提供免费开始与升级路径。适合参考成熟效率产品如何用场景模板承接不同用户，同时让入门任务保持简单明确。",
+      "tags": [
+        "任务清单",
+        "场景模板",
+        "个人团队",
+        "媒体评价"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "用一个日常任务界面解释核心用法",
+        "模板按工作、个人和学习等目的分类",
+        "免费开始与升级入口在文案上区分适用人群"
+      ],
+      "caution": "适合覆盖多种日常场景的工具；用户规模与评价属官网展示，未验证模板实际效果。",
+      "recipe": "saas-conversion",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.todoist.com/",
+        "title": "Todoist | A To-Do List to Organize Your Work & Life",
+        "notes": "已读取首页定位、任务截图替代文本、评价与用途模板分组。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-spline",
+      "name": "Spline",
+      "url": "https://spline.design/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "官网将三维创作定位与社区可改编作品连接，示例按交互网站、产品设计、品牌、游戏体验和样机等用途组织。适合参考创意工具如何让新用户从看得懂的结果进入，再选择人工智能辅助或直接控制的创作路径。",
+      "tags": [
+        "三维创作",
+        "社区示例",
+        "创作用途",
+        "在线工具"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "作品网格"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "用可识别的成品用途组织示例",
+        "在作品旁标注作者和进入编辑的路径",
+        "将生成辅助与直接编辑说明为可选择的创作方式"
+      ],
+      "caution": "适合结果可视化的创作工具；只读示例说明，未编辑三维场景或测试设备性能。",
+      "recipe": "tool-demo",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://spline.design/",
+        "title": "Spline - 3D Design tool in the browser with real-time collaboration",
+        "notes": "已读取首页三维定位、创作方式与社区示例用途。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-rive",
+      "name": "Rive",
+      "url": "https://rive.app/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "页面按构建、交付和探索组织编辑器、命令工具、运行时与格式说明，并按应用、网站、游戏和车辆等场景分流。适合参考创意技术产品如何同时向设计师与工程师解释作品的制作过程，以及最终进入产品的方式。",
+      "tags": [
+        "交互动效",
+        "编辑工具",
+        "运行时",
+        "行业场景"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "产品演示",
+        "渐进披露"
+      ],
+      "styles": [
+        "实验性",
+        "几何"
+      ],
+      "takeaways": [
+        "把制作与部署两类需求分别设置导航",
+        "用目标平台解释运行时存在的价值",
+        "案例入口连接具体应用场景而非泛化效果展示"
+      ],
+      "caution": "适合涉及设计与开发交接的工具；未执行命令或验证动画运行时与编辑体验。",
+      "recipe": "tool-demo",
+      "theme": "neon",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://rive.app/",
+        "title": "Rive: interactive animation engine for games, apps, and UI",
+        "notes": "已读取首页构建交付导航、平台用途与案例入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-descript",
+      "name": "Descript",
+      "url": "https://www.descript.com/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "当前首页以人工智能视频编辑为主线，将视频、播客、录屏、字幕和生成媒体按创作任务组织，并同时提供自主编辑与助手路径。适合参考多功能创作软件如何用用户任务管理功能密度，并用熟悉的操作类比解释核心体验。",
+      "tags": [
+        "视频编辑",
+        "音频创作",
+        "字幕工具",
+        "任务导航"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "用编辑文字的熟悉类比解释新工作流",
+        "功能分组围绕录制、剪辑和发布等任务",
+        "助手与手动操作各有入口以保留用户控制感"
+      ],
+      "caution": "适合内容创作平台；未上传媒体、生成内容或验证自动编辑质量。",
+      "recipe": "tool-demo",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.descript.com/",
+        "title": "Descript: AI Video & Audio Text-based Editor — Try Free",
+        "notes": "已读取首页任务导航、视频编辑定位、助手手动路径及客户展示。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-reflect",
+      "name": "Reflect",
+      "url": "https://reflect.app/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "当前官网突出本地文本文件、每日笔记、反向链接和可选同步，并把人工智能能力单独说明为可选择的辅助。适合参考笔记工具如何将数据位置、基础使用与附加服务拆开讲清，让用户在开始前理解产品的组成与边界。",
+      "tags": [
+        "本地笔记",
+        "反向链接",
+        "同步选择",
+        "可选助手"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "把文件位置与同步选择列为独立说明",
+        "先讲日常记录再介绍智能辅助",
+        "对另行计费的服务在能力附近交代费用关系"
+      ],
+      "caution": "仅核实官网的本地与开源陈述，未审计源码许可、数据实现或第三方服务调用。",
+      "recipe": "app-showcase",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://reflect.app/",
+        "title": "Reflect",
+        "notes": "已读取首页本地文件、同步、反向链接及可选助手计费说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-pitch",
+      "name": "Pitch",
+      "url": "https://pitch.com/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "官网以演示文稿协作为主线，结合提示生成与编辑入口，解释多人协作、品牌一致性和后续工作流，并提供模板与用途导航。适合参考文档型产品如何从成果质量入手，再交代团队合作与持续复用的机制。",
+      "tags": [
+        "演示协作",
+        "模板资源",
+        "品牌一致",
+        "创作流程"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "作品网格"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "先让访客理解最终交付物，再说明生成步骤",
+        "把可继续编辑作为演示的重要信息",
+        "模板按用途分类并连接团队品牌管理能力"
+      ],
+      "caution": "适合有明确成品的协作工具；未生成或导出演示文件，也未验证多人同步。",
+      "recipe": "saas-conversion",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://pitch.com/",
+        "title": "The AI presentation workspace",
+        "notes": "已读取首页演示定位、多人编辑、品牌与工作流段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-warp",
+      "name": "Warp",
+      "url": "https://www.warp.dev/",
+      "type": "产品页",
+      "category": "开发工具",
+      "summary": "当前官网以云端软件工厂为方向，将代理编排、终端和命令工具纳入产品导航，并用配置定义解释代码仓库、任务来源与自动化的连接。适合参考开发平台如何展示可配置系统的组成，而不是只用抽象能力词描述结果。",
+      "tags": [
+        "代理编排",
+        "终端工具",
+        "配置说明",
+        "开发流程"
+      ],
+      "patterns": [
+        "目录导航",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "深色",
+        "几何"
+      ],
+      "takeaways": [
+        "为代理平台展示一份可理解的配置结构",
+        "把产品和使用场景分开导航",
+        "用代码评审或故障调查等任务解释平台能力"
+      ],
+      "caution": "当前定位已扩展到软件工厂；未执行命令或验证代理编排与自动化可靠性。",
+      "recipe": "tool-demo",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.warp.dev/",
+        "title": "Warp — Open Infrastructure for Cloud Software Factories",
+        "notes": "已读取首页产品任务导航、配置定义与组件按钮。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-lark",
+      "name": "Lark",
+      "url": "https://www.larksuite.com/en_sg/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "读取飞书入口时被导向此国际站，页面把聊天、邮件、文档、表格、会议与知识库放入统一产品目录，再按行业、团队和场景分流。适合参考大型协作套件如何用多种查找路径服务不同采购与使用角色。",
+      "tags": [
+        "协作套件",
+        "角色分流",
+        "行业方案",
+        "国际站"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "社交证明",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "几何"
+      ],
+      "takeaways": [
+        "产品名旁用短动词说明它能做什么",
+        "行业和团队两套入口对应不同访问动机",
+        "将客户故事连接到具体业务场景增强上下文"
+      ],
+      "caution": "此条仅代表实际读到的国际站，不能当作飞书中国站内容与功能已核实。",
+      "recipe": "saas-conversion",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.larksuite.com/en_sg/?from_site=feishu",
+        "title": "Lark | Productivity Superapp for Chat, Meetings, Docs & Projects",
+        "notes": "已读取国际站产品目录、行业团队场景分流与客户栏目。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-modao",
+      "name": "墨刀",
+      "url": "https://modao.cc/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "中文官网把原型、白板、界面设计与人工智能创作按产研任务组织，通过场景说明和行业客户材料解释协作价值。适合参考多工具设计平台如何用完整工作链串联产品组合，并为不同团队提供进入各自功能的路径。",
+      "tags": [
+        "中文产品",
+        "原型设计",
+        "产研协作",
+        "客户场景"
+      ],
+      "patterns": [
+        "大字首屏",
+        "功能网格",
+        "产品演示",
+        "社交证明"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "按创意到交付的工作步骤组织工具",
+        "各工具先写一个典型使用场景",
+        "客户案例说明所属行业与解决的问题，避免只有标识"
+      ],
+      "caution": "适合面向产品团队的平台；客户成果是官网自述，未登录或测试原型协作。",
+      "recipe": "saas-conversion",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://modao.cc/",
+        "title": "墨刀(Modao) - 智能原型设计与产研协作平台，让产品团队更快落地好想法",
+        "notes": "已读取中文首页客户场景、原型白板设计及创作分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-pixso",
+      "name": "Pixso",
+      "url": "https://pixso.cn/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "中文官网将界面设计、原型、白板和交付放入协作流程，导航同时提供设计角色、设计系统和智能辅助等入口。适合参考专业设计工具如何将面向个人的创作功能与团队管理需求分开说明，并以完整流程建立产品定位。",
+      "tags": [
+        "中文设计工具",
+        "原型协作",
+        "设计系统",
+        "流程整合"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "社交证明",
+        "渐进披露"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "先定义完整协作流程再展开单项工具",
+        "导航中的解决方案使用清楚任务名称",
+        "把设计系统和交付需求与个人编辑功能分开说明"
+      ],
+      "caution": "适合需要多人交付的工具；只读官网流程与导航，未验证编辑器、导出或兼容性。",
+      "recipe": "saas-conversion",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://pixso.cn/",
+        "title": "在线 UI 设计与原型协作工具｜Pixso 官网",
+        "notes": "已读取中文首页产品导航、协作定位、客户及全流程段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-affine",
+      "name": "AFFiNE",
+      "url": "https://affine.pro/",
+      "type": "产品页",
+      "category": "协作产品",
+      "summary": "首页将文档、白板和数据库描述为连贯工作空间，用书写、绘制和规划三个动作解释用途，并连接团队空间、部署咨询与开始使用。适合参考跨形态知识工具如何先建立共同工作对象，再让不同规模用户选择合适入口。",
+      "tags": [
+        "知识协作",
+        "文档白板",
+        "团队空间",
+        "部署咨询"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "用少量动作解释跨形态编辑的共同目标",
+        "基础体验和团队部署咨询分别设置入口",
+        "先说明工作流如何连接，再列技术与部署选项"
+      ],
+      "caution": "适合融合多种编辑方式的产品；开源与私有部署仅属官网说明，未审计许可或部署。",
+      "recipe": "product-launch",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://affine.pro/",
+        "title": "AFFiNE — Open-Source Knowledge Base Software",
+        "notes": "已读取首页书写绘制规划定位、工作空间说明与团队部署入口。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-heptabase",
+      "name": "Heptabase",
+      "url": "https://heptabase.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页面向学生、研究者与终身学习者，把资料问答、白板卡片、双向链接和阅读材料整理串成学习流程，并展示各类资料入口。适合参考研究工具如何围绕理解问题组织功能，而不是只罗列知识管理术语。",
+      "tags": [
+        "视觉知识",
+        "研究流程",
+        "资料整理",
+        "白板卡片"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "以研究资料到理解结构的顺序解释功能",
+        "把不同资料类型作为演示入口",
+        "卡片与双向链接都要回到它们支持的思考动作"
+      ],
+      "caution": "适合研究和学习型工具；本次未导入资料或评估问答可靠性与知识组织效果。",
+      "recipe": "tool-demo",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://heptabase.com/",
+        "title": "Heptabase",
+        "notes": "已读取首页研究定位、资料类型、白板卡片和链接功能段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-eagle",
+      "name": "Eagle",
+      "url": "https://eagle.cool/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "首页以收集、搜索和整理设计文件为主线，按插画、摄影、包装与空间等创作领域呈现场景，并提供系统下载及搜索能力说明。适合参考素材工具如何让不同创作者从自己的工作材料出发，理解统一管理产品的价值。",
+      "tags": [
+        "素材管理",
+        "创作领域",
+        "文件整理",
+        "桌面下载"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "几何"
+      ],
+      "takeaways": [
+        "用创作者熟悉的素材类别解释应用场景",
+        "下载入口旁同步给出系统要求",
+        "把收集、查找和整理串成一条完整任务链"
+      ],
+      "caution": "适合桌面素材管理软件；读取为英文首页，未确认中文版本或测试素材识别能力。",
+      "recipe": "app-showcase",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://eagle.cool/",
+        "title": "Eagle - Organize design files has never been easier",
+        "notes": "已读取英文首页定位、创作领域、系统下载与素材搜索分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-utools",
+      "name": "uTools",
+      "url": "https://www.u-tools.cn/index.html",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "中文官网以工具平台定位连接插件、应用生成与智能代理，随后用悬浮球和全局唤出说明基本操作，并提供下载与开发文档。适合参考扩展型效率工具如何兼顾普通用户的第一次使用，以及开发者对生态接入的深入需求。",
+      "tags": [
+        "中文效率",
+        "插件平台",
+        "操作引导",
+        "工具生态"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "命令搜索"
+      ],
+      "styles": [
+        "极简"
+      ],
+      "takeaways": [
+        "先展示日常工具用途再解释插件平台",
+        "上手步骤区分鼠标入口与快捷键入口",
+        "给开发者文档独立入口，避免干扰普通用户下载"
+      ],
+      "caution": "适合有扩展生态的桌面工具；插件数量属页面自述，未安装或验证具体插件。",
+      "recipe": "tool-demo",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.u-tools.cn/index.html",
+        "title": "uTools，你的下一代工具平台",
+        "notes": "已读取跳转后中文首页工具列表、应用生成与快速上手段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-immersive-translate",
+      "name": "沉浸式翻译 Immersive Translate",
+      "url": "https://immersivetranslate.com/en/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "读取到的英文首页把网页、文档、字幕和图像翻译分组，再按学习、专业阅读与创作场景解释用途。适合参考覆盖多种内容载体的工具如何先区分材料类型，再通过用户目标建立更直观的选择路径与价值说明。",
+      "tags": [
+        "双语阅读",
+        "多格式翻译",
+        "学习场景",
+        "工具导航"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "产品演示",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "把输入材料类型做成清楚的产品入口",
+        "学习与专业阅读分别提供具体使用情境",
+        "涉及保留版式的能力应配前后对照示例"
+      ],
+      "caution": "仅核实英文官网产品说明，未测试翻译质量、文档版式或浏览器插件。",
+      "recipe": "tool-demo",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://immersivetranslate.com/en/",
+        "title": "Immersive Translate - Next-Gen AI Translator | Bilingual Website Translation, PDF, Video Subtitle, Manga & Image Translation",
+        "notes": "已读取英文首页翻译类型目录、学习专业阅读创作场景。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-quicker",
+      "name": "Quicker",
+      "url": "https://getquicker.net/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "中文首页从快捷面板和鼠标触发切入，逐步解释上下文动作、全局操作、创建动作及软件连接，并列出常见自动化用途。适合参考复杂效率工具如何从一个小操作建立理解，再引导用户进入组合能力与社区动作资源。",
+      "tags": [
+        "中文自动化",
+        "快捷面板",
+        "动作组合",
+        "场景说明"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "渐进披露"
+      ],
+      "styles": [
+        "极简",
+        "几何"
+      ],
+      "takeaways": [
+        "先解释用户如何唤出和触发一个动作",
+        "从固定动作逐步过渡到可组合流程",
+        "按软件、文字和资源等对象提供具体捷径示例"
+      ],
+      "caution": "适合需要逐步学习的自动化工具；未下载软件或执行社区动作，不评价脚本安全性。",
+      "recipe": "tool-demo",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://getquicker.net/",
+        "title": "Quicker软件 您的指尖工具箱 - Quicker",
+        "notes": "已读取中文首页快捷面板、动作创建、软件连接与用途分段。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-ticktick",
+      "name": "TickTick",
+      "url": "https://ticktick.com/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "首页以整理生活与保持创造力为主题，连接任务、日历和其他效率能力，并提供下载、免费开始及功能说明。适合参考多功能个人应用如何用一个稳定目标统合扩展能力，同时通过媒体与用户材料承接进一步了解的需求。",
+      "tags": [
+        "任务日历",
+        "个人效率",
+        "功能说明",
+        "媒体材料"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "用单一目标串起任务与日历等能力",
+        "基础开始和下载都保持容易找到",
+        "媒体评价之后继续给具体功能信息，避免只靠口碑推进"
+      ],
+      "caution": "此条为英文国际首页；未验证中国区产品页面、同步或智能功能。",
+      "recipe": "app-showcase",
+      "theme": "lavender",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://ticktick.com/",
+        "title": "TickTick: A To-Do List and Calendar to keep you organized",
+        "notes": "已读取英文首页定位、功能标题、获取与媒体栏目。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-bear",
+      "name": "Bear",
+      "url": "https://bear.app/",
+      "type": "产品页",
+      "category": "效率工具",
+      "summary": "官网用多设备笔记界面的替代说明建立产品背景，随后介绍编辑、标签、隐私和高级功能，并对照免费与付费范围。适合参考原生笔记应用如何把核心写作体验、平台要求与付费边界放在同一条易查找的阅读路径中。",
+      "tags": [
+        "原生笔记",
+        "标签整理",
+        "免费付费",
+        "多设备展示"
+      ],
+      "patterns": [
+        "大字首屏",
+        "产品演示",
+        "功能网格",
+        "定价对比"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "以用户可识别的编辑界面解释核心价值",
+        "免费与付费使用同一组功能维度对照",
+        "把同步等附加能力在功能和价格区同时说明"
+      ],
+      "caution": "适合原生应用与订阅产品；未安装或付款，隐私和加密能力只核实官网陈述。",
+      "recipe": "app-showcase",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://bear.app/",
+        "title": "Bear: Markdown Notes App for Mac, iPhone & iPad",
+        "notes": "已读取首页设备截图说明、功能与免费付费对照段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-milanote",
+      "name": "Milanote",
+      "url": "https://milanote.com/",
+      "type": "产品页",
+      "category": "创意工具",
+      "summary": "首页按收集灵感、记录研究、视觉整理和团队协作解释产品，再为电影、写作、设计、摄影等创意领域提供入口。适合参考通用创作工具如何用工作步骤建立共同理解，再让不同职业找到贴合自己材料的用法与模板。",
+      "tags": [
+        "灵感整理",
+        "视觉项目",
+        "创意流程",
+        "职业入口"
+      ],
+      "patterns": [
+        "目录导航",
+        "功能网格",
+        "产品演示",
+        "社交证明"
+      ],
+      "styles": [
+        "编辑感",
+        "温暖"
+      ],
+      "takeaways": [
+        "先用通用创作步骤建立产品认知",
+        "职业入口旁说明典型产出而非只写职位",
+        "桌面整理与移动捕捉分别解释使用价值"
+      ],
+      "caution": "适合跨职业创意工具；本次未进入画布或验证多人协作与素材同步。",
+      "recipe": "tool-demo",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://milanote.com/",
+        "title": "Milanote - the tool for organizing creative projects",
+        "notes": "已读取首页收集记录整理协作段落、职业用途和设备说明。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-basement",
+      "name": "Basement Studio",
+      "url": "https://basement.studio/",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "首页将数字工作室定位、客户背景、精选项目和能力分类顺序展开，项目说明连接网站、品牌、活动与营销任务。适合参考创意团队如何把表现力与交付范围放在一起说明，让潜在客户从作品进一步了解合作内容。",
+      "tags": [
+        "数字工作室",
+        "品牌体验",
+        "项目说明",
+        "服务分类"
+      ],
+      "patterns": [
+        "大字首屏",
+        "作品网格",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "深色",
+        "实验性"
+      ],
+      "takeaways": [
+        "案例旁标注实际服务范围以解释团队贡献",
+        "精选项目之后连接对应能力介绍",
+        "把联系入口放在服务说明之后承接明确意向"
+      ],
+      "caution": "适合已有商业案例的工作室；效果与业务结果为官网自述，未独立验证或体验动效。",
+      "recipe": "creative-studio",
+      "theme": "brutal",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://basement.studio/",
+        "title": "basement.studio | We make cool shit that performs.",
+        "notes": "已读取首页定位、客户展示、精选项目、能力与联系段落。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-locomotive",
+      "name": "Locomotive",
+      "url": "https://locomotive.ca/en",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "首页以数字体验机构身份展开精选项目，后接文章、荣誉与联系路径，项目以名称和行业背景形成浏览线索。适合参考创意团队如何在展示作品之外补充方法文章，让访客同时了解交付成果与团队对技术设计问题的判断。",
+      "tags": [
+        "数字体验",
+        "精选项目",
+        "方法文章",
+        "团队联系"
+      ],
+      "patterns": [
+        "大字首屏",
+        "作品网格",
+        "编辑排版",
+        "目录导航"
+      ],
+      "styles": [
+        "极简",
+        "编辑感"
+      ],
+      "takeaways": [
+        "作品条目同时给项目名与简短业务背景",
+        "用方法文章补足作品之外的决策过程",
+        "完整作品库与精选入口分开，保持首页重点"
+      ],
+      "caution": "适合项目视觉较强的团队；滚动库相关文章不等于首页滚动效果已被实际验证。",
+      "recipe": "creative-studio",
+      "theme": "swiss",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://locomotive.ca/en",
+        "title": "Locomotive | Montreal web agency",
+        "notes": "已读取英文首页项目、文章、导航与联系相关内容。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-set-studio",
+      "name": "Set Studio",
+      "url": "https://set.studio/",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "首页结合代表项目的图像替代说明、团队定位与合作理由，把简化流程、长期效率和设计开发能力联系起来。适合参考小型工作室如何用清楚的方法与项目背景建立专业感，让潜在客户理解合作方式而非只看到作品名称。",
+      "tags": [
+        "精品工作室",
+        "设计开发",
+        "合作方法",
+        "项目背景"
+      ],
+      "patterns": [
+        "大字首屏",
+        "作品网格",
+        "社交证明",
+        "编辑排版"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "温暖"
+      ],
+      "takeaways": [
+        "为作品缩略图提供能独立理解的文字说明",
+        "合作理由对应客户的预算与维护顾虑",
+        "服务介绍写清过程如何简化，而非仅堆形容词"
+      ],
+      "caution": "适合强调长期合作的小型团队；图像外观只读替代文本，未作实际视觉验收。",
+      "recipe": "creative-studio",
+      "theme": "atelier",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://set.studio/",
+        "title": "Set.Studio",
+        "notes": "已读取首页项目替代文本、团队定位、合作理由与导航。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-madebyshape",
+      "name": "MadeByShape",
+      "url": "https://madebyshape.co.uk/",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "首页把网站设计、品牌、内容系统与电商等服务放入明确导航，随后连接项目、团队、评价和文章内容，并提供作品短片入口。适合参考服务型工作室如何让客户从业务需求进入，再通过项目和团队材料逐步形成合作预期。",
+      "tags": [
+        "网站服务",
+        "品牌建设",
+        "项目展示",
+        "团队内容"
+      ],
+      "patterns": [
+        "目录导航",
+        "作品网格",
+        "功能网格",
+        "社交证明"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "服务名称后说明能为客户交付什么",
+        "项目展示后提供下一步咨询入口",
+        "团队、流程和常见问题各有稳定页面承接顾虑"
+      ],
+      "caution": "适合需要解释服务范围的工作室；视频只确认播放控制与入口，未播放或核实案例成果。",
+      "recipe": "creative-studio",
+      "theme": "ocean",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://madebyshape.co.uk/",
+        "title": "Web Design Manchester | Web Design Agency | MadeByShape",
+        "notes": "已读取首页服务导航、作品项目、团队评价与文章标题。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-ustwo",
+      "name": "ustwo",
+      "url": "https://ustwo.com/",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "首页以数字产品设计与建设为定位，通过项目、客户反馈和方法分段解释团队能力，内容涵盖技术、游戏化思考和行为科学。适合参考产品工作室如何让方法论回到用户参与与具体交付，并为不同需求提供进一步了解的路径。",
+      "tags": [
+        "数字产品",
+        "用户研究",
+        "行为设计",
+        "客户反馈"
+      ],
+      "patterns": [
+        "大字首屏",
+        "功能网格",
+        "社交证明",
+        "编辑排版"
+      ],
+      "styles": [
+        "极简",
+        "温暖"
+      ],
+      "takeaways": [
+        "方法介绍始终说明它改善哪类用户行为",
+        "案例与能力分段互相连接以提供证据背景",
+        "客户反馈标注角色和调查时间便于判断上下文"
+      ],
+      "caution": "适合产品设计与开发服务团队；客户评分属官网展示，未核实调查或项目实际表现。",
+      "recipe": "creative-studio",
+      "theme": "precision",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://ustwo.com/",
+        "title": "ustwo | Digital Product Studio",
+        "notes": "已读取首页项目、客户反馈背景、产品方法与团队导航。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    },
+    {
+      "id": "site-further",
+      "name": "Further",
+      "url": "https://www.further.group/",
+      "type": "工作室",
+      "category": "工作室",
+      "summary": "当前官网由原设计工作室品牌导向新名称，以创意立场、精选项目和不同地区联系信息建立主要内容，项目同时注明领域与服务方向。适合参考品牌机构如何在更名后维持作品可发现性，并让访客顺利找到合作渠道。",
+      "tags": [
+        "品牌机构",
+        "品牌更名",
+        "项目索引",
+        "地区联系"
+      ],
+      "patterns": [
+        "大字首屏",
+        "作品网格",
+        "目录导航",
+        "编辑排版"
+      ],
+      "styles": [
+        "鲜明色彩",
+        "编辑感"
+      ],
+      "takeaways": [
+        "品牌更名页提供清楚的新站入口",
+        "项目条目同时标注领域与品牌或体验等服务",
+        "多地区联系信息分段呈现以支持正确分流"
+      ],
+      "caution": "本条对应新品牌官网；旧站主要为跳转说明，未将旧站历史外观计作已核实。",
+      "recipe": "creative-studio",
+      "theme": "editorial",
+      "evidence": {
+        "level": "content-reviewed",
+        "checkedAt": "2026-10-22",
+        "url": "https://www.further.group/",
+        "title": "Further – Formerly DesignStudio | Creative, Branding & Design Agency",
+        "notes": "已读取原站更名提示及新官网项目、领域与地区联系内容。只复核文本与内容结构，未操作交互或确认响应式、配色和动态外观。布局与风格标签为基于内容的适配归纳，待视觉抽样；recipe、theme 是工作台原创建议，不代表来源 token 或源码。"
+      },
+      "rights": {
+        "type": "reference-only",
+        "note": "公开网站设计参考；未获得页面源码与品牌资产再分发授权。"
+      }
+    }
+  ]
+}

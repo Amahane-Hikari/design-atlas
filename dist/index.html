@@ -8,6 +8,7 @@
  <title>Design Atlas · 前端设计工作台</title>
  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%233d6655'/%3E%3Ctext x='24' y='35' text-anchor='middle' font-size='36' fill='%23f2edce'%3E✳%3C/text%3E%3C/svg%3E">
  <link rel="stylesheet" href="app.css">
+ <link rel="stylesheet" href="cases.css">
 </head>
 <body>
  <a class="skip-link" href="#main">跳到主要内容</a>
@@ -15,6 +16,7 @@
   <a class="logo" href="#library" aria-label="Design Atlas 首页"><span class="logo-mark">✳</span><span>design<span class="logo-bottom">atlas<span class="logo-dot">®</span></span></span></a>
   <div class="workspace-label"><i></i> PERSONAL WORKSPACE <button id="close-sidebar" class="icon-btn mobile-only" aria-label="关闭导航">×</button></div>
   <nav class="primary-nav">
+   <button data-view="cases" class="nav-item"><span data-icon="external"></span>公开网站案例<span class="nav-count" id="nav-cases">—</span></button>
    <button data-view="library" class="nav-item active"><span data-icon="grid"></span>设计资源库<span class="nav-count" id="nav-total">30</span></button>
    <button data-view="builder" class="nav-item"><span data-icon="layers"></span>页面拼装台<span class="new-label">LAB</span></button>
    <button data-view="themes" class="nav-item"><span data-icon="palette"></span>主题实验室</button>
@@ -29,7 +31,7 @@
   <div class="sidebar-bottom">
    <div class="sidebar-note"><span>FROM IDEAS<br>TO INTERFACES.</span><b aria-hidden="true">↗</b><p>一点灵感，一点尝试。<br>做出属于你的好界面。</p><button data-view="builder">开始我的设计 <span>↗</span></button></div>
    <button class="about-link" id="about-button"><span data-icon="info"></span>关于这个工作台<span>↗</span></button>
-   <div class="local-status"><i></i> 本地自动保存 <span>v1.0</span></div>
+   <div class="local-status"><i></i> 本地自动保存 <span>v2.0</span></div>
   </div>
  </aside>
  <div class="sidebar-backdrop" id="sidebar-backdrop" hidden></div>

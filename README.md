@@ -1,4 +1,4 @@
-# Design Atlas · 前端设计工作台
+# Design Atlas 2.0 · 前端设计工作台
 
 一个可以在浏览器里探索设计、调整主题、拼装页面并带走源代码的工作台。核心交互不依赖外部 CDN，也不需要账号或后端。
 
@@ -9,12 +9,30 @@
 - 开发时执行 `npm start` 或 `node scripts/serve.mjs`。服务器仅监听 `127.0.0.1`。
 - `dist/index.html` 使用 ES modules 和 JSON 文件，请通过 HTTP 打开。不要直接双击此文件；离线使用请选择 `offline.html`。
 
+
+## v2.0：公开网站案例与可扩充设计配方
+
+本次新增 **80 个独立网站案例**：27 个人网站、11 作品集、36 产品页、6 工作室，包含 Anthony Fu、Brittany Chiang、Steph Ango、Linear、Raycast、Resend 等。80 条均读取了官网内容；其中 5 个站补充桌面与 390px 窄屏的真实浏览器抽样。案例记录来源、阅读范围、借鉴要点与适用边界，不把文字读取当成完整视觉审计。
+
+- 按类型、建议风格、设计模式与关键词组合筛选；分页、收藏优先、个人网站优先。
+- 最多并排比较 3 个案例，分别借鉴结构或主题。
+- 12 个原创设计配方，支持实时预览、切换主题、只应用主题、追加模块或替换整页，三种修改均可一步撤销。
+- 新增 12 个原创模块：分栏个人主页、项目索引、文章搜索、履历、近况、项目叙事、功能演示、桌面应用窗口、对比表、更新日志、评价墙、大字宣言。
+- 自定义案例、学习笔记；把当前页面保存为可复用配方。扩展包导入导出包含案例、配方、笔记和网站案例收藏；支持移除与最近一次库修改撤销。
+- 完整 HTML、HTML 片段、CSS、JavaScript、项目 JSON 的编辑、预览与复制继续可用。用户项目与扩展包分别管理，v2 能读取旧版 v1 项目。
+
+卡片是**原创布局示意**，详情中的 iframe 是**原创适配预览**；点击「访问原站」查看真实网站。配方与主题是适配建议，不是原站测量结果或源码复制。没有打包原站品牌素材。
+
+可扩充协议、代码结构与新模块注册方法见 [EXTENDING.md](EXTENDING.md)。
+
 ## 已整合内容
 
 | 内容 | 数量 | 用途 |
 | --- | ---: | --- |
-| 原创可玩模块 | 30 | 首屏、导航、Bento、定价、表单、数据、交互组件、动效等 |
-| 可编辑整页模板 | 4 | 独立工作室、SaaS、作品集、产品工作空间 |
+| 公开网站案例 | 80 | 个人网站、作品集、产品与工作室的来源和设计建议 |
+| 设计配方 | 12 | 结构与主题可分开应用，自定义配方可继续添加 |
+| 原创可玩模块 | 42 | 首屏、导航、Bento、定价、表单、数据、交互组件、动效等 |
+| 可编辑整页模板 | 10 | 独立工作室、SaaS、作品集、产品工作空间 |
 | 全局主题 | 8 | 森林、深空、编辑式、海盐蓝、粗野主义、霓虹、薰衣草、瑞士网格 |
 | 本地设计参考 | 75 | 实际存在的全部 DESIGN.md 的摘要、分类、颜色与来源 |
 | 前端相关技能索引 | 45 | 从 189 份技能文件中筛选的设计、搭建与验收能力 |
@@ -71,7 +89,7 @@ node scripts/build-offline.mjs
 node scripts/check.mjs
 ```
 
-开源资源存放在 `dist/data/catalog.json` 的 `resources`；本地参考位于 `dist/data/local-references.json`。刷新会保留已有的 resources 和人工维护的中文摘要。新增模块修改 `dist/engine.js` 的 BLOCKS 与渲染函数；新增主题修改 THEMES。修改后重建离线版。
+开源资源存放在 `dist/data/catalog.json` 的 `resources`；本地参考位于 `dist/data/local-references.json`。刷新会保留已有的 resources 和人工维护的中文摘要。新增模块在 `dist/pattern-engine.js` 注册，案例协议与配方位于 `dist/case-model.js`；新增主题修改 engine 的 THEMES。详情见 EXTENDING.md。修改后重建离线版。
 
 工程使用原生 ES modules，无 npm 运行时依赖。`npm start` 只调用内置 Node HTTP 服务器。将 `dist/` 作为静态目录即可部署。
 
@@ -82,7 +100,12 @@ dist/index.html               在线/本地 HTTP 入口
 dist/offline.html             无需服务器的完整离线版
 dist/app.css                  工作台视觉与响应式布局
 dist/app.js                   交互、拼装、编辑器与存储
-dist/engine.js                30 个原创模块及源码生成引擎
+dist/engine.js                42 个模块的统一接口与源码生成引擎
+dist/pattern-engine.js       12 个新增模块的定义、渲染与交互
+dist/case-model.js           案例包验证、筛选与配方规划
+dist/case-ui.js              案例库、对比、笔记与扩展 UI
+dist/cases.css              案例库响应式样式
+dist/data/site-cases.json    80 个网站案例与来源
 dist/data/catalog.json        本地技能与开源资源索引
 dist/data/local-references.json 设计参考、配色与来源
 scripts/serve.mjs             本地服务器
