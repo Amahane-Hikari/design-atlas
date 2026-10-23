@@ -28,7 +28,7 @@ export const FX_OPTIONS={
 // Text fields that renderers mark with data-f, so they can be selected and styled one by one.
 export const EL_FIELDS=[['eyebrow','上方短句'],['title','主标题'],['subtitle','说明文字'],['button','主按钮'],['secondary','次要按钮']];
 export const EL_DEFAULTS={color:'',size:100,weight:0,align:'',tracking:0,italic:false,upper:false,hidden:false};
-export const STYLE_DEFAULTS={tone:'auto',bg:'',bg2:'',bg3:'',gradType:'linear',gradAngle:135,accent:'',pattern:'none',patternOpacity:60,image:'',imageFit:'cover',imagePos:'center',overlay:0,overlayColor:'',imageBlur:0,padTop:-1,padBottom:-1,width:'auto',align:'auto',radius:-1,zoom:100,divider:'none',sticky:'none',hide:'none',enter:'none',trigger:'scroll',stagger:false,duration:700,delay:0,ease:'smooth',hover:'none',text:'none',loop:'none',scroll:'none',css:'',media:{},els:{},free:{}};
+export const STYLE_DEFAULTS={tone:'auto',bg:'',bg2:'',bg3:'',gradType:'linear',gradAngle:135,accent:'',pattern:'none',patternOpacity:60,image:'',imageFit:'cover',imagePos:'center',overlay:0,overlayColor:'',imageBlur:0,padTop:-1,padBottom:-1,width:'auto',align:'auto',radius:-1,zoom:100,divider:'none',sticky:'none',hide:'none',enter:'none',trigger:'scroll',stagger:false,duration:700,delay:0,ease:'smooth',hover:'none',text:'none',loop:'none',scroll:'none',css:'',media:{},els:{},free:{},freeM:{}};
 export const EFFECT_DEFAULTS={progress:false,backTop:false,grain:false,scrollbar:false,cursor:'none',intro:'none',reveal:'none'};
 export const ASSET_LIMITS={count:24,bytes:1400000,total:4500000};
 const assetId=v=>typeof v==='string'&&/^a-[\w-]{4,40}$/.test(v);
@@ -44,29 +44,39 @@ export function normalizeElementStyle(raw){
 export const FREE_DEFAULTS={x:0,y:0,rotate:0,scale:100,w:0,opacity:100,z:0,color:'',bg:'',size:0,weight:0,align:'',lh:0,tracking:0,radius:-1,pad:-1,border:0,borderColor:'',shadow:'none',blur:0,italic:false,upper:false,hidden:false};
 export const FREE_SHADOWS=[['none','无'],['soft','柔和'],['strong','浓重'],['hard','硬投影'],['glow','光晕']];
 export const freePath=v=>typeof v==='string'&&/^\d{1,3}(\/\d{1,3}){0,11}$/.test(v)&&v.split('/').every(n=>Number(n)>=1);
+const freeFull=e=>({x:num(e.x,-2400,2400,0),y:num(e.y,-2400,2400,0),rotate:num(e.rotate,-180,180,0),scale:num(e.scale,10,400,100),w:num(e.w,0,2400,0),opacity:num(e.opacity,0,100,100),z:num(e.z,-10,50,0),color:hex(e.color)?e.color.toLowerCase():'',bg:hex(e.bg)?e.bg.toLowerCase():'',size:num(e.size,0,240,0),weight:[100,200,300,400,500,600,700,800,900].includes(Number(e.weight))?Number(e.weight):0,align:['left','center','right'].includes(e.align)?e.align:'',lh:Number(e.lh)>0?num(e.lh,80,300,0):0,tracking:num(e.tracking,-10,60,0),radius:e.radius==null||Number(e.radius)<0?-1:num(e.radius,0,200,-1),pad:e.pad==null||Number(e.pad)<0?-1:num(e.pad,0,200,-1),border:num(e.border,0,20,0),borderColor:hex(e.borderColor)?e.borderColor.toLowerCase():'',shadow:pick(FREE_SHADOWS,e.shadow,'none'),blur:num(e.blur,0,40,0),italic:e.italic===true,upper:e.upper===true,hidden:e.hidden===true});
 export function normalizeFree(raw){
- const e=plain(raw)?raw:{},out={};
- const full={x:num(e.x,-2400,2400,0),y:num(e.y,-2400,2400,0),rotate:num(e.rotate,-180,180,0),scale:num(e.scale,10,400,100),w:num(e.w,0,2400,0),opacity:num(e.opacity,0,100,100),z:num(e.z,-10,50,0),color:hex(e.color)?e.color.toLowerCase():'',bg:hex(e.bg)?e.bg.toLowerCase():'',size:num(e.size,0,240,0),weight:[100,200,300,400,500,600,700,800,900].includes(Number(e.weight))?Number(e.weight):0,align:['left','center','right'].includes(e.align)?e.align:'',lh:Number(e.lh)>0?num(e.lh,80,300,0):0,tracking:num(e.tracking,-10,60,0),radius:e.radius==null||Number(e.radius)<0?-1:num(e.radius,0,200,-1),pad:e.pad==null||Number(e.pad)<0?-1:num(e.pad,0,200,-1),border:num(e.border,0,20,0),borderColor:hex(e.borderColor)?e.borderColor.toLowerCase():'',shadow:pick(FREE_SHADOWS,e.shadow,'none'),blur:num(e.blur,0,40,0),italic:e.italic===true,upper:e.upper===true,hidden:e.hidden===true};
+ const e=plain(raw)?raw:{},full=freeFull(e),out={};
  for(const k of Object.keys(FREE_DEFAULTS))if(full[k]!==FREE_DEFAULTS[k])out[k]=full[k];
+ return out;
+}
+// Phone overrides (≤760px) keep every key that was set, even a default value, so "back to 0 on phones" survives. An empty colour falls back to the desktop value.
+export function normalizeFreeM(raw){
+ const e=plain(raw)?raw:{},full=freeFull(e),out={};
+ for(const k of Object.keys(FREE_DEFAULTS))if(Object.hasOwn(e,k)&&!(['color','bg','borderColor'].includes(k)&&!full[k]))out[k]=full[k];
  return out;
 }
 const freeSelector=path=>path.split('/').map((n,i)=>i===0?`>:nth-child(${n} of :not(.fx-bg,.fx-img,.fx-divider))`:`>:nth-child(${n})`).join('');
 const SHADOW_CSS={soft:'0 12px 30px -12px rgba(0,0,0,.28)',strong:'0 28px 60px -18px rgba(0,0,0,.5)',hard:'6px 6px 0 currentColor',glow:'0 0 0 1px var(--accent),0 0 34px color-mix(in srgb,var(--accent) 55%,transparent)'};
-function freeRule(e){const v={...FREE_DEFAULTS,...e},d=[];
- if(v.x||v.y)d.push(`translate:${v.x}px ${v.y}px`);if(v.rotate)d.push(`rotate:${v.rotate}deg`);if(v.scale!==100)d.push(`scale:${v.scale/100}`);if(v.w)d.push(`width:${v.w}px`,'max-width:none');if(v.opacity!==100)d.push(`opacity:${v.opacity/100}`);if(v.z)d.push('position:relative',`z-index:${v.z}`);
- if(v.color)d.push(`color:${v.color}`,'-webkit-text-fill-color:currentColor');if(v.bg)d.push(`background:${v.bg}`);if(v.size)d.push(`font-size:${v.size}px`);if(v.weight)d.push(`font-weight:${v.weight}`);if(v.align)d.push(`text-align:${v.align}`);if(v.lh)d.push(`line-height:${v.lh/100}`);if(v.tracking)d.push(`letter-spacing:${v.tracking/100}em`);
- if(v.radius>=0)d.push(`border-radius:${v.radius}px`,'overflow:hidden');if(v.pad>=0)d.push(`padding:${v.pad}px`);if(v.border)d.push(`border:${v.border}px solid ${v.borderColor||'currentColor'}`);if(v.shadow!=='none')d.push(`box-shadow:${SHADOW_CSS[v.shadow]}`);if(v.blur)d.push(`filter:blur(${v.blur}px)`);if(v.italic)d.push('font-style:italic');if(v.upper)d.push('text-transform:uppercase');if(v.hidden)d.push('display:none!important');
- return d.join(';')}
+// Declarations are grouped by the key that owns them, so a phone override can move whole groups into media queries.
+const FREE_GROUP={y:'x',borderColor:'border'};
+function freeDecl(e){const v={...FREE_DEFAULTS,...e},d={},add=(g,...x)=>{d[g]=x};
+ if(v.x||v.y)add('x',`translate:${v.x}px ${v.y}px`);if(v.rotate)add('rotate',`rotate:${v.rotate}deg`);if(v.scale!==100)add('scale',`scale:${v.scale/100}`);if(v.w)add('w',`width:${v.w}px`,'max-width:none');if(v.opacity!==100)add('opacity',`opacity:${v.opacity/100}`);if(v.z)add('z','position:relative',`z-index:${v.z}`);
+ if(v.color)add('color',`color:${v.color}`,'-webkit-text-fill-color:currentColor');if(v.bg)add('bg',`background:${v.bg}`);if(v.size)add('size',`font-size:${v.size}px`);if(v.weight)add('weight',`font-weight:${v.weight}`);if(v.align)add('align',`text-align:${v.align}`);if(v.lh)add('lh',`line-height:${v.lh/100}`);if(v.tracking)add('tracking',`letter-spacing:${v.tracking/100}em`);
+ if(v.radius>=0)add('radius',`border-radius:${v.radius}px`,'overflow:hidden');if(v.pad>=0)add('pad',`padding:${v.pad}px`);if(v.border)add('border',`border:${v.border}px solid ${v.borderColor||'currentColor'}`);if(v.shadow!=='none')add('shadow',`box-shadow:${SHADOW_CSS[v.shadow]}`);if(v.blur)add('blur',`filter:blur(${v.blur}px)`);if(v.italic)add('italic','font-style:italic');if(v.upper)add('upper','text-transform:uppercase');if(v.hidden)add('hidden','display:none!important');
+ return d}
+const freeRule=(e,keep=()=>true)=>Object.entries(freeDecl(e)).filter(([g])=>keep(g)).flatMap(([,x])=>x).join(';');
 // Returns only the keys that differ from defaults, so unchanged blocks stay compact in JSON.
 export function normalizeBlockStyle(raw){
  const s=plain(raw)?raw:{},o=FX_OPTIONS,out={};
- const media={},els={},free={};
+ const media={},els={},free={},freeM={};
  if(plain(s.free))for(const [k,v] of Object.entries(s.free).slice(0,80))if(freePath(k)){const n=normalizeFree(v);if(Object.keys(n).length)free[k]=n}
+ if(plain(s.freeM))for(const [k,v] of Object.entries(s.freeM).slice(0,80))if(freePath(k)){const n=normalizeFreeM(v);if(Object.keys(n).length)freeM[k]=n}
  if(plain(s.media))for(const [k,v] of Object.entries(s.media).slice(0,24))if(slotId(k)&&assetId(v))media[k]=v;
  if(plain(s.els))for(const [k] of EL_FIELDS){const v=normalizeElementStyle(s.els[k]);if(Object.keys(v).length)els[k]=v}
  const full={tone:pick(o.tone,s.tone,'auto'),bg:hex(s.bg)?s.bg.toLowerCase():'',bg2:hex(s.bg2)?s.bg2.toLowerCase():'',bg3:hex(s.bg3)?s.bg3.toLowerCase():'',gradType:pick(o.gradType,s.gradType,'linear'),gradAngle:num(s.gradAngle,0,360,135),accent:hex(s.accent)?s.accent.toLowerCase():'',pattern:pick(o.pattern,s.pattern,'none'),patternOpacity:num(s.patternOpacity,5,100,60),image:assetId(s.image)?s.image:'',imageFit:pick(o.imageFit,s.imageFit,'cover'),imagePos:pick(o.imagePos,s.imagePos,'center'),overlay:num(s.overlay,0,90,0),overlayColor:hex(s.overlayColor)?s.overlayColor.toLowerCase():'',imageBlur:num(s.imageBlur,0,24,0),padTop:s.padTop==null||Number(s.padTop)<0?-1:num(s.padTop,0,240,-1),padBottom:s.padBottom==null||Number(s.padBottom)<0?-1:num(s.padBottom,0,240,-1),width:pick(o.width,s.width,'auto'),align:pick(o.align,s.align,'auto'),radius:s.radius==null||Number(s.radius)<0?-1:num(s.radius,0,48,-1),zoom:num(s.zoom,70,140,100),divider:pick(o.divider,s.divider,'none'),sticky:pick(o.sticky,s.sticky,'none'),hide:pick(o.hide,s.hide,'none'),enter:pick(o.enter,s.enter,'none'),trigger:pick(o.trigger,s.trigger,'scroll'),stagger:s.stagger===true,duration:num(s.duration,150,2400,700),delay:num(s.delay,0,2000,0),ease:pick(o.ease,s.ease,'smooth'),hover:pick(o.hover,s.hover,'none'),text:pick(o.text,s.text,'none'),loop:pick(o.loop,s.loop,'none'),scroll:pick(o.scroll,s.scroll,'none'),css:typeof s.css==='string'?s.css.slice(0,8000):''};
- for(const k of Object.keys(STYLE_DEFAULTS)){if(k==='media'||k==='els'||k==='free')continue;if(full[k]!==STYLE_DEFAULTS[k])out[k]=full[k]}
- if(Object.keys(media).length)out.media=media;if(Object.keys(els).length)out.els=els;if(Object.keys(free).length)out.free=free;
+ for(const k of Object.keys(STYLE_DEFAULTS)){if(k==='media'||k==='els'||k==='free'||k==='freeM')continue;if(full[k]!==STYLE_DEFAULTS[k])out[k]=full[k]}
+ if(Object.keys(media).length)out.media=media;if(Object.keys(els).length)out.els=els;if(Object.keys(free).length)out.free=free;if(Object.keys(freeM).length)out.freeM=freeM;
  return out;
 }
 export function normalizeEffects(raw){
@@ -112,7 +122,8 @@ export function scopedCSS(blocks,assets={}){return blocks.filter(b=>!b.hidden).m
  if(s.image&&assets[s.image])rules.push(`${id}>.fx-img{background-image:url("${assets[s.image].d}")}`);
  for(const [slot,a] of Object.entries(s.media||{}))if(assets[a])rules.push(`${id} [data-media="${slot}"]{background:url("${assets[a].d}") center/cover no-repeat}${id} [data-media="${slot}"]>*{visibility:hidden}${id} [data-media="${slot}"]::before{display:none}`);
  for(const [f,e] of Object.entries(s.els||{})){const d=[];if(e.color)d.push(`color:${e.color}`,'-webkit-text-fill-color:currentColor');if(e.size&&e.size!==100)d.push(`zoom:${e.size/100}`);if(e.weight)d.push(`font-weight:${e.weight}`);if(e.align)d.push(`text-align:${e.align}`);if(e.tracking)d.push(`letter-spacing:${e.tracking/100}em`);if(e.italic)d.push('font-style:italic');if(e.upper)d.push('text-transform:uppercase');if(e.hidden)d.push('display:none!important');if(d.length)rules.push(`${id} [data-f="${f}"]{${d.join(';')}}`)}
- for(const [p,e] of Object.entries(s.free||{})){if(!freePath(p))continue;const d=freeRule(e);if(d)rules.push(`${id}${freeSelector(p)}{${d}}`)}
+ // Groups a phone override touches move into min-width/max-width queries; the rest apply everywhere.
+ const fm=s.freeM||{};for(const p of new Set([...Object.keys(s.free||{}),...Object.keys(fm)])){if(!freePath(p))continue;const sel=id+freeSelector(p),e=(s.free||{})[p]||{},m=fm[p],g=new Set(Object.keys(m||{}).map(k=>FREE_GROUP[k]||k)),all=freeRule(e,k=>!g.has(k));if(all)rules.push(`${sel}{${all}}`);if(m){const desk=freeRule(e,k=>g.has(k)),phone=freeRule({...e,...m},k=>g.has(k));if(desk)rules.push(`@media(min-width:761px){${sel}{${desk}}}`);if(phone)rules.push(`@media(max-width:760px){${sel}{${phone}}}`)}}
  if(s.css)rules.push(`${id}{\n${String(s.css).replace(/<\/style/gi,'')}\n}`);
  return rules.join('\n')}).filter(Boolean).join('\n');}
 
@@ -325,6 +336,9 @@ html[data-atlas-mode=edit] .atlas-text-hit{cursor:text}
 .atlas-ff .ff-tag{position:absolute;left:-1.5px;bottom:calc(100% + 6px);background:#ff6a3d;color:#fff;padding:3px 8px;border-radius:6px;white-space:nowrap;font-size:11px}
 .atlas-ff.top .ff-tag{bottom:auto;top:calc(100% + 6px)}
 .atlas-fh{border:1.5px dashed #ff6a3d;border-radius:3px;pointer-events:none;opacity:.8}
+.atlas-guide{background:#ff2d92;box-shadow:0 0 0 .5px #ff2d9255}.atlas-guide.v{width:1px}.atlas-guide.h{height:1px}
+.atlas-guide::before,.atlas-guide::after{content:'';position:absolute;width:5px;height:5px;border-radius:50%;background:#ff2d92}.atlas-guide.v::before,.atlas-guide.v::after{left:-2px}.atlas-guide.v::before{top:-2px}.atlas-guide.v::after{bottom:-2px}.atlas-guide.h::before,.atlas-guide.h::after{top:-2px}.atlas-guide.h::before{left:-2px}.atlas-guide.h::after{right:-2px}
+html[data-atlas-mode=edit] .atlas-free-on,.atlas-ff i,.atlas-pad,.atlas-bar button[data-a=drag]{touch-action:none}
 html[data-atlas-mode=edit] .atlas-free-on{cursor:move}
 .atlas-drop-target{outline:3px solid #4f7cff!important;outline-offset:-3px;box-shadow:inset 0 0 0 9999px #4f7cff22!important}
 .atlas-pad{pointer-events:auto;cursor:ns-resize;width:46px;height:12px;border-radius:10px;background:#4f7cff;border:2px solid #fff;box-shadow:0 4px 12px #1d3a8a55;display:flex;justify-content:center}
@@ -342,6 +356,12 @@ const padT=ui('atlas-pad','<span></span>'),padB=ui('atlas-pad','<span></span>');
 let selEl=ED.field||'',padDrag=null,dropEl=null,selFree=ED.free||'',fdrag=null,swallow=false,hoverEl=null;
 const ff=ui('atlas-ff','<span class="ff-tag"></span><i class="ff-r" data-h="w" title="拖动改宽度"></i><i class="ff-s" data-h="s" title="拖动缩放"></i><i class="ff-rot" data-h="r" title="拖动旋转"></i>'),fh=ui('atlas-fh');
 const DECOR='.fx-bg,.fx-img,.fx-divider';
+// Smart guides: while moving, the element's edges and centre snap to its ancestors and siblings. Alt turns snapping off.
+const gv=ui('atlas-guide v'),gh=ui('atlas-guide h'),SNAP=7;
+const snapTargets=fe=>{const s=byId(selected),out=[];if(!s)return out;for(let n=fe.parentElement;n&&s.contains(n);n=n.parentElement){out.push(n.getBoundingClientRect());if(n===s)break}const p=fe.parentElement;if(p)for(const k of [...p.children].slice(0,60))if(k!==fe&&!k.matches(DECOR)&&k.getClientRects().length)out.push(k.getBoundingClientRect());return out};
+const edges=(r,axis)=>axis==='x'?[r.left,r.left+r.width/2,r.right]:[r.top,r.top+r.height/2,r.bottom];
+function snapTo(r,targets,axis,d){let best=null;for(const t of targets)for(const v of edges(t,axis))for(const m of edges(r,axis)){const diff=v-(m+d);if(Math.abs(diff)<=SNAP&&(!best||Math.abs(diff)<Math.abs(best.diff)))best={diff,v,t}}return best}
+function showGuide(g,hit,m,axis){if(!hit){g.hidden=true;return}const t=hit.t;g.hidden=false;if(axis==='x'){const a=Math.min(m.top,t.top)-8,b=Math.max(m.bottom,t.bottom)+8;g.style.left=hit.v+'px';g.style.top=a+'px';g.style.height=(b-a)+'px'}else{const a=Math.min(m.left,t.left)-8,b=Math.max(m.right,t.right)+8;g.style.top=hit.v+'px';g.style.left=a+'px';g.style.width=(b-a)+'px'}}
 const pathOf=(s,el)=>{const parts=[];let n=el;while(n&&n!==s){const p=n.parentElement;if(!p)return '';const kids=[...p.children].filter(k=>p!==s||!k.matches(DECOR));parts.unshift(kids.indexOf(n)+1);n=p}return n===s&&parts.length<=12?parts.join('/'):''};
 const byPath=(s,path)=>{if(!s||!path)return null;let n=s;for(const [i,k] of path.split('/').entries()){const kids=[...n.children].filter(c=>i>0||!c.matches(DECOR));n=kids[Number(k)-1];if(!n)return null}return n};
 const PICK='[data-f],[data-media],button,a,h1,h2,h3,h4,h5,p,li,figure,article,img,svg,blockquote,label,small,strong,time,dd,dt,.panel,.fx-card,.btn,.eyebrow,.tag';
@@ -383,14 +403,15 @@ document.addEventListener('click',e=>{if(e.target.closest('.atlas-ui'))return;if
  if(edit){if(!e.target.matches('input,textarea,select,label,option')){e.preventDefault();e.stopPropagation()}if(swallow){swallow=false;return}if(s){if(s.dataset.blockId===selected){selectFree(s,pickEl(s,e.target))}else{selFree='';select(s.dataset.blockId,false,false,'');post({type:'atlas-select',uid:s.dataset.blockId})}}}},true);
 // Drag the selected element to move it; handles resize, scale and rotate. Values are proposals; the workbench stores them.
 document.addEventListener('pointerdown',e=>{if(!edit||editing||e.button!==0)return;const fe=freeEl();if(!fe)return;const h=e.target.closest&&e.target.closest('.atlas-ff i');const onEl=fe===e.target||fe.contains(e.target);if(!h&&!onEl)return;if(!h&&e.target.matches('input,textarea,select'))return;e.preventDefault();
- const mode=h?h.dataset.h:'move',start=cur(fe),r=fe.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,x0=e.clientX,y0=e.clientY,a0=Math.atan2(y0-cy,x0-cx);let moved=false,patch={};const cap=h||fe;try{cap.setPointerCapture(e.pointerId)}catch{}
+ const mode=h?h.dataset.h:'move',start=cur(fe),r=fe.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,x0=e.clientX,y0=e.clientY,a0=Math.atan2(y0-cy,x0-cx),snaps=h?[]:snapTargets(fe);let moved=false,patch={};const cap=h||fe;try{cap.setPointerCapture(e.pointerId)}catch{}
  const move=ev=>{const dx=ev.clientX-x0,dy=ev.clientY-y0;if(!moved&&Math.hypot(dx,dy)<3)return;moved=true;live(fe);fdrag={mode};
-  if(mode==='move'){let x=Math.round(start.x+dx),y=Math.round(start.y+dy);if(ev.shiftKey){Math.abs(dx)>Math.abs(dy)?y=start.y:x=start.x}if(Math.abs(x)<6)x=0;if(Math.abs(y)<6)y=0;fe.style.translate=x+'px '+y+'px';patch={x,y};fdrag.info=x+', '+y}
+  if(mode==='move'){let ddx=dx,ddy=dy,lock='';if(ev.shiftKey){lock=Math.abs(dx)>Math.abs(dy)?'y':'x';lock==='y'?ddy=0:ddx=0}const sx=!ev.altKey&&lock!=='x'?snapTo(r,snaps,'x',ddx):null,sy=!ev.altKey&&lock!=='y'?snapTo(r,snaps,'y',ddy):null;if(sx)ddx+=sx.diff;if(sy)ddy+=sy.diff;
+   let x=Math.round(start.x+ddx),y=Math.round(start.y+ddy);if(!sx&&Math.abs(x)<6)x=0;if(!sy&&Math.abs(y)<6)y=0;fe.style.translate=x+'px '+y+'px';patch={x,y};const m={left:r.left+x-start.x,top:r.top+y-start.y};m.right=m.left+r.width;m.bottom=m.top+r.height;showGuide(gv,sx,m,'x');showGuide(gh,sy,m,'y');fdrag.info=x+', '+y+(sx||sy?' · 对齐':'')}
   else if(mode==='w'){const w=Math.max(16,Math.round(start.w+dx/((start.scale||100)/100)));fe.style.width=w+'px';fe.style.maxWidth='none';patch={w};fdrag.info='宽 '+w+'px'}
   else if(mode==='s'){const k=Math.max(10,Math.min(400,Math.round(start.scale*(1+dx/Math.max(40,r.width)))));fe.style.scale=k/100;patch={scale:k};fdrag.info=k+'%'}
   else if(mode==='r'){let a=Math.round(start.rotate+(Math.atan2(ev.clientY-cy,ev.clientX-cx)-a0)*180/Math.PI);a=((a+540)%360)-180;if(ev.shiftKey)a=Math.round(a/15)*15;fe.style.rotate=a+'deg';patch={rotate:a};fdrag.info=a+'°'}
   schedule()};
- const up=()=>{cap.removeEventListener('pointermove',move);cap.removeEventListener('pointerup',up);cap.removeEventListener('pointercancel',up);fdrag=null;if(moved){swallow=true;setTimeout(()=>{swallow=false},350);sendFree(patch)}schedule()};
+ const up=()=>{cap.removeEventListener('pointermove',move);cap.removeEventListener('pointerup',up);cap.removeEventListener('pointercancel',up);fdrag=null;gv.hidden=gh.hidden=true;if(moved){swallow=true;setTimeout(()=>{swallow=false},350);sendFree(patch)}schedule()};
  cap.addEventListener('pointermove',move);cap.addEventListener('pointerup',up);cap.addEventListener('pointercancel',up)},true);
 document.addEventListener('submit',e=>{if(edit){e.preventDefault();e.stopImmediatePropagation()}},true);
 bar.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||!selected)return;const a=b.dataset.a;if(a==='drag')return;if(a==='replay'){const s=byId(selected);if(s&&window.__atlasFx)window.__atlasFx.replay(s);return}post({type:'atlas-action',uid:selected,action:a})});

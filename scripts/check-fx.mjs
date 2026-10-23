@@ -4,7 +4,7 @@ import {Script} from 'node:vm';
 import {BLOCKS,THEMES,TEMPLATES,FONTS,STYLES,createBlock,createProject,validateProject,generateDocument,generateParts,normalizeTheme,editorProps,mediaSlots} from '../dist/engine.js';
 import {MEDIA_BLOCKS} from '../dist/media-blocks.js';
 import {FX_BLOCKS} from '../dist/fx-blocks.js';
-import {FX_OPTIONS,STYLE_DEFAULTS,ASSET_LIMITS,normalizeBlockStyle,normalizeEffects,normalizeAssets,normalizeElementStyle,normalizeFree,sectionFx} from '../dist/fx-runtime.js';
+import {FX_OPTIONS,STYLE_DEFAULTS,ASSET_LIMITS,normalizeBlockStyle,normalizeEffects,normalizeAssets,normalizeElementStyle,normalizeFree,normalizeFreeM,sectionFx,EDITOR_JS,EDITOR_CSS} from '../dist/fx-runtime.js';
 import {RECIPES,validateRecipe,recipePlan} from '../dist/case-model.js';
 import {replaceProjectBlock,replacementOptions} from '../dist/studio-model.js';
 import {createBuilderUI,renderFxLab} from '../dist/builder-ui.js';
@@ -89,6 +89,18 @@ const fp=createProject();fp.blocks=[createBlock('hero-editorial',{free:{'2/1':{x
 const fd=generateDocument(validateProject(JSON.parse(JSON.stringify(fp))));
 check(fd.includes(`>:nth-child(2 of :not(.fx-bg,.fx-img,.fx-divider))>:nth-child(1){translate:24px -8px;rotate:-6deg;scale:1.2;background:#112233;box-shadow:`)&&fd.includes('>:nth-child(2)'+'{display:none!important}'),'free styles become scoped CSS with decor-safe selectors');
 check(generateDocument(fp,{editor:{mode:'edit',free:'2/1',token:'t'}}).includes('"free":"2/1"')&&generateDocument(fp,{editor:{mode:'edit',free:'2/1"};alert(1);//',token:'t'}}).includes('"free":""'),'editor keeps a valid selected path only');
+
+// v4.1: phone overrides keep explicit defaults, and only the groups they touch move into media queries.
+const fm=normalizeFreeM({x:0,y:-9999,color:'',bg:'#ABCDEF',hidden:false,evil:1});
+check(fm.x===0&&fm.y===-2400&&!('color' in fm)&&fm.bg==='#abcdef'&&fm.hidden===false&&!('evil' in fm)&&!('rotate' in fm),'phone overrides keep set keys (even defaults), clamp and drop empty colours');
+const fs2=normalizeBlockStyle({freeM:{'2/1':{x:0},'0/1':{x:1},'1/x':{y:2},'3':{}}});
+check(Object.keys(fs2.freeM).join()==='2/1'&&fs2.freeM['2/1'].x===0&&!('free' in fs2),'phone override paths validated like desktop paths');
+const mpj=createProject();mpj.blocks=[createBlock('hero-editorial',{free:{'2/1':{x:200,y:10,rotate:5,hidden:true}},freeM:{'2/1':{x:0,hidden:false},'2/2':{size:18}}})];
+const mdoc=generateDocument(validateProject(JSON.parse(JSON.stringify(mpj)))),mSel='>:nth-child(2 of :not(.fx-bg,.fx-img,.fx-divider))>:nth-child(1)';
+const mq=(q,sel,body)=>mdoc.split('@media('+q+'){#s-').slice(1).some(x=>x.slice(x.indexOf('>')).startsWith(sel+'{'+body+'}}'));
+check(mdoc.includes(mSel+'{rotate:5deg}')&&mq('min-width:761px',mSel,'translate:200px 10px;display:none!important')&&mq('max-width:760px',mSel,'translate:0px 10px'),'untouched groups stay global; overridden groups split into desktop and phone queries');
+check(mq('max-width:760px','>:nth-child(2 of :not(.fx-bg,.fx-img,.fx-divider))>:nth-child(2)','font-size:18px'),'phone-only element styles need no desktop rule');
+check(EDITOR_JS.includes('snapTargets')&&EDITOR_JS.includes('ev.altKey')&&EDITOR_CSS.includes('.atlas-guide')&&EDITOR_CSS.includes('touch-action:none'),'editor ships smart guides, Alt to bypass and touch-safe handles');
 
 const offline=await readFile(new URL('../dist/offline.html',import.meta.url),'utf8');
 check(offline.includes('MEDIA_BLOCK_JS')&&offline.includes('--c-3d6655')&&offline.includes('data-ui'),'offline bundle contains 3.1 modules, tokens and theme bootstrap');
