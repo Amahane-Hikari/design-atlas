@@ -102,6 +102,10 @@ check(mdoc.includes(mSel+'{rotate:5deg}')&&mq('min-width:761px',mSel,'translate:
 check(mq('max-width:760px','>:nth-child(2 of :not(.fx-bg,.fx-img,.fx-divider))>:nth-child(2)','font-size:18px'),'phone-only element styles need no desktop rule');
 check(EDITOR_JS.includes('snapTargets')&&EDITOR_JS.includes('ev.altKey')&&EDITOR_CSS.includes('.atlas-guide')&&EDITOR_CSS.includes('touch-action:none'),'editor ships smart guides, Alt to bypass and touch-safe handles');
 
+// v4.2: editor chrome is counter-scaled by 1 / canvas zoom; the factor is clamped.
+const kDoc=k=>generateDocument(createProject(),{editor:{mode:'edit',k,token:'t'}});
+check(kDoc(1/0.5).includes('"k":2')&&kDoc(99).includes('"k":2.5')&&kDoc('x').includes('"k":1')&&kDoc(0.2).includes('"k":1'),'editor zoom factor is clamped to 1–2.5');
+check(EDITOR_JS.includes("m.type==='ui-scale'")&&EDITOR_CSS.includes('scale:var(--k,1)')&&EDITOR_CSS.includes('calc(2px*var(--k,1))'),'canvas labels, toolbar, handles and outlines follow the zoom factor');
 const offline=await readFile(new URL('../dist/offline.html',import.meta.url),'utf8');
 check(offline.includes('MEDIA_BLOCK_JS')&&offline.includes('--c-3d6655')&&offline.includes('data-ui'),'offline bundle contains 3.1 modules, tokens and theme bootstrap');
 check(offline.includes('createBuilderUI')&&offline.includes('FX_BLOCK_JS')&&offline.includes('.studio-bar'),'offline bundle contains v3 studio, effects and styles');

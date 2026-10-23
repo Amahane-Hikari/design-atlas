@@ -304,8 +304,8 @@ if(cursor){addEventListener('pointerdown',()=>cursor.classList.add('press'));add
 // Injected only into the builder canvas. The canvas is a sandboxed iframe; all edits are proposals that the workbench validates.
 export const EDITOR_CSS=String.raw`
 html[data-atlas-mode=edit] main>section{cursor:default}
-html[data-atlas-mode=edit] main>section:hover{outline:1.5px dashed color-mix(in srgb,#5b8cff 70%,transparent);outline-offset:-1.5px}
-html[data-atlas-mode=edit] main>section.atlas-selected{outline:2px solid #4f7cff;outline-offset:-2px}
+html[data-atlas-mode=edit] main>section:hover{outline:calc(1.5px*var(--k,1)) dashed color-mix(in srgb,#5b8cff 70%,transparent);outline-offset:calc(-1.5px*var(--k,1))}
+html[data-atlas-mode=edit] main>section.atlas-selected{outline:calc(2px*var(--k,1)) solid #4f7cff;outline-offset:calc(-2px*var(--k,1))}
 html[data-atlas-mode=edit] .fx-intro,html[data-atlas-mode=edit] .fx-cursor{display:none!important}
 .atlas-ui{all:initial;position:fixed;z-index:2147483000;font:500 12px/1.2 "Segoe UI","PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:#fff;pointer-events:none}
 .atlas-tag{background:#4f7cff;padding:5px 9px;border-radius:7px 7px 7px 0;box-shadow:0 6px 18px -6px #1d3a8a88;white-space:nowrap;display:flex;gap:6px;align-items:center}
@@ -315,7 +315,7 @@ html[data-atlas-mode=edit] .fx-intro,html[data-atlas-mode=edit] .fx-cursor{displ
 .atlas-bar button:hover{background:#ffffff1f}.atlas-bar button[data-a=remove]:hover{background:#ff5d5d33;color:#ffb4b4}
 .atlas-bar button[data-a=drag]{cursor:grab;font-size:15px;letter-spacing:-2px}
 .atlas-bar i{width:1px;margin:5px 3px;background:#ffffff22}
-.atlas-line{height:4px;border-radius:4px;background:#4f7cff;box-shadow:0 0 0 3px #4f7cff40}
+.atlas-line{height:calc(4px*var(--k,1));border-radius:4px;background:#4f7cff;box-shadow:0 0 0 3px #4f7cff40}
 .atlas-line::before,.atlas-line::after{content:'';position:absolute;top:-4px;width:12px;height:12px;border-radius:50%;background:#4f7cff}.atlas-line::before{left:-6px}.atlas-line::after{right:-6px}
 .atlas-line span{position:absolute;left:50%;top:-30px;translate:-50% 0;background:#4f7cff;padding:5px 10px;border-radius:20px;white-space:nowrap}
 .atlas-ghost{background:#4f7cff;padding:9px 14px;border-radius:10px;box-shadow:0 18px 40px -10px #1d3a8a99;rotate:-2deg}
@@ -327,18 +327,20 @@ main>section.atlas-dragging{opacity:.35}
 html[data-atlas-mode=edit] .atlas-text-hit{cursor:text}
 
 .atlas-el-on{outline:none}
-.atlas-ff{border:1.5px solid #ff6a3d;border-radius:3px;box-shadow:0 0 0 4px #ff6a3d22;pointer-events:none}
+.atlas-ff{border:calc(1.5px*var(--k,1)) solid #ff6a3d;border-radius:3px;box-shadow:0 0 0 calc(4px*var(--k,1)) #ff6a3d22;pointer-events:none}
 .atlas-ff i{position:absolute;width:12px;height:12px;background:#fff;border:2px solid #ff6a3d;border-radius:3px;pointer-events:auto;box-sizing:border-box}
 .atlas-ff .ff-r{right:-7px;top:50%;height:24px;margin-top:-12px;border-radius:6px;cursor:ew-resize}
 .atlas-ff .ff-s{right:-8px;bottom:-8px;cursor:nwse-resize}
-.atlas-ff .ff-rot{left:50%;top:-32px;margin-left:-6px;border-radius:50%;cursor:grab}
+.atlas-ff .ff-rot{left:50%;top:calc(-32px*var(--k,1));margin-left:-6px;border-radius:50%;cursor:grab}
 .atlas-ff .ff-rot::after{content:'';position:absolute;left:3px;top:10px;width:1.5px;height:20px;background:#ff6a3d}
 .atlas-ff .ff-tag{position:absolute;left:-1.5px;bottom:calc(100% + 6px);background:#ff6a3d;color:#fff;padding:3px 8px;border-radius:6px;white-space:nowrap;font-size:11px}
 .atlas-ff.top .ff-tag{bottom:auto;top:calc(100% + 6px)}
-.atlas-fh{border:1.5px dashed #ff6a3d;border-radius:3px;pointer-events:none;opacity:.8}
-.atlas-guide{background:#ff2d92;box-shadow:0 0 0 .5px #ff2d9255}.atlas-guide.v{width:1px}.atlas-guide.h{height:1px}
+.atlas-fh{border:calc(1.5px*var(--k,1)) dashed #ff6a3d;border-radius:3px;pointer-events:none;opacity:.8}
+.atlas-guide{background:#ff2d92;box-shadow:0 0 0 .5px #ff2d9255}.atlas-guide.v{width:calc(1px*var(--k,1))}.atlas-guide.h{height:calc(1px*var(--k,1))}
 .atlas-guide::before,.atlas-guide::after{content:'';position:absolute;width:5px;height:5px;border-radius:50%;background:#ff2d92}.atlas-guide.v::before,.atlas-guide.v::after{left:-2px}.atlas-guide.v::before{top:-2px}.atlas-guide.v::after{bottom:-2px}.atlas-guide.h::before,.atlas-guide.h::after{top:-2px}.atlas-guide.h::before{left:-2px}.atlas-guide.h::after{right:-2px}
 html[data-atlas-mode=edit] .atlas-free-on,.atlas-ff i,.atlas-pad,.atlas-bar button[data-a=drag]{touch-action:none}
+.atlas-tag,.atlas-bar,.atlas-ghost,.atlas-pad,.atlas-ff i,.atlas-ff .ff-tag,.atlas-line span{scale:var(--k,1)}
+.atlas-tag,.atlas-ff .ff-tag{transform-origin:0 100%}.atlas-ff.top .ff-tag{transform-origin:0 0}.atlas-bar{transform-origin:100% 100%}.atlas-ghost{transform-origin:0 0}.atlas-line span{transform-origin:50% 100%}
 html[data-atlas-mode=edit] .atlas-free-on{cursor:move}
 .atlas-drop-target{outline:3px solid #4f7cff!important;outline-offset:-3px;box-shadow:inset 0 0 0 9999px #4f7cff22!important}
 .atlas-pad{pointer-events:auto;cursor:ns-resize;width:46px;height:12px;border-radius:10px;background:#4f7cff;border:2px solid #fff;box-shadow:0 4px 12px #1d3a8a55;display:flex;justify-content:center}
@@ -350,6 +352,8 @@ html[data-atlas-mode=edit] main>section.atlas-selected [data-media]:hover{outlin
 export const EDITOR_JS=String.raw`
 (()=>{const ED=window.__ATLAS_EDITOR__;if(!ED)return;const root=document.documentElement;root.dataset.atlasMode=ED.mode;const edit=ED.mode==='edit';
 const post=m=>parent.postMessage(Object.assign({atlas:ED.token},m),'*');
+// K is 1 / canvas zoom: editor chrome is scaled by it so handles and labels keep their real size on screen.
+let K=ED.k||1;root.style.setProperty('--k',K);
 const ui=(cls,html='')=>{const el=document.createElement('div');el.className='atlas-ui '+cls;el.innerHTML=html;el.hidden=true;document.body.append(el);return el};
 const tag=ui('atlas-tag hover'),sel=ui('atlas-tag'),bar=ui('atlas-bar','<button data-a="drag" title="拖动排序">⋮⋮</button><i></i><button data-a="up" title="上移 Alt+↑">↑</button><button data-a="down" title="下移 Alt+↓">↓</button><button data-a="duplicate" title="复制 Ctrl+D">⧉</button><button data-a="add" title="在下方添加模块">＋</button><button data-a="replay" title="重播动效">▶</button><button data-a="hide" title="隐藏">◐</button><i></i><button data-a="remove" title="删除 Delete">✕</button>'),line=ui('atlas-line','<span>放到这里</span>'),ghost=ui('atlas-ghost');
 const padT=ui('atlas-pad','<span></span>'),padB=ui('atlas-pad','<span></span>');
@@ -379,11 +383,15 @@ let selected=ED.selected||'',hover=null,editing=null,drag=null,dropBefore=void 0
 const sections=()=>[...document.querySelectorAll('main>section[data-block-id]')];
 const byId=id=>id?document.querySelector('main>section[data-block-id="'+CSS.escape(id)+'"]'):null;
 const name=s=>ED.names[s.dataset.blockId]||'模块';
-function place(){raf=0;const s=byId(selected);sections().forEach(x=>x.classList.toggle('atlas-selected',x===s));document.querySelectorAll('.atlas-free-on').forEach(x=>x.classList.remove('atlas-free-on'));const fe=edit&&s?byPath(s,selFree):null;if(fe&&!drag){fe.classList.add('atlas-free-on');const r=fe.getBoundingClientRect();ff.hidden=false;ff.style.left=r.left+'px';ff.style.top=r.top+'px';ff.style.width=Math.max(4,r.width)+'px';ff.style.height=Math.max(4,r.height)+'px';ff.classList.toggle('top',r.top<34);const d=describe(fe);ff.querySelector('.ff-tag').textContent=d.label+(fdrag&&fdrag.info?' · '+fdrag.info:'')}else ff.hidden=true;
+function place(){raf=0;const s=byId(selected);sections().forEach(x=>x.classList.toggle('atlas-selected',x===s));document.querySelectorAll('.atlas-free-on').forEach(x=>x.classList.remove('atlas-free-on'));const fe=edit&&s?byPath(s,selFree):null;if(fe&&!drag){fe.classList.add('atlas-free-on');const r=fe.getBoundingClientRect();ff.hidden=false;ff.style.left=r.left+'px';ff.style.top=r.top+'px';ff.style.width=Math.max(4,r.width)+'px';ff.style.height=Math.max(4,r.height)+'px';ff.classList.toggle('top',r.top<34*K);const d=describe(fe);ff.querySelector('.ff-tag').textContent=d.label+(fdrag&&fdrag.info?' · '+fdrag.info:'')}else ff.hidden=true;
  if(edit&&s&&hoverEl&&hoverEl!==fe&&!drag&&!fdrag&&s.contains(hoverEl)){const r=hoverEl.getBoundingClientRect();fh.hidden=false;fh.style.left=r.left+'px';fh.style.top=r.top+'px';fh.style.width=r.width+'px';fh.style.height=r.height+'px'}else fh.hidden=true;
  const pr=s&&s.getBoundingClientRect();if(edit&&s&&!drag&&pr.bottom>30&&pr.top<innerHeight-30){padT.hidden=pr.top<-4&&!padDrag;padB.hidden=pr.bottom>innerHeight+4&&!padDrag;const cx=pr.left+pr.width/2-23;padT.style.left=padB.style.left=cx+'px';padT.style.top=Math.max(2,pr.top-6)+'px';padB.style.top=Math.min(innerHeight-14,pr.bottom-6)+'px'}else{padT.hidden=padB.hidden=true}
- const vr=s&&s.getBoundingClientRect();if(edit&&s&&!drag&&vr.bottom>30&&vr.top<innerHeight-30){const r=vr;sel.hidden=false;sel.textContent=name(s);sel.style.left=Math.max(4,r.left)+'px';sel.style.top=(r.top>26?r.top-24:Math.max(4,r.top+4))+'px';bar.hidden=false;bar.querySelector('[data-a=replay]').hidden=!s.dataset.enter&&s.dataset.text!=='split';const y=r.top>48?r.top-42:Math.min(Math.max(8,r.top+8),innerHeight-44);bar.style.left=Math.max(8,r.right-bar.offsetWidth-6)+'px';bar.style.top=(r.bottom<60?-100:y)+'px'}else{sel.hidden=true;bar.hidden=true}
- if(edit&&hover&&hover!==s&&!drag){const r=hover.getBoundingClientRect();tag.hidden=false;tag.textContent=name(hover);tag.style.left=Math.max(4,r.left)+'px';tag.style.top=(r.top>26?r.top-24:Math.max(4,r.top+4))+'px'}else tag.hidden=true}
+ const vr=s&&s.getBoundingClientRect();if(edit&&s&&!drag&&vr.bottom>30&&vr.top<innerHeight-30){const r=vr;sel.hidden=false;sel.textContent=name(s);label(sel,r);bar.hidden=false;bar.querySelector('[data-a=replay]').hidden=!s.dataset.enter&&s.dataset.text!=='split';
+  // Toolbar: above the block if there is room; below a short block (e.g. a nav at the very top); otherwise inside its top edge.
+  const bw=bar.offsetWidth,bh=bar.offsetHeight,room=(bh+12)*K;let y,o='100% 100%';if(r.top>room)y=r.top-6-bh;else if(r.height<260&&r.bottom+room<innerHeight){y=r.bottom+6;o='100% 0'}else{y=Math.min(Math.max(8,r.top+8),innerHeight-bh*K-8);o='100% 0'}
+  bar.style.transformOrigin=o;bar.style.left=Math.max(8+bw*(K-1),r.right-bw-6)+'px';bar.style.top=(r.bottom<60?-100:y)+'px'}else{sel.hidden=true;bar.hidden=true}
+ if(edit&&hover&&hover!==s&&!drag){const r=hover.getBoundingClientRect();tag.hidden=false;tag.textContent=name(hover);label(tag,r)}else tag.hidden=true}
+function label(el,r){const h=el.offsetHeight;el.style.left=Math.max(4,r.left)+'px';if(r.top>(h+4)*K){el.style.transformOrigin='0 100%';el.style.top=(r.top-2-h)+'px'}else if(r.height<260&&r.bottom+(h+8)*K<innerHeight){el.style.transformOrigin='0 0';el.style.top=(r.bottom+2)+'px'}else{el.style.transformOrigin='0 0';el.style.top=Math.max(4,r.top+4)+'px'}}
 const schedule=()=>{if(!raf)raf=requestAnimationFrame(place)};
 function select(id,scroll,instant,field){if(field!==void 0)selEl=field;else if(id!==selected)selEl='';selected=id||'';schedule();const s=byId(selected);if(scroll&&s){const r=s.getBoundingClientRect();if(r.bottom<80||r.top>innerHeight-80)s.scrollIntoView({block:r.height>innerHeight*.8?'start':'center',behavior:instant?'auto':'smooth'})}}
 addEventListener('scroll',()=>{schedule();clearTimeout(window.__atlasScrollT);window.__atlasScrollT=setTimeout(()=>post({type:'atlas-scroll',y:scrollY}),120)},{passive:true});addEventListener('resize',schedule);
@@ -439,7 +447,8 @@ addEventListener('message',e=>{if(e.source!==parent)return;const m=e.data||{};if
  else if(m.type==='drop'){const b=dropBefore;hideLine();cancelAnimationFrame(auto);if(b!==void 0)post({type:'atlas-insert',blockType:m.blockType,before:b})}
  else if(m.type==='patch'){if(m.names)Object.assign(ED.names,m.names);if(m.props)Object.assign(ED.props,m.props);if(typeof m.css==='string'){const st=document.querySelector('style');if(st&&st.textContent!==m.css)st.textContent=m.css}unlive();(m.blocks||[]).forEach(p=>{const old=byId(p.uid);if(!old)return;const t=document.createElement('template');t.innerHTML=p.html;const s=t.content.firstElementChild;if(!s)return;old.replaceWith(s);if(window.__atlasFx)window.__atlasFx.init(s)});schedule()}
  else if(m.type==='replay'){const s=byId(m.uid);if(s&&window.__atlasFx)window.__atlasFx.replay(s)}
- else if(m.type==='scroll'){scrollTo(0,m.y)}});
+ else if(m.type==='scroll'){scrollTo(0,m.y)}
+ else if(m.type==='ui-scale'){K=Math.max(1,Math.min(2.5,Number(m.k)||1));root.style.setProperty('--k',K);schedule()}});
 document.addEventListener('keydown',e=>{if(editing){if(e.key==='Escape'){e.preventDefault();finish(false);editing=null}else if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();finish(true)}return}
  if(e.target.matches('input,textarea,select,[contenteditable]'))return;const k=e.key,mod=e.ctrlKey||e.metaKey;const fe=edit&&freeEl();
  if(fe&&!mod&&!e.altKey){if(/^Arrow/.test(k)){e.preventDefault();const c=cur(fe),st=e.shiftKey?10:1,x=c.x+(k==='ArrowLeft'?-st:k==='ArrowRight'?st:0),y=c.y+(k==='ArrowUp'?-st:k==='ArrowDown'?st:0);live(fe);fe.style.translate=x+'px '+y+'px';schedule();sendFree({x,y});return}if(k==='Delete'||k==='Backspace'){e.preventDefault();sendFree({hidden:true});return}if(k==='Escape'){e.preventDefault();const s=byId(selected),p=fe.parentElement;selectFree(s,p&&p!==s&&s.contains(p)?p:null);return}}if(edit&&!mod&&!e.altKey&&/^Arrow(Up|Down)$/.test(k)){const list=sections(),i=list.indexOf(byId(selected)),n=list[Math.max(0,Math.min(list.length-1,i+(k==='ArrowUp'?-1:1)))];if(n){e.preventDefault();select(n.dataset.blockId,true,false,'');post({type:'atlas-select',uid:n.dataset.blockId})}return}if(['Delete','Backspace','Escape'].includes(k)||mod&&/^[zydcvse]$/i.test(k)||e.altKey&&/^Arrow(Up|Down)$/.test(k)){e.preventDefault();post({type:'atlas-key',key:k,mod,shift:e.shiftKey,alt:e.altKey})}});
